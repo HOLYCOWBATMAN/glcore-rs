@@ -614,11 +614,11 @@ pub mod version_2_1 {
 }
 
 pub mod version_3_0 {
-/* OpenGL 3.0 also reuses entry points from these extensions: */
-/* ARB_framebuffer_object */
-/* ARB_map_buffer_range */
-/* ARB_vertex_array_object */
-#[nolink]
+    /* OpenGL 3.0 also reuses entry points from these extensions: */
+    /* ARB_framebuffer_object */
+    /* ARB_map_buffer_range */
+    /* ARB_vertex_array_object */
+    #[nolink]
     extern {
         fn glColorMaski(++index: GLuint, ++r: GLboolean, ++g: GLboolean, ++b: GLboolean, ++a: GLboolean);
         fn glGetBooleani_v(++target: GLenum, ++index: GLuint, ++data: *GLboolean);
@@ -740,10 +740,10 @@ pub mod version_3_0 {
 }
 
 pub mod version_3_1 {
-/* OpenGL 3.1 also reuses entry points from these extensions: */
-/* ARB_copy_buffer */
-/* ARB_uniform_buffer_object */
-#[nolink]
+    /* OpenGL 3.1 also reuses entry points from these extensions: */
+    /* ARB_copy_buffer */
+    /* ARB_uniform_buffer_object */
+    #[nolink]
     extern {
         fn glDrawArraysInstanced(++mode: GLenum, ++first: GLint, ++count: GLsizei, ++instancecount: GLsizei);
         fn glDrawElementsInstanced(++mode: GLenum, ++count: GLsizei, ++gltype: GLenum, ++indices: *GLvoid, ++instancecount: GLsizei);
@@ -757,12 +757,12 @@ pub mod version_3_1 {
 }
 
 pub mod version_3_2 {
-/* OpenGL 3.2 also reuses entry points from these extensions: */
-/* ARB_draw_elements_base_vertex */
-/* ARB_provoking_vertex */
-/* ARB_sync */
-/* ARB_texture_multisample */
-#[nolink]
+    /* OpenGL 3.2 also reuses entry points from these extensions: */
+    /* ARB_draw_elements_base_vertex */
+    /* ARB_provoking_vertex */
+    /* ARB_sync */
+    /* ARB_texture_multisample */
+    #[nolink]
     extern {
         fn glGetInteger64i_v(++target: GLenum, ++index: GLuint, ++data: *GLint64);
         fn glGetBufferParameteri64v(++target: GLenum, ++pname: GLenum, ++params: *GLint64);
@@ -774,17 +774,17 @@ pub mod version_3_2 {
 }
 
 pub mod version_3_3 {
-/* OpenGL 3.3 also reuses entry points from these extensions: */
-/* ARB_blend_func_extended */
-/* ARB_sampler_objects */
-/* ARB_explicit_attrib_location, but it has none */
-/* ARB_occlusion_query2 (no entry points) */
-/* ARB_shader_bit_encoding (no entry points) */
-/* ARB_texture_rgb10_a2ui (no entry points) */
-/* ARB_texture_swizzle (no entry points) */
-/* ARB_timer_query */
-/* ARB_vertex_type_2_10_10_10_rev */
-#[nolink]
+    /* OpenGL 3.3 also reuses entry points from these extensions: */
+    /* ARB_blend_func_extended */
+    /* ARB_sampler_objects */
+    /* ARB_explicit_attrib_location, but it has none */
+    /* ARB_occlusion_query2 (no entry points) */
+    /* ARB_shader_bit_encoding (no entry points) */
+    /* ARB_texture_rgb10_a2ui (no entry points) */
+    /* ARB_texture_swizzle (no entry points) */
+    /* ARB_timer_query */
+    /* ARB_vertex_type_2_10_10_10_rev */
+    #[nolink]
     extern {
         fn glVertexAttribDivisor(++index: GLuint, ++divisor: GLuint);
     }
@@ -792,19 +792,19 @@ pub mod version_3_3 {
 }
 
 pub mod version_4_0 {
-/* OpenGL 4.0 also reuses entry points from these extensions: */
-/* ARB_texture_query_lod (no entry points) */
-/* ARB_draw_indirect */
-/* ARB_gpu_shader5 (no entry points) */
-/* ARB_gpu_shader_fp64 */
-/* ARB_shader_subroutine */
-/* ARB_tessellation_shader */
-/* ARB_texture_buffer_object_rgb32 (no entry points) */
-/* ARB_texture_cube_map_array (no entry points) */
-/* ARB_texture_gather (no entry points) */
-/* ARB_transform_feedback2 */
-/* ARB_transform_feedback3 */
-#[nolink]
+    /* OpenGL 4.0 also reuses entry points from these extensions: */
+    /* ARB_texture_query_lod (no entry points) */
+    /* ARB_draw_indirect */
+    /* ARB_gpu_shader5 (no entry points) */
+    /* ARB_gpu_shader_fp64 */
+    /* ARB_shader_subroutine */
+    /* ARB_tessellation_shader */
+    /* ARB_texture_buffer_object_rgb32 (no entry points) */
+    /* ARB_texture_cube_map_array (no entry points) */
+    /* ARB_texture_gather (no entry points) */
+    /* ARB_transform_feedback2 */
+    /* ARB_transform_feedback3 */
+    #[nolink]
     extern {
         fn glMinSampleShading(++value: GLfloat);
         fn glBlendEquationi(++buf: GLuint, ++mode: GLenum);
@@ -820,54 +820,54 @@ pub mod version_4_0 {
 }
 
 pub mod version_4_1 {
-/* OpenGL 4.1 reuses entry points from these extensions: */
-/* ARB_ES2_compatibility */
-/* ARB_get_program_binary */
-/* ARB_separate_shader_objects */
-/* ARB_shader_precision (no entry points) */
-/* ARB_vertex_attrib_64bit */
-/* ARB_viewport_array */
+    /* OpenGL 4.1 reuses entry points from these extensions: */
+    /* ARB_ES2_compatibility */
+    /* ARB_get_program_binary */
+    /* ARB_separate_shader_objects */
+    /* ARB_shader_precision (no entry points) */
+    /* ARB_vertex_attrib_64bit */
+    /* ARB_viewport_array */
 }
 
 pub mod version_4_2 {
-/* OpenGL 4.2 reuses entry points from these extensions: */
-/* ARB_base_instance */
-/* ARB_shading_language_420pack (no entry points) */
-/* ARB_transform_feedback_instanced */
-/* ARB_compressed_texture_pixel_storage (no entry points) */
-/* ARB_conservative_depth (no entry points) */
-/* ARB_internalformat_query */
-/* ARB_map_buffer_alignment (no entry points) */
-/* ARB_shader_atomic_counters */
-/* ARB_shader_image_load_store */
-/* ARB_shading_language_packing (no entry points) */
-/* ARB_texture_storage */
+    /* OpenGL 4.2 reuses entry points from these extensions: */
+    /* ARB_base_instance */
+    /* ARB_shading_language_420pack (no entry points) */
+    /* ARB_transform_feedback_instanced */
+    /* ARB_compressed_texture_pixel_storage (no entry points) */
+    /* ARB_conservative_depth (no entry points) */
+    /* ARB_internalformat_query */
+    /* ARB_map_buffer_alignment (no entry points) */
+    /* ARB_shader_atomic_counters */
+    /* ARB_shader_image_load_store */
+    /* ARB_shading_language_packing (no entry points) */
+    /* ARB_texture_storage */
 }
 
 pub mod version_4_3 {
-/* OpenGL 4.3 reuses entry points from these extensions: */
-/* ARB_arrays_of_arrays (no entry points, GLSL only) */
-/* ARB_fragment_layer_viewport (no entry points, GLSL only) */
-/* ARB_shader_image_size (no entry points, GLSL only) */
-/* ARB_ES3_compatibility (no entry points) */
-/* ARB_clear_buffer_object */
-/* ARB_compute_shader */
-/* ARB_copy_image */
+    /* OpenGL 4.3 reuses entry points from these extensions: */
+    /* ARB_arrays_of_arrays (no entry points, GLSL only) */
+    /* ARB_fragment_layer_viewport (no entry points, GLSL only) */
+    /* ARB_shader_image_size (no entry points, GLSL only) */
+    /* ARB_ES3_compatibility (no entry points) */
+    /* ARB_clear_buffer_object */
+    /* ARB_compute_shader */
+    /* ARB_copy_image */
 /* KHR_debug (includes ARB_debug_output commands promoted to KHR without suffixes) */
-/* ARB_explicit_uniform_location (no entry points) */
-/* ARB_framebuffer_no_attachments */
-/* ARB_internalformat_query2 */
-/* ARB_invalidate_subdata */
-/* ARB_multi_draw_indirect */
-/* ARB_program_interface_query */
-/* ARB_robust_buffer_access_behavior (no entry points) */
-/* ARB_shader_storage_buffer_object */
-/* ARB_stencil_texturing (no entry points) */
-/* ARB_texture_buffer_range */
-/* ARB_texture_query_levels (no entry points) */
-/* ARB_texture_storage_multisample */
-/* ARB_texture_view */
-/* ARB_vertex_attrib_binding */
+    /* ARB_explicit_uniform_location (no entry points) */
+    /* ARB_framebuffer_no_attachments */
+    /* ARB_internalformat_query2 */
+    /* ARB_invalidate_subdata */
+    /* ARB_multi_draw_indirect */
+    /* ARB_program_interface_query */
+    /* ARB_robust_buffer_access_behavior (no entry points) */
+    /* ARB_shader_storage_buffer_object */
+    /* ARB_stencil_texturing (no entry points) */
+    /* ARB_texture_buffer_range */
+    /* ARB_texture_query_levels (no entry points) */
+    /* ARB_texture_storage_multisample */
+    /* ARB_texture_view */
+    /* ARB_vertex_attrib_binding */
 }
 
 pub mod arb_depth_buffer_float {
