@@ -1,0 +1,9 @@
+#[link(name = "glcore", 
+       vers = "0.1", 
+       author = "Brendan Zabarauskas",
+       url = "https://github.com/bjz/glcore-rs")];
+#[crate_type = "lib"];
+
+pub mod consts;
+pub mod functions;
+pub mod types;
