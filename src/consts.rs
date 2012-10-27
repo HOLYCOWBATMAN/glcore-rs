@@ -5,8 +5,8 @@ pub mod GL_VERSION_1_1 {
     pub const GL_STENCIL_BUFFER_BIT             : GLenum = 0x00000400;
     pub const GL_COLOR_BUFFER_BIT               : GLenum = 0x00004000;
     /* Boolean */
-    pub const GL_FALSE                          : GLenum = 0;
-    pub const GL_TRUE                           : GLenum = 1;
+    pub const GL_FALSE                          : GLboolean = 0;
+    pub const GL_TRUE                           : GLboolean = 1;
     /* BeginMode */
     pub const GL_POINTS                         : GLenum = 0x0000;
     pub const GL_LINES                          : GLenum = 0x0001;
