@@ -50,99 +50,87 @@ use libc::*;
 
 /* Base GL types */
 
-pub type GLenum             = c_uint;
-pub type GLboolean          = c_uchar;
-pub type GLbitfield         = c_uint;
-pub type GLbyte             = c_schar;
-pub type GLshort            = c_short;
-pub type GLint              = c_int;
-pub type GLsizei            = c_int;
-pub type GLubyte            = c_uchar;
-pub type GLushort           = c_ushort;
-pub type GLuint             = c_uint;
-pub type GLhalf             = c_ushort;
-pub type GLfloat            = c_float;
-pub type GLclampf           = c_float;
-pub type GLdouble           = c_double;
-pub type GLclampd           = c_double;
-pub type GLvoid             = c_void;
+pub mod version_1_0 {
+    pub type GLenum             = c_uint;
+    pub type GLboolean          = c_uchar;
+    pub type GLbitfield         = c_uint;
+    pub type GLbyte             = c_schar;
+    pub type GLshort            = c_short;
+    pub type GLint              = c_int;
+    pub type GLsizei            = c_int;
+    pub type GLubyte            = c_uchar;
+    pub type GLushort           = c_ushort;
+    pub type GLuint             = c_uint;
+    pub type GLhalf             = c_ushort;
+    pub type GLfloat            = c_float;
+    pub type GLclampf           = c_float;
+    pub type GLdouble           = c_double;
+    pub type GLclampd           = c_double;
+    pub type GLvoid             = c_void;
+}
 
 /*************************************************************/
 
-pub use version_2_0::*;
-pub use version_1_5::*;
-pub use arb_sync::*;
-pub use arb_vertex_buffer_object::*;
-pub use arb_shader_objects::*;
-pub use arb_half_float_pixel::*;
-pub use nv_half_float::*;
-pub use ext_timer_query::*;
-pub use arb_cl_event::*;
-pub use arb_debug_output::*;
-pub use amd_debug_output::*;
-pub use khr_debug::*;
-pub use nv_vdpau_interop::*;
-
 pub mod version_2_0 {
-    type GLchar             = c_char;
+    pub type GLchar             = c_char;
 }
 
 pub mod version_1_5 {
-    type GLintptr           = ptrdiff_t;
-    type GLsizeiptr         = ptrdiff_t;
+    pub type GLintptr           = ptrdiff_t;
+    pub type GLsizeiptr         = ptrdiff_t;
 }
 
 pub mod arb_vertex_buffer_object {
     /* GL types for handling large vertex buffer objects */
-    type GLintptrARB        = ptrdiff_t;
-    type GLsizeiptrARB      = ptrdiff_t;
+    pub type GLintptrARB        = ptrdiff_t;
+    pub type GLsizeiptrARB      = ptrdiff_t;
 }
 
 pub mod arb_shader_objects {
     /* GL types for program/shader text and shader object handles */
-    type GLcharARB          = c_char;
-    type GLhandleARB        = c_uint;
+    pub type GLcharARB          = c_char;
+    pub type GLhandleARB        = c_uint;
 }
 
 pub mod arb_half_float_pixel {
     /* GL type for "half" precision (s10e5) float data in host memory */
-    type GLhalfARB          = c_ushort;
+    pub type GLhalfARB          = c_ushort;
 }
 
 pub mod nv_half_float {
-    type GLhalfNV           = c_ushort;
+    pub type GLhalfNV           = c_ushort;
 }
 
 pub mod ext_timer_query {
-    type GLint64EXT         = int64_t;
-    type GLuint64EXT        = uint64_t;
+    pub type GLint64EXT         = int64_t;
+    pub type GLuint64EXT        = uint64_t;
 }
 
 pub mod arb_sync {
-    type GLint64            = int64_t;
-    type GLuint64           = uint64_t;
-    type Struct___GLsync    = c_void;
-    type GLsync             = *Struct___GLsync;
+    pub type GLint64            = int64_t;
+    pub type GLuint64           = uint64_t;
+    pub type Struct___GLsync    = c_void;
+    pub type GLsync             = *Struct___GLsync;
 }
 
 pub mod arb_cl_event {
     /* These incomplete types let us declare types compatible with OpenCL's cl_context and cl_event */
-    type Struct__cl_context = c_void;
-    type Struct__cl_event   = c_void;
+    pub type Struct__cl_context = c_void;
+    pub type Struct__cl_event   = c_void;
 }
 
 pub mod arb_debug_output {
-    type GLDEBUGPROCARB     = *u8;
+    pub type GLDEBUGPROCARB     = *u8;
 }
 
 pub mod amd_debug_output {
-    type GLDEBUGPROCAMD     = *u8;
+    pub type GLDEBUGPROCAMD     = *u8;
 }
 
 pub mod khr_debug {
-    type GLDEBUGPROC        = *u8;
+    pub type GLDEBUGPROC        = *u8;
 }
 
 pub mod nv_vdpau_interop {
-    type GLvdpauSurfaceNV   = GLintptr;
+    pub type GLvdpauSurfaceNV   = GLintptr;
 }

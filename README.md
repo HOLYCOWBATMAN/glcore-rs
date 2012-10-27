@@ -4,6 +4,8 @@ These bindings are derived from the latest version of [glcorearb.h](http://www.o
 
   > glcorearb.h includes only APIs in the latest OpenGL core profile implementation together with APIs in newer ARB extensions which can be can be supported by the core profile. It does not, and never will include functionality removed from the core profile, such as fixed-function vertex and fragment processing.
 
+All symbols are public at the top-level module scope, so all you need to do to include in your source is `use glcore::*`.
+
 Unfortunately Rust doesn't currently support dynamic loading of libraries, so in the mean time you'll have to comment out the functions that your platform doesn't support.
 
 Be warned: although I tried to be careful there was a great deal of regex involved in the conversion process. I might have made some mistakes!

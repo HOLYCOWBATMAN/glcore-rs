@@ -4,6 +4,6 @@
        url = "https://github.com/bjz/glcore-rs")];
 #[crate_type = "lib"];
 
-pub mod consts;
-pub mod functions;
-pub mod types;
+mod consts;
+mod functions;
+mod types;
