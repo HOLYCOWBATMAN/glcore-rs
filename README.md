@@ -6,8 +6,8 @@ These bindings are derived from the latest version of [glcorearb.h](http://www.o
 
 All symbols are public at the top-level module scope, so all you need to do to include in your source is `use glcore::*`.
 
-Unfortunately Rust doesn't currently support dynamic loading of libraries, so in the mean time you'll have to comment out the functions that your platform doesn't support.
+Unfortunately Rust doesn't currently support dynamic loading of libraries. As an interim solution, I've included a cfg attribute for each api extension. You can find a list of these in `./extensions`.
 
-Be warned: although I tried to be careful there was a great deal of regex involved in the conversion process. I might have made some mistakes!
+The default make target includes all the extensions, but unless you're *very* fortunate it will almost certainly give you undefined symbol errors. If you're on OS X Lion or greater you can use `make osx-lion`. If not you'll have to compose your own target. My suggestion is to progressively add flags over time as you require sections of the api for your projects. Good luck!
 
 ~B☼
