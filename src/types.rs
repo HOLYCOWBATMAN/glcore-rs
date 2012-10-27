@@ -50,8 +50,8 @@ use libc::*;
 
 /* Base GL types */
 
-#[cfg(version_1_0)]
-pub mod version_1_0 {
+#[cfg(GL_VERSION_1_0)]
+pub mod GL_VERSION_1_0 {
     pub type GLenum             = c_uint;
     pub type GLboolean          = c_uchar;
     pub type GLbitfield         = c_uint;
@@ -72,79 +72,79 @@ pub mod version_1_0 {
 
 /*************************************************************/
 
-#[cfg(version_2_0)]
-pub mod version_2_0 {
+#[cfg(GL_VERSION_2_0)]
+pub mod GL_VERSION_2_0 {
     pub type GLchar             = c_char;
 }
 
-#[cfg(version_1_5)]
-pub mod version_1_5 {
+#[cfg(GL_VERSION_1_5)]
+pub mod GL_VERSION_1_5 {
     pub type GLintptr           = ptrdiff_t;
     pub type GLsizeiptr         = ptrdiff_t;
 }
 
-#[cfg(arb_vertex_buffer_object)]
-pub mod arb_vertex_buffer_object {
+#[cfg(GL_ARB_vertex_buffer_object)]
+pub mod GL_ARB_vertex_buffer_object {
     /* GL types for handling large vertex buffer objects */
     pub type GLintptrARB        = ptrdiff_t;
     pub type GLsizeiptrARB      = ptrdiff_t;
 }
 
-#[cfg(arb_shader_objects)]
-pub mod arb_shader_objects {
+#[cfg(GL_ARB_shader_objects)]
+pub mod GL_ARB_shader_objects {
     /* GL types for program/shader text and shader object handles */
     pub type GLcharARB          = c_char;
     pub type GLhandleARB        = c_uint;
 }
 
-#[cfg(arb_half_float_pixel)]
-pub mod arb_half_float_pixel {
+#[cfg(GL_ARB_half_float_pixel)]
+pub mod GL_ARB_half_float_pixel {
     /* GL type for "half" precision (s10e5) float data in host memory */
     pub type GLhalfARB          = c_ushort;
 }
 
-#[cfg(nv_half_float)]
-pub mod nv_half_float {
+#[cfg(GL_NV_half_float)]
+pub mod GL_NV_half_float {
     pub type GLhalfNV           = c_ushort;
 }
 
-#[cfg(ext_timer_query)]
-pub mod ext_timer_query {
+#[cfg(GL_EXT_timer_query)]
+pub mod GL_EXT_timer_query {
     pub type GLint64EXT         = int64_t;
     pub type GLuint64EXT        = uint64_t;
 }
 
-#[cfg(arb_sync)]
-pub mod arb_sync {
+#[cfg(GL_ARB_sync)]
+pub mod GL_ARB_sync {
     pub type GLint64            = int64_t;
     pub type GLuint64           = uint64_t;
     pub type Struct___GLsync    = c_void;
     pub type GLsync             = *Struct___GLsync;
 }
 
-#[cfg(arb_cl_event)]
-pub mod arb_cl_event {
+#[cfg(GL_ARB_cl_event)]
+pub mod GL_ARB_cl_event {
     /* These incomplete types let us declare types compatible with OpenCL's cl_context and cl_event */
     pub type Struct__cl_context = c_void;
     pub type Struct__cl_event   = c_void;
 }
 
-#[cfg(arb_debug_output)]
-pub mod arb_debug_output {
+#[cfg(GL_ARB_debug_output)]
+pub mod GL_ARB_debug_output {
     pub type GLDEBUGPROCARB     = *u8;
 }
 
-#[cfg(amd_debug_output)]
-pub mod amd_debug_output {
+#[cfg(GL_AMD_debug_output)]
+pub mod GL_AMD_debug_output {
     pub type GLDEBUGPROCAMD     = *u8;
 }
 
-#[cfg(khr_debug)]
-pub mod khr_debug {
+#[cfg(GL_KHR_debug)]
+pub mod GL_KHR_debug {
     pub type GLDEBUGPROC        = *u8;
 }
 
-#[cfg(nv_vdpau_interop)]
-pub mod nv_vdpau_interop {
+#[cfg(GL_NV_vdpau_interop)]
+pub mod GL_NV_vdpau_interop {
     pub type GLvdpauSurfaceNV   = GLintptr;
 }

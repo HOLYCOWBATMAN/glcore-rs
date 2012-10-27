@@ -56,8 +56,8 @@ extern mod linkhack {}
 #[cfg(target_os = "linux")]
 extern mod linkhack {}
 
-#[cfg(version_1_0)]
-pub mod version_1_0 {
+#[cfg(GL_VERSION_1_0)]
+pub mod GL_VERSION_1_0 {
     #[nolink]
     extern {
         fn glCullFace(++mode: GLenum);
@@ -159,8 +159,8 @@ pub mod version_1_0 {
     type PFNGLVIEWPORTPROC = *u8;
 }
 
-#[cfg(version_1_1)]
-pub mod version_1_1 {
+#[cfg(GL_VERSION_1_1)]
+pub mod GL_VERSION_1_1 {
     #[nolink]
     extern {
         fn glDrawArrays(++mode: GLenum, ++first: GLint, ++count: GLsizei);
@@ -194,8 +194,8 @@ pub mod version_1_1 {
     type PFNGLISTEXTUREPROC = *u8;
 }
 
-#[cfg(version_1_2)]
-pub mod version_1_2 {
+#[cfg(GL_VERSION_1_2)]
+pub mod GL_VERSION_1_2 {
     #[nolink]
     extern {
         fn glBlendColor(++red: GLfloat, ++green: GLfloat, ++blue: GLfloat, ++alpha: GLfloat);
@@ -213,8 +213,8 @@ pub mod version_1_2 {
     type PFNGLCOPYTEXSUBIMAGE3DPROC = *u8;
 }
 
-#[cfg(version_1_3)]
-pub mod version_1_3 {
+#[cfg(GL_VERSION_1_3)]
+pub mod GL_VERSION_1_3 {
     #[nolink]
     extern {
         fn glActiveTexture(++texture: GLenum);
@@ -238,8 +238,8 @@ pub mod version_1_3 {
     type PFNGLGETCOMPRESSEDTEXIMAGEPROC = *u8;
 }
 
-#[cfg(version_1_4)]
-pub mod version_1_4 {
+#[cfg(GL_VERSION_1_4)]
+pub mod GL_VERSION_1_4 {
     #[nolink]
     extern {
         fn glBlendFuncSeparate(++sfactorRGB: GLenum, ++dfactorRGB: GLenum, ++sfactorAlpha: GLenum, ++dfactorAlpha: GLenum);
@@ -259,8 +259,8 @@ pub mod version_1_4 {
     type PFNGLPOINTPARAMETERIVPROC = *u8;
 }
 
-#[cfg(version_1_5)]
-pub mod version_1_5 {
+#[cfg(GL_VERSION_1_5)]
+pub mod GL_VERSION_1_5 {
     #[nolink]
     extern {
         fn glGenQueries(++n: GLsizei, ++ids: *GLuint);
@@ -304,8 +304,8 @@ pub mod version_1_5 {
     type PFNGLGETBUFFERPOINTERVPROC = *u8;
 }
 
-#[cfg(version_2_0)]
-pub mod version_2_0 {
+#[cfg(GL_VERSION_2_0)]
+pub mod GL_VERSION_2_0 {
     #[nolink]
     extern {
         fn glBlendEquationSeparate(++modeRGB: GLenum, ++modeAlpha: GLenum);
@@ -497,8 +497,8 @@ pub mod version_2_0 {
     type PFNGLVERTEXATTRIBPOINTERPROC = *u8;
 }
 
-#[cfg(version_2_1)]
-pub mod version_2_1 {
+#[cfg(GL_VERSION_2_1)]
+pub mod GL_VERSION_2_1 {
     #[nolink]
     extern {
         fn glUniformMatrix2x3fv(++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLfloat);
@@ -516,8 +516,8 @@ pub mod version_2_1 {
     type PFNGLUNIFORMMATRIX4X3FVPROC = *u8;
 }
 
-#[cfg(version_3_0)]
-pub mod version_3_0 {
+#[cfg(GL_VERSION_3_0)]
+pub mod GL_VERSION_3_0 {
     /* OpenGL 3.0 also reuses entry points from these extensions: */
     /* ARB_framebuffer_object */
     /* ARB_map_buffer_range */
@@ -643,8 +643,8 @@ pub mod version_3_0 {
     type PFNGLGETSTRINGIPROC = *u8;
 }
 
-#[cfg(version_3_1)]
-pub mod version_3_1 {
+#[cfg(GL_VERSION_3_1)]
+pub mod GL_VERSION_3_1 {
     /* OpenGL 3.1 also reuses entry points from these extensions: */
     /* ARB_copy_buffer */
     /* ARB_uniform_buffer_object */
@@ -661,8 +661,8 @@ pub mod version_3_1 {
     type PFNGLPRIMITIVERESTARTINDEXPROC = *u8;
 }
 
-#[cfg(version_3_2)]
-pub mod version_3_2 {
+#[cfg(GL_VERSION_3_2)]
+pub mod GL_VERSION_3_2 {
     /* OpenGL 3.2 also reuses entry points from these extensions: */
     /* ARB_draw_elements_base_vertex */
     /* ARB_provoking_vertex */
@@ -679,8 +679,8 @@ pub mod version_3_2 {
     type PFNGLFRAMEBUFFERTEXTUREPROC = *u8;
 }
 
-#[cfg(version_3_3)]
-pub mod version_3_3 {
+#[cfg(GL_VERSION_3_3)]
+pub mod GL_VERSION_3_3 {
     /* OpenGL 3.3 also reuses entry points from these extensions: */
     /* ARB_blend_func_extended */
     /* ARB_sampler_objects */
@@ -698,8 +698,8 @@ pub mod version_3_3 {
     type PFNGLVERTEXATTRIBDIVISORPROC = *u8;
 }
 
-#[cfg(version_4_0)]
-pub mod version_4_0 {
+#[cfg(GL_VERSION_4_0)]
+pub mod GL_VERSION_4_0 {
     /* OpenGL 4.0 also reuses entry points from these extensions: */
     /* ARB_texture_query_lod (no entry points) */
     /* ARB_draw_indirect */
@@ -727,8 +727,8 @@ pub mod version_4_0 {
     type PFNGLBLENDFUNCSEPARATEIPROC = *u8;
 }
 
-#[cfg(version_4_1)]
-pub mod version_4_1 {
+#[cfg(GL_VERSION_4_1)]
+pub mod GL_VERSION_4_1 {
     /* OpenGL 4.1 reuses entry points from these extensions: */
     /* ARB_ES2_compatibility */
     /* ARB_get_program_binary */
@@ -738,8 +738,8 @@ pub mod version_4_1 {
     /* ARB_viewport_array */
 }
 
-#[cfg(version_4_2)]
-pub mod version_4_2 {
+#[cfg(GL_VERSION_4_2)]
+pub mod GL_VERSION_4_2 {
     /* OpenGL 4.2 reuses entry points from these extensions: */
     /* ARB_base_instance */
     /* ARB_shading_language_420pack (no entry points) */
@@ -754,8 +754,8 @@ pub mod version_4_2 {
     /* ARB_texture_storage */
 }
 
-#[cfg(version_4_3)]
-pub mod version_4_3 {
+#[cfg(GL_VERSION_4_3)]
+pub mod GL_VERSION_4_3 {
     /* OpenGL 4.3 reuses entry points from these extensions: */
     /* ARB_arrays_of_arrays (no entry points, GLSL only) */
     /* ARB_fragment_layer_viewport (no entry points, GLSL only) */
@@ -781,12 +781,12 @@ pub mod version_4_3 {
     /* ARB_vertex_attrib_binding */
 }
 
-#[cfg(arb_depth_buffer_float)]
-pub mod arb_depth_buffer_float {
+#[cfg(GL_ARB_depth_buffer_float)]
+pub mod GL_ARB_depth_buffer_float {
 }
 
-#[cfg(arb_framebuffer_object)]
-pub mod arb_framebuffer_object {
+#[cfg(GL_ARB_framebuffer_object)]
+pub mod GL_ARB_framebuffer_object {
     #[nolink]
     extern {
         fn glIsRenderbuffer(++renderbuffer: GLuint) -> GLboolean;
@@ -832,16 +832,16 @@ pub mod arb_framebuffer_object {
     type PFNGLFRAMEBUFFERTEXTURELAYERPROC = *u8;
 }
 
-#[cfg(arb_framebuffer_srgb)]
-pub mod arb_framebuffer_srgb {
+#[cfg(GL_ARB_framebuffer_srgb)]
+pub mod GL_ARB_framebuffer_srgb {
 }
 
-#[cfg(arb_half_float_vertex)]
-pub mod arb_half_float_vertex {
+#[cfg(GL_ARB_half_float_vertex)]
+pub mod GL_ARB_half_float_vertex {
 }
 
-#[cfg(arb_map_buffer_range)]
-pub mod arb_map_buffer_range {
+#[cfg(GL_ARB_map_buffer_range)]
+pub mod GL_ARB_map_buffer_range {
     #[nolink]
     extern {
         fn glMapBufferRange(++target: GLenum, ++offset: GLintptr, ++length: GLsizeiptr, ++access: GLbitfield) -> *GLvoid;
@@ -851,16 +851,16 @@ pub mod arb_map_buffer_range {
     type PFNGLFLUSHMAPPEDBUFFERRANGEPROC = *u8;
 }
 
-#[cfg(arb_texture_compression_rgtc)]
-pub mod arb_texture_compression_rgtc {
+#[cfg(GL_ARB_texture_compression_rgtc)]
+pub mod GL_ARB_texture_compression_rgtc {
 }
 
-#[cfg(arb_texture_rg)]
-pub mod arb_texture_rg {
+#[cfg(GL_ARB_texture_rg)]
+pub mod GL_ARB_texture_rg {
 }
 
-#[cfg(arb_vertex_array_object)]
-pub mod arb_vertex_array_object {
+#[cfg(GL_ARB_vertex_array_object)]
+pub mod GL_ARB_vertex_array_object {
     #[nolink]
     extern {
         fn glBindVertexArray(++array: GLuint);
@@ -874,8 +874,8 @@ pub mod arb_vertex_array_object {
     type PFNGLISVERTEXARRAYPROC = *u8;
 }
 
-#[cfg(arb_uniform_buffer_object)]
-pub mod arb_uniform_buffer_object {
+#[cfg(GL_ARB_uniform_buffer_object)]
+pub mod GL_ARB_uniform_buffer_object {
     #[nolink]
     extern {
         fn glGetUniformIndices(++program: GLuint, ++uniformCount: GLsizei, ++uniformNames: **GLchar, ++uniformIndices: *GLuint);
@@ -895,8 +895,8 @@ pub mod arb_uniform_buffer_object {
     type PFNGLUNIFORMBLOCKBINDINGPROC = *u8;
 }
 
-#[cfg(arb_copy_buffer)]
-pub mod arb_copy_buffer {
+#[cfg(GL_ARB_copy_buffer)]
+pub mod GL_ARB_copy_buffer {
     #[nolink]
     extern {
         fn glCopyBufferSubData(++readTarget: GLenum, ++writeTarget: GLenum, ++readOffset: GLintptr, ++writeOffset: GLintptr, ++size: GLsizeiptr);
@@ -904,12 +904,12 @@ pub mod arb_copy_buffer {
     type PFNGLCOPYBUFFERSUBDATAPROC = *u8;
 }
 
-#[cfg(arb_depth_clamp)]
-pub mod arb_depth_clamp {
+#[cfg(GL_ARB_depth_clamp)]
+pub mod GL_ARB_depth_clamp {
 }
 
-#[cfg(arb_draw_elements_base_vertex)]
-pub mod arb_draw_elements_base_vertex {
+#[cfg(GL_ARB_draw_elements_base_vertex)]
+pub mod GL_ARB_draw_elements_base_vertex {
     #[nolink]
     extern {
         fn glDrawElementsBaseVertex(++mode: GLenum, ++count: GLsizei, ++gltype: GLenum, ++indices: *GLvoid, ++basevertex: GLint);
@@ -923,12 +923,12 @@ pub mod arb_draw_elements_base_vertex {
     type PFNGLMULTIDRAWELEMENTSBASEVERTEXPROC = *u8;
 }
 
-#[cfg(arb_fragment_coord_conventions)]
-pub mod arb_fragment_coord_conventions {
+#[cfg(GL_ARB_fragment_coord_conventions)]
+pub mod GL_ARB_fragment_coord_conventions {
 }
 
-#[cfg(arb_provoking_vertex)]
-pub mod arb_provoking_vertex {
+#[cfg(GL_ARB_provoking_vertex)]
+pub mod GL_ARB_provoking_vertex {
     #[nolink]
     extern {
         fn glProvokingVertex(++mode: GLenum);
@@ -936,12 +936,12 @@ pub mod arb_provoking_vertex {
     type PFNGLPROVOKINGVERTEXPROC = *u8;
 }
 
-#[cfg(arb_seamless_cube_map)]
-pub mod arb_seamless_cube_map {
+#[cfg(GL_ARB_seamless_cube_map)]
+pub mod GL_ARB_seamless_cube_map {
 }
 
-#[cfg(arb_sync)]
-pub mod arb_sync {
+#[cfg(GL_ARB_sync)]
+pub mod GL_ARB_sync {
     #[nolink]
     extern {
         fn glFenceSync(++condition: GLenum, ++flags: GLbitfield) -> GLsync;
@@ -961,8 +961,8 @@ pub mod arb_sync {
     type PFNGLGETSYNCIVPROC = *u8;
 }
 
-#[cfg(arb_texture_multisample)]
-pub mod arb_texture_multisample {
+#[cfg(GL_ARB_texture_multisample)]
+pub mod GL_ARB_texture_multisample {
     #[nolink]
     extern {
         fn glTexImage2DMultisample(++target: GLenum, ++samples: GLsizei, ++internalformat: GLint, ++width: GLsizei, ++height: GLsizei, ++fixedsamplelocations: GLboolean);
@@ -976,12 +976,12 @@ pub mod arb_texture_multisample {
     type PFNGLSAMPLEMASKIPROC = *u8;
 }
 
-#[cfg(arb_vertex_array_bgra)]
-pub mod arb_vertex_array_bgra {
+#[cfg(GL_ARB_vertex_array_bgra)]
+pub mod GL_ARB_vertex_array_bgra {
 }
 
-#[cfg(arb_draw_buffers_blend)]
-pub mod arb_draw_buffers_blend {
+#[cfg(GL_ARB_draw_buffers_blend)]
+pub mod GL_ARB_draw_buffers_blend {
     #[nolink]
     extern {
         fn glBlendEquationiARB(++buf: GLuint, ++mode: GLenum);
@@ -995,8 +995,8 @@ pub mod arb_draw_buffers_blend {
     type PFNGLBLENDFUNCSEPARATEIARBPROC = *u8;
 }
 
-#[cfg(arb_sample_shading)]
-pub mod arb_sample_shading {
+#[cfg(GL_ARB_sample_shading)]
+pub mod GL_ARB_sample_shading {
     #[nolink]
     extern {
         fn glMinSampleShadingARB(++value: GLfloat);
@@ -1004,20 +1004,20 @@ pub mod arb_sample_shading {
     type PFNGLMINSAMPLESHADINGARBPROC = *u8;
 }
 
-#[cfg(arb_texture_cube_map_array)]
-pub mod arb_texture_cube_map_array {
+#[cfg(GL_ARB_texture_cube_map_array)]
+pub mod GL_ARB_texture_cube_map_array {
 }
 
-#[cfg(arb_texture_gather)]
-pub mod arb_texture_gather {
+#[cfg(GL_ARB_texture_gather)]
+pub mod GL_ARB_texture_gather {
 }
 
-#[cfg(arb_texture_query_lod)]
-pub mod arb_texture_query_lod {
+#[cfg(GL_ARB_texture_query_lod)]
+pub mod GL_ARB_texture_query_lod {
 }
 
-#[cfg(arb_shading_language_include)]
-pub mod arb_shading_language_include {
+#[cfg(GL_ARB_shading_language_include)]
+pub mod GL_ARB_shading_language_include {
     #[nolink]
     extern {
         fn glNamedStringARB(++gltype: GLenum, ++namelen: GLint, ++name: *GLchar, ++stringlen: GLint, ++string: *GLchar);
@@ -1035,12 +1035,12 @@ pub mod arb_shading_language_include {
     type PFNGLGETNAMEDSTRINGIVARBPROC = *u8;
 }
 
-#[cfg(arb_texture_compression_bptc)]
-pub mod arb_texture_compression_bptc {
+#[cfg(GL_ARB_texture_compression_bptc)]
+pub mod GL_ARB_texture_compression_bptc {
 }
 
-#[cfg(arb_blend_func_extended)]
-pub mod arb_blend_func_extended {
+#[cfg(GL_ARB_blend_func_extended)]
+pub mod GL_ARB_blend_func_extended {
     #[nolink]
     extern {
         fn glBindFragDataLocationIndexed(++program: GLuint, ++colorNumber: GLuint, ++index: GLuint, ++name: *GLchar);
@@ -1050,16 +1050,16 @@ pub mod arb_blend_func_extended {
     type PFNGLGETFRAGDATAINDEXPROC = *u8;
 }
 
-#[cfg(arb_explicit_attrib_location)]
-pub mod arb_explicit_attrib_location {
+#[cfg(GL_ARB_explicit_attrib_location)]
+pub mod GL_ARB_explicit_attrib_location {
 }
 
-#[cfg(arb_occlusion_query2)]
-pub mod arb_occlusion_query2 {
+#[cfg(GL_ARB_occlusion_query2)]
+pub mod GL_ARB_occlusion_query2 {
 }
 
-#[cfg(arb_sampler_objects)]
-pub mod arb_sampler_objects {
+#[cfg(GL_ARB_sampler_objects)]
+pub mod GL_ARB_sampler_objects {
     #[nolink]
     extern {
         fn glGenSamplers(++count: GLsizei, ++samplers: *GLuint);
@@ -1093,20 +1093,20 @@ pub mod arb_sampler_objects {
     type PFNGLGETSAMPLERPARAMETERIUIVPROC = *u8;
 }
 
-#[cfg(arb_shader_bit_encoding)]
-pub mod arb_shader_bit_encoding {
+#[cfg(GL_ARB_shader_bit_encoding)]
+pub mod GL_ARB_shader_bit_encoding {
 }
 
-#[cfg(arb_texture_rgb10_a2ui)]
-pub mod arb_texture_rgb10_a2ui {
+#[cfg(GL_ARB_texture_rgb10_a2ui)]
+pub mod GL_ARB_texture_rgb10_a2ui {
 }
 
-#[cfg(arb_texture_swizzle)]
-pub mod arb_texture_swizzle {
+#[cfg(GL_ARB_texture_swizzle)]
+pub mod GL_ARB_texture_swizzle {
 }
 
-#[cfg(arb_timer_query)]
-pub mod arb_timer_query {
+#[cfg(GL_ARB_timer_query)]
+pub mod GL_ARB_timer_query {
     #[nolink]
     extern {
         fn glQueryCounter(++id: GLuint, ++target: GLenum);
@@ -1118,8 +1118,8 @@ pub mod arb_timer_query {
     type PFNGLGETQUERYOBJECTUI64VPROC = *u8;
 }
 
-#[cfg(arb_vertex_type_2_10_10_10_rev)]
-pub mod arb_vertex_type_2_10_10_10_rev {
+#[cfg(GL_ARB_vertex_type_2_10_10_10_rev)]
+pub mod GL_ARB_vertex_type_2_10_10_10_rev {
     #[nolink]
     extern {
         fn glVertexP2ui(++gltype: GLenum, ++value: GLuint);
@@ -1201,8 +1201,8 @@ pub mod arb_vertex_type_2_10_10_10_rev {
     type PFNGLVERTEXATTRIBP4UIVPROC = *u8;
 }
 
-#[cfg(arb_draw_indirect)]
-pub mod arb_draw_indirect {
+#[cfg(GL_ARB_draw_indirect)]
+pub mod GL_ARB_draw_indirect {
     #[nolink]
     extern {
         fn glDrawArraysIndirect(++mode: GLenum, ++indirect: *GLvoid);
@@ -1212,12 +1212,12 @@ pub mod arb_draw_indirect {
     type PFNGLDRAWELEMENTSINDIRECTPROC = *u8;
 }
 
-#[cfg(arb_gpu_shader5)]
-pub mod arb_gpu_shader5 {
+#[cfg(GL_ARB_gpu_shader5)]
+pub mod GL_ARB_gpu_shader5 {
 }
 
-#[cfg(arb_gpu_shader_fp64)]
-pub mod arb_gpu_shader_fp64 {
+#[cfg(GL_ARB_gpu_shader_fp64)]
+pub mod GL_ARB_gpu_shader_fp64 {
     #[nolink]
     extern {
         fn glUniform1d(++location: GLint, ++x: GLdouble);
@@ -1259,8 +1259,8 @@ pub mod arb_gpu_shader_fp64 {
     type PFNGLGETUNIFORMDVPROC = *u8;
 }
 
-#[cfg(arb_shader_subroutine)]
-pub mod arb_shader_subroutine {
+#[cfg(GL_ARB_shader_subroutine)]
+pub mod GL_ARB_shader_subroutine {
     #[nolink]
     extern {
         fn glGetSubroutineUniformLocation(++program: GLuint, ++shadertype: GLenum, ++name: *GLchar) -> GLint;
@@ -1282,8 +1282,8 @@ pub mod arb_shader_subroutine {
     type PFNGLGETPROGRAMSTAGEIVPROC = *u8;
 }
 
-#[cfg(arb_tessellation_shader)]
-pub mod arb_tessellation_shader {
+#[cfg(GL_ARB_tessellation_shader)]
+pub mod GL_ARB_tessellation_shader {
     #[nolink]
     extern {
         fn glPatchParameteri(++pname: GLenum, ++value: GLint);
@@ -1293,12 +1293,12 @@ pub mod arb_tessellation_shader {
     type PFNGLPATCHPARAMETERFVPROC = *u8;
 }
 
-#[cfg(arb_texture_buffer_object_rgb32)]
-pub mod arb_texture_buffer_object_rgb32 {
+#[cfg(GL_ARB_texture_buffer_object_rgb32)]
+pub mod GL_ARB_texture_buffer_object_rgb32 {
 }
 
-#[cfg(arb_transform_feedback2)]
-pub mod arb_transform_feedback2 {
+#[cfg(GL_ARB_transform_feedback2)]
+pub mod GL_ARB_transform_feedback2 {
     #[nolink]
     extern {
         fn glBindTransformFeedback(++target: GLenum, ++id: GLuint);
@@ -1318,8 +1318,8 @@ pub mod arb_transform_feedback2 {
     type PFNGLDRAWTRANSFORMFEEDBACKPROC = *u8;
 }
 
-#[cfg(arb_transform_feedback3)]
-pub mod arb_transform_feedback3 {
+#[cfg(GL_ARB_transform_feedback3)]
+pub mod GL_ARB_transform_feedback3 {
     #[nolink]
     extern {
         fn glDrawTransformFeedbackStream(++mode: GLenum, ++id: GLuint, ++stream: GLuint);
@@ -1333,8 +1333,8 @@ pub mod arb_transform_feedback3 {
     type PFNGLGETQUERYINDEXEDIVPROC = *u8;
 }
 
-#[cfg(arb_es2_compatibility)]
-pub mod arb_es2_compatibility {
+#[cfg(GL_ARB_es2_compatibility)]
+pub mod GL_ARB_es2_compatibility {
     #[nolink]
     extern {
         fn glReleaseShaderCompiler();
@@ -1350,8 +1350,8 @@ pub mod arb_es2_compatibility {
     type PFNGLCLEARDEPTHFPROC = *u8;
 }
 
-#[cfg(arb_get_program_binary)]
-pub mod arb_get_program_binary {
+#[cfg(GL_ARB_get_program_binary)]
+pub mod GL_ARB_get_program_binary {
     #[nolink]
     extern {
         fn glGetProgramBinary(++program: GLuint, ++bufSize: GLsizei, ++length: *GLsizei, ++binaryFormat: *GLenum, ++binary: *GLvoid);
@@ -1363,8 +1363,8 @@ pub mod arb_get_program_binary {
     type PFNGLPROGRAMPARAMETERIPROC = *u8;
 }
 
-#[cfg(arb_separate_shader_objects)]
-pub mod arb_separate_shader_objects {
+#[cfg(GL_ARB_separate_shader_objects)]
+pub mod GL_ARB_separate_shader_objects {
     #[nolink]
     extern {
         fn glUseProgramStages(++pipeline: GLuint, ++stages: GLbitfield, ++program: GLuint);
@@ -1490,8 +1490,8 @@ pub mod arb_separate_shader_objects {
     type PFNGLGETPROGRAMPIPELINEINFOLOGPROC = *u8;
 }
 
-#[cfg(arb_vertex_attrib_64bit)]
-pub mod arb_vertex_attrib_64bit {
+#[cfg(GL_ARB_vertex_attrib_64bit)]
+pub mod GL_ARB_vertex_attrib_64bit {
     #[nolink]
     extern {
         fn glVertexAttribL1d(++index: GLuint, ++x: GLdouble);
@@ -1517,8 +1517,8 @@ pub mod arb_vertex_attrib_64bit {
     type PFNGLGETVERTEXATTRIBLDVPROC = *u8;
 }
 
-#[cfg(arb_viewport_array)]
-pub mod arb_viewport_array {
+#[cfg(GL_ARB_viewport_array)]
+pub mod GL_ARB_viewport_array {
     #[nolink]
     extern {
         fn glViewportArrayv(++first: GLuint, ++count: GLsizei, ++v: *GLfloat);
@@ -1544,8 +1544,8 @@ pub mod arb_viewport_array {
     type PFNGLGETDOUBLEI_VPROC = *u8;
 }
 
-#[cfg(arb_cl_event)]
-pub mod arb_cl_event {
+#[cfg(GL_ARB_cl_event)]
+pub mod GL_ARB_cl_event {
     #[nolink]
     extern {
         fn glCreateSyncFromCLeventARB(++context: *Struct__cl_context, ++event: *Struct__cl_event, ++flags: GLbitfield) -> GLsync;
@@ -1553,8 +1553,8 @@ pub mod arb_cl_event {
     type PFNGLCREATESYNCFROMCLEVENTARBPROC = *u8;
 }
 
-#[cfg(arb_debug_output)]
-pub mod arb_debug_output {
+#[cfg(GL_ARB_debug_output)]
+pub mod GL_ARB_debug_output {
     #[nolink]
     extern {
         fn glDebugMessageControlARB(++source: GLenum, ++gltype: GLenum, ++severity: GLenum, ++count: GLsizei, ++ids: *GLuint, ++enabled: GLboolean);
@@ -1568,8 +1568,8 @@ pub mod arb_debug_output {
     type PFNGLGETDEBUGMESSAGELOGARBPROC = *u8;
 }
 
-#[cfg(arb_robustness)]
-pub mod arb_robustness {
+#[cfg(GL_ARB_robustness)]
+pub mod GL_ARB_robustness {
     #[nolink]
     extern {
         fn glGetGraphicsResetStatusARB() -> GLenum;
@@ -1591,12 +1591,12 @@ pub mod arb_robustness {
     type PFNGLGETNUNIFORMDVARBPROC = *u8;
 }
 
-#[cfg(arb_shader_stencil_export)]
-pub mod arb_shader_stencil_export {
+#[cfg(GL_ARB_shader_stencil_export)]
+pub mod GL_ARB_shader_stencil_export {
 }
 
-#[cfg(arb_base_instance)]
-pub mod arb_base_instance {
+#[cfg(GL_ARB_base_instance)]
+pub mod GL_ARB_base_instance {
     #[nolink]
     extern {
         fn glDrawArraysInstancedBaseInstance(++mode: GLenum, ++first: GLint, ++count: GLsizei, ++instancecount: GLsizei, ++baseinstance: GLuint);
@@ -1608,12 +1608,12 @@ pub mod arb_base_instance {
     type PFNGLDRAWELEMENTSINSTANCEDBASEVERTEXBASEINSTANCEPROC = *u8;
 }
 
-#[cfg(arb_shading_language_420pack)]
-pub mod arb_shading_language_420pack {
+#[cfg(GL_ARB_shading_language_420pack)]
+pub mod GL_ARB_shading_language_420pack {
 }
 
-#[cfg(arb_transform_feedback_instanced)]
-pub mod arb_transform_feedback_instanced {
+#[cfg(GL_ARB_transform_feedback_instanced)]
+pub mod GL_ARB_transform_feedback_instanced {
     #[nolink]
     extern {
         fn glDrawTransformFeedbackInstanced(++mode: GLenum, ++id: GLuint, ++instancecount: GLsizei);
@@ -1623,16 +1623,16 @@ pub mod arb_transform_feedback_instanced {
     type PFNGLDRAWTRANSFORMFEEDBACKSTREAMINSTANCEDPROC = *u8;
 }
 
-#[cfg(arb_compressed_texture_pixel_storage)]
-pub mod arb_compressed_texture_pixel_storage {
+#[cfg(GL_ARB_compressed_texture_pixel_storage)]
+pub mod GL_ARB_compressed_texture_pixel_storage {
 }
 
-#[cfg(arb_conservative_depth)]
-pub mod arb_conservative_depth {
+#[cfg(GL_ARB_conservative_depth)]
+pub mod GL_ARB_conservative_depth {
 }
 
-#[cfg(arb_internalformat_query)]
-pub mod arb_internalformat_query {
+#[cfg(GL_ARB_internalformat_query)]
+pub mod GL_ARB_internalformat_query {
     #[nolink]
     extern {
         fn glGetInternalformativ(++target: GLenum, ++internalformat: GLenum, ++pname: GLenum, ++bufSize: GLsizei, ++params: *GLint);
@@ -1640,12 +1640,12 @@ pub mod arb_internalformat_query {
     type PFNGLGETINTERNALFORMATIVPROC = *u8;
 }
 
-#[cfg(arb_map_buffer_alignment)]
-pub mod arb_map_buffer_alignment {
+#[cfg(GL_ARB_map_buffer_alignment)]
+pub mod GL_ARB_map_buffer_alignment {
 }
 
-#[cfg(arb_shader_atomic_counters)]
-pub mod arb_shader_atomic_counters {
+#[cfg(GL_ARB_shader_atomic_counters)]
+pub mod GL_ARB_shader_atomic_counters {
     #[nolink]
     extern {
         fn glGetActiveAtomicCounterBufferiv(++program: GLuint, ++bufferIndex: GLuint, ++pname: GLenum, ++params: *GLint);
@@ -1653,8 +1653,8 @@ pub mod arb_shader_atomic_counters {
     type PFNGLGETACTIVEATOMICCOUNTERBUFFERIVPROC = *u8;
 }
 
-#[cfg(arb_shader_image_load_store)]
-pub mod arb_shader_image_load_store {
+#[cfg(GL_ARB_shader_image_load_store)]
+pub mod GL_ARB_shader_image_load_store {
     #[nolink]
     extern {
         fn glBindImageTexture(++unit: GLuint, ++texture: GLuint, ++level: GLint, ++layered: GLboolean, ++layer: GLint, ++access: GLenum, ++format: GLenum);
@@ -1664,12 +1664,12 @@ pub mod arb_shader_image_load_store {
     type PFNGLMEMORYBARRIERPROC = *u8;
 }
 
-#[cfg(arb_shading_language_packing)]
-pub mod arb_shading_language_packing {
+#[cfg(GL_ARB_shading_language_packing)]
+pub mod GL_ARB_shading_language_packing {
 }
 
-#[cfg(arb_texture_storage)]
-pub mod arb_texture_storage {
+#[cfg(GL_ARB_texture_storage)]
+pub mod GL_ARB_texture_storage {
     #[nolink]
     extern {
         fn glTexStorage1D(++target: GLenum, ++levels: GLsizei, ++internalformat: GLenum, ++width: GLsizei);
@@ -1687,12 +1687,12 @@ pub mod arb_texture_storage {
     type PFNGLTEXTURESTORAGE3DEXTPROC = *u8;
 }
 
-#[cfg(khr_texture_compression_astc_ldr)]
-pub mod khr_texture_compression_astc_ldr {
+#[cfg(GL_KHR_texture_compression_astc_ldr)]
+pub mod GL_KHR_texture_compression_astc_ldr {
 }
 
-#[cfg(khr_debug)]
-pub mod khr_debug {
+#[cfg(GL_KHR_debug)]
+pub mod GL_KHR_debug {
     #[nolink]
     extern {
         fn glDebugMessageControl(++source: GLenum, ++gltype: GLenum, ++severity: GLenum, ++count: GLsizei, ++ids: *GLuint, ++enabled: GLboolean);
@@ -1718,12 +1718,12 @@ pub mod khr_debug {
     type PFNGLGETOBJECTPTRLABELPROC = *u8;
 }
 
-#[cfg(arb_arrays_of_arrays)]
-pub mod arb_arrays_of_arrays {
+#[cfg(GL_ARB_arrays_of_arrays)]
+pub mod GL_ARB_arrays_of_arrays {
 }
 
-#[cfg(arb_clear_buffer_object)]
-pub mod arb_clear_buffer_object {
+#[cfg(GL_ARB_clear_buffer_object)]
+pub mod GL_ARB_clear_buffer_object {
     #[nolink]
     extern {
         fn glClearBufferData(++target: GLenum, ++internalformat: GLenum, ++format: GLenum, ++gltype: GLenum, ++data: *libc::c_void);
@@ -1737,8 +1737,8 @@ pub mod arb_clear_buffer_object {
     type PFNGLCLEARNAMEDBUFFERSUBDATAEXTPROC = *u8;
 }
 
-#[cfg(arb_compute_shader)]
-pub mod arb_compute_shader {
+#[cfg(GL_ARB_compute_shader)]
+pub mod GL_ARB_compute_shader {
     #[nolink]
     extern {
         fn glDispatchCompute(++num_groups_x: GLuint, ++num_groups_y: GLuint, ++num_groups_z: GLuint);
@@ -1748,8 +1748,8 @@ pub mod arb_compute_shader {
     type PFNGLDISPATCHCOMPUTEINDIRECTPROC = *u8;
 }
 
-#[cfg(arb_copy_image)]
-pub mod arb_copy_image {
+#[cfg(GL_ARB_copy_image)]
+pub mod GL_ARB_copy_image {
     #[nolink]
     extern {
         fn glCopyImageSubData(++srcName: GLuint, ++srcTarget: GLenum, ++srcLevel: GLint, ++srcX: GLint, ++srcY: GLint, ++srcZ: GLint, ++dstName: GLuint, ++dstTarget: GLenum, ++dstLevel: GLint, ++dstX: GLint, ++dstY: GLint, ++dstZ: GLint, ++srcWidth: GLsizei, ++srcHeight: GLsizei, ++srcDepth: GLsizei);
@@ -1757,8 +1757,8 @@ pub mod arb_copy_image {
     type PFNGLCOPYIMAGESUBDATAPROC = *u8;
 }
 
-#[cfg(arb_texture_view)]
-pub mod arb_texture_view {
+#[cfg(GL_ARB_texture_view)]
+pub mod GL_ARB_texture_view {
     #[nolink]
     extern {
         fn glTextureView(++texture: GLuint, ++target: GLenum, ++origtexture: GLuint, ++internalformat: GLenum, ++minlevel: GLuint, ++numlevels: GLuint, ++minlayer: GLuint, ++numlayers: GLuint);
@@ -1766,8 +1766,8 @@ pub mod arb_texture_view {
     type PFNGLTEXTUREVIEWPROC = *u8;
 }
 
-#[cfg(arb_vertex_attrib_binding)]
-pub mod arb_vertex_attrib_binding {
+#[cfg(GL_ARB_vertex_attrib_binding)]
+pub mod GL_ARB_vertex_attrib_binding {
     #[nolink]
     extern {
         fn glBindVertexBuffer(++bindingindex: GLuint, ++buffer: GLuint, ++offset: GLintptr, ++stride: GLsizei);
@@ -1797,24 +1797,24 @@ pub mod arb_vertex_attrib_binding {
     type PFNGLVERTEXARRAYVERTEXBINDINGDIVISOREXTPROC = *u8;
 }
 
-#[cfg(arb_robustness_isolation)]
-pub mod arb_robustness_isolation {
+#[cfg(GL_ARB_robustness_isolation)]
+pub mod GL_ARB_robustness_isolation {
 }
 
-#[cfg(arb_es3_compatibility)]
-pub mod arb_es3_compatibility {
+#[cfg(GL_ARB_es3_compatibility)]
+pub mod GL_ARB_es3_compatibility {
 }
 
-#[cfg(arb_explicit_uniform_location)]
-pub mod arb_explicit_uniform_location {
+#[cfg(GL_ARB_explicit_uniform_location)]
+pub mod GL_ARB_explicit_uniform_location {
 }
 
-#[cfg(arb_fragment_layer_viewport)]
-pub mod arb_fragment_layer_viewport {
+#[cfg(GL_ARB_fragment_layer_viewport)]
+pub mod GL_ARB_fragment_layer_viewport {
 }
 
-#[cfg(arb_framebuffer_no_attachments)]
-pub mod arb_framebuffer_no_attachments {
+#[cfg(GL_ARB_framebuffer_no_attachments)]
+pub mod GL_ARB_framebuffer_no_attachments {
     #[nolink]
     extern {
         fn glFramebufferParameteri(++target: GLenum, ++pname: GLenum, ++param: GLint);
@@ -1828,8 +1828,8 @@ pub mod arb_framebuffer_no_attachments {
     type PFNGLGETNAMEDFRAMEBUFFERPARAMETERIVEXTPROC = *u8;
 }
 
-#[cfg(arb_internalformat_query2)]
-pub mod arb_internalformat_query2 {
+#[cfg(GL_ARB_internalformat_query2)]
+pub mod GL_ARB_internalformat_query2 {
     #[nolink]
     extern {
         fn glGetInternalformati64v(++target: GLenum, ++internalformat: GLenum, ++pname: GLenum, ++bufSize: GLsizei, ++params: *GLint64);
@@ -1837,8 +1837,8 @@ pub mod arb_internalformat_query2 {
     type PFNGLGETINTERNALFORMATI64VPROC = *u8;
 }
 
-#[cfg(arb_invalidate_subdata)]
-pub mod arb_invalidate_subdata {
+#[cfg(GL_ARB_invalidate_subdata)]
+pub mod GL_ARB_invalidate_subdata {
     #[nolink]
     extern {
         fn glInvalidateTexSubImage(++texture: GLuint, ++level: GLint, ++xoffset: GLint, ++yoffset: GLint, ++zoffset: GLint, ++width: GLsizei, ++height: GLsizei, ++depth: GLsizei);
@@ -1856,8 +1856,8 @@ pub mod arb_invalidate_subdata {
     type PFNGLINVALIDATESUBFRAMEBUFFERPROC = *u8;
 }
 
-#[cfg(arb_multi_draw_indirect)]
-pub mod arb_multi_draw_indirect {
+#[cfg(GL_ARB_multi_draw_indirect)]
+pub mod GL_ARB_multi_draw_indirect {
     #[nolink]
     extern {
         fn glMultiDrawArraysIndirect(++mode: GLenum, ++indirect: *libc::c_void, ++drawcount: GLsizei, ++stride: GLsizei);
@@ -1867,8 +1867,8 @@ pub mod arb_multi_draw_indirect {
     type PFNGLMULTIDRAWELEMENTSINDIRECTPROC = *u8;
 }
 
-#[cfg(arb_program_interface_query)]
-pub mod arb_program_interface_query {
+#[cfg(GL_ARB_program_interface_query)]
+pub mod GL_ARB_program_interface_query {
     #[nolink]
     extern {
         fn glGetProgramInterfaceiv(++program: GLuint, ++programInterface: GLenum, ++pname: GLenum, ++params: *GLint);
@@ -1886,16 +1886,16 @@ pub mod arb_program_interface_query {
     type PFNGLGETPROGRAMRESOURCELOCATIONINDEXPROC = *u8;
 }
 
-#[cfg(arb_robust_buffer_access_behavior)]
-pub mod arb_robust_buffer_access_behavior {
+#[cfg(GL_ARB_robust_buffer_access_behavior)]
+pub mod GL_ARB_robust_buffer_access_behavior {
 }
 
-#[cfg(arb_shader_image_size)]
-pub mod arb_shader_image_size {
+#[cfg(GL_ARB_shader_image_size)]
+pub mod GL_ARB_shader_image_size {
 }
 
-#[cfg(arb_shader_storage_buffer_object)]
-pub mod arb_shader_storage_buffer_object {
+#[cfg(GL_ARB_shader_storage_buffer_object)]
+pub mod GL_ARB_shader_storage_buffer_object {
     #[nolink]
     extern {
         fn glShaderStorageBlockBinding(++program: GLuint, ++storageBlockIndex: GLuint, ++storageBlockBinding: GLuint);
@@ -1903,12 +1903,12 @@ pub mod arb_shader_storage_buffer_object {
     type PFNGLSHADERSTORAGEBLOCKBINDINGPROC = *u8;
 }
 
-#[cfg(arb_stencil_texturing)]
-pub mod arb_stencil_texturing {
+#[cfg(GL_ARB_stencil_texturing)]
+pub mod GL_ARB_stencil_texturing {
 }
 
-#[cfg(arb_texture_buffer_range)]
-pub mod arb_texture_buffer_range {
+#[cfg(GL_ARB_texture_buffer_range)]
+pub mod GL_ARB_texture_buffer_range {
     #[nolink]
     extern {
         fn glTexBufferRange(++target: GLenum, ++internalformat: GLenum, ++buffer: GLuint, ++offset: GLintptr, ++size: GLsizeiptr);
@@ -1918,12 +1918,12 @@ pub mod arb_texture_buffer_range {
     type PFNGLTEXTUREBUFFERRANGEEXTPROC = *u8;
 }
 
-#[cfg(arb_texture_query_levels)]
-pub mod arb_texture_query_levels {
+#[cfg(GL_ARB_texture_query_levels)]
+pub mod GL_ARB_texture_query_levels {
 }
 
-#[cfg(arb_texture_storage_multisample)]
-pub mod arb_texture_storage_multisample {
+#[cfg(GL_ARB_texture_storage_multisample)]
+pub mod GL_ARB_texture_storage_multisample {
     #[nolink]
     extern {
         fn glTexStorage2DMultisample(++target: GLenum, ++samples: GLsizei, ++internalformat: GLenum, ++width: GLsizei, ++height: GLsizei, ++fixedsamplelocations: GLboolean);

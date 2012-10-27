@@ -46,8 +46,8 @@
  * "OpenGL", category "Registry".
  */
 
-#[cfg(version_1_1)]
-pub mod version_1_1 {
+#[cfg(GL_VERSION_1_1)]
+pub mod GL_VERSION_1_1 {
     /* AttribMask */
     pub const GL_DEPTH_BUFFER_BIT               : GLenum = 0x00000100;
     pub const GL_STENCIL_BUFFER_BIT             : GLenum = 0x00000400;
@@ -280,8 +280,8 @@ pub mod version_1_1 {
     pub const GL_RGBA16                         : GLenum = 0x805B;
 }
 
-#[cfg(version_1_2)]
-pub mod version_1_2 {
+#[cfg(GL_VERSION_1_2)]
+pub mod GL_VERSION_1_2 {
     pub const GL_UNSIGNED_BYTE_3_3_2            : GLenum = 0x8032;
     pub const GL_UNSIGNED_SHORT_4_4_4_4         : GLenum = 0x8033;
     pub const GL_UNSIGNED_SHORT_5_5_5_1         : GLenum = 0x8034;
@@ -320,8 +320,8 @@ pub mod version_1_2 {
     pub const GL_ALIASED_LINE_WIDTH_RANGE       : GLenum = 0x846E;
 }
 
-#[cfg(arb_imaging)]
-pub mod arb_imaging {
+#[cfg(GL_ARB_imaging)]
+pub mod GL_ARB_imaging {
     pub const GL_CONSTANT_COLOR                 : GLenum = 0x8001;
     pub const GL_ONE_MINUS_CONSTANT_COLOR       : GLenum = 0x8002;
     pub const GL_CONSTANT_ALPHA                 : GLenum = 0x8003;
@@ -335,8 +335,8 @@ pub mod arb_imaging {
     pub const GL_FUNC_REVERSE_SUBTRACT          : GLenum = 0x800B;
 }
 
-#[cfg(version_1_3)]
-pub mod version_1_3 {
+#[cfg(GL_VERSION_1_3)]
+pub mod GL_VERSION_1_3 {
     pub const GL_TEXTURE0                       : GLenum = 0x84C0;
     pub const GL_TEXTURE1                       : GLenum = 0x84C1;
     pub const GL_TEXTURE2                       : GLenum = 0x84C2;
@@ -398,8 +398,8 @@ pub mod version_1_3 {
     pub const GL_CLAMP_TO_BORDER                : GLenum = 0x812D;
 }
 
-#[cfg(version_1_4)]
-pub mod version_1_4 {
+#[cfg(GL_VERSION_1_4)]
+pub mod GL_VERSION_1_4 {
     pub const GL_BLEND_DST_RGB                  : GLenum = 0x80C8;
     pub const GL_BLEND_SRC_RGB                  : GLenum = 0x80C9;
     pub const GL_BLEND_DST_ALPHA                : GLenum = 0x80CA;
@@ -418,8 +418,8 @@ pub mod version_1_4 {
     pub const GL_TEXTURE_COMPARE_FUNC           : GLenum = 0x884D;
 }
 
-#[cfg(version_1_5)]
-pub mod version_1_5 {
+#[cfg(GL_VERSION_1_5)]
+pub mod GL_VERSION_1_5 {
     pub const GL_BUFFER_SIZE                    : GLenum = 0x8764;
     pub const GL_BUFFER_USAGE                   : GLenum = 0x8765;
     pub const GL_QUERY_COUNTER_BITS             : GLenum = 0x8864;
@@ -450,8 +450,8 @@ pub mod version_1_5 {
     pub const GL_SRC1_ALPHA                     : GLenum = 0x8589;
 }
 
-#[cfg(version_2_0)]
-pub mod version_2_0 {
+#[cfg(GL_VERSION_2_0)]
+pub mod GL_VERSION_2_0 {
     pub const GL_BLEND_EQUATION_RGB             : GLenum = 0x8009;
     pub const GL_VERTEX_ATTRIB_ARRAY_ENABLED    : GLenum = 0x8622;
     pub const GL_VERTEX_ATTRIB_ARRAY_SIZE       : GLenum = 0x8623;
@@ -534,8 +534,8 @@ pub mod version_2_0 {
     pub const GL_STENCIL_BACK_WRITEMASK         : GLenum = 0x8CA5;
 }
 
-#[cfg(version_2_1)]
-pub mod version_2_1 {
+#[cfg(GL_VERSION_2_1)]
+pub mod GL_VERSION_2_1 {
     pub const GL_PIXEL_PACK_BUFFER              : GLenum = 0x88EB;
     pub const GL_PIXEL_UNPACK_BUFFER            : GLenum = 0x88EC;
     pub const GL_PIXEL_PACK_BUFFER_BINDING      : GLenum = 0x88ED;
@@ -554,8 +554,8 @@ pub mod version_2_1 {
     pub const GL_COMPRESSED_SRGB_ALPHA          : GLenum = 0x8C49;
 }
 
-#[cfg(version_3_0)]
-pub mod version_3_0 {
+#[cfg(GL_VERSION_3_0)]
+pub mod GL_VERSION_3_0 {
     pub const GL_COMPARE_REF_TO_TEXTURE         : GLenum = 0x884E;
     pub const GL_CLIP_DISTANCE0                 : GLenum = 0x3000;
     pub const GL_CLIP_DISTANCE1                 : GLenum = 0x3001;
@@ -783,8 +783,8 @@ pub mod version_3_0 {
     /* reuse GL_VERTEX_ARRAY_BINDING */
 }
 
-#[cfg(version_3_1)]
-pub mod version_3_1 {
+#[cfg(GL_VERSION_3_1)]
+pub mod GL_VERSION_3_1 {
     pub const GL_SAMPLER_2D_RECT                : GLenum = 0x8B63;
     pub const GL_SAMPLER_2D_RECT_SHADOW         : GLenum = 0x8B64;
     pub const GL_SAMPLER_BUFFER                 : GLenum = 0x8DC2;
@@ -852,8 +852,8 @@ pub mod version_3_1 {
     /* reuse GL_INVALID_INDEX */
 }
 
-#[cfg(version_3_2)]
-pub mod version_3_2 {
+#[cfg(GL_VERSION_3_2)]
+pub mod GL_VERSION_3_2 {
     pub const GL_CONTEXT_CORE_PROFILE_BIT       : GLenum = 0x00000001;
     pub const GL_CONTEXT_COMPATIBILITY_PROFILE_BIT : GLenum = 0x00000002;
     pub const GL_LINES_ADJACENCY                : GLenum = 0x000A;
@@ -931,8 +931,8 @@ pub mod version_3_2 {
 /* Don't need to reuse tokens from ARB_vertex_array_bgra since they're already in 1.2 core */
 }
 
-#[cfg(version_3_3)]
-pub mod version_3_3 {
+#[cfg(GL_VERSION_3_3)]
+pub mod GL_VERSION_3_3 {
     pub const GL_VERTEX_ATTRIB_ARRAY_DIVISOR    : GLenum = 0x88FE;
     /* Reuse tokens from ARB_blend_func_extended */
     /* reuse GL_SRC1_COLOR */
@@ -960,8 +960,8 @@ pub mod version_3_3 {
     /* reuse GL_INT_2_10_10_10_REV */
 }
 
-#[cfg(version_4_0)]
-pub mod version_4_0 {
+#[cfg(GL_VERSION_4_0)]
+pub mod GL_VERSION_4_0 {
     pub const GL_SAMPLE_SHADING                 : GLenum = 0x8C36;
     pub const GL_MIN_SAMPLE_SHADING_VALUE       : GLenum = 0x8C37;
     pub const GL_MIN_PROGRAM_TEXTURE_GATHER_OFFSET : GLenum = 0x8E5E;
@@ -1052,8 +1052,8 @@ pub mod version_4_0 {
     /* reuse GL_MAX_VERTEX_STREAMS */
 }
 
-#[cfg(version_4_1)]
-pub mod version_4_1 {
+#[cfg(GL_VERSION_4_1)]
+pub mod GL_VERSION_4_1 {
     /* Reuse tokens from ARB_ES2_compatibility */
     /* reuse GL_FIXED */
     /* reuse GL_IMPLEMENTATION_COLOR_READ_TYPE */
@@ -1097,8 +1097,8 @@ pub mod version_4_1 {
     /* reuse GL_UNDEFINED_VERTEX */
 }
 
-#[cfg(version_4_2)]
-pub mod version_4_2 {
+#[cfg(GL_VERSION_4_2)]
+pub mod GL_VERSION_4_2 {
     /* Reuse tokens from ARB_base_instance (none) */
     /* Reuse tokens from ARB_shading_language_420pack (none) */
     /* Reuse tokens from ARB_transform_feedback_instanced (none) */
@@ -1216,8 +1216,8 @@ pub mod version_4_2 {
     /* reuse GL_TEXTURE_IMMUTABLE_FORMAT */
 }
 
-#[cfg(version_4_3)]
-pub mod version_4_3 {
+#[cfg(GL_VERSION_4_3)]
+pub mod GL_VERSION_4_3 {
     pub const GL_NUM_SHADING_LANGUAGE_VERSIONS  : GLenum = 0x82E9;
     pub const GL_VERTEX_ATTRIB_ARRAY_LONG       : GLenum = 0x874E;
     /* Reuse tokens from ARB_arrays_of_arrays (none, GLSL only) */
@@ -1501,15 +1501,15 @@ pub mod version_4_3 {
     /* reuse GL_MAX_VERTEX_ATTRIB_BINDINGS */
 }
 
-#[cfg(arb_depth_buffer_float)]
-pub mod arb_depth_buffer_float {
+#[cfg(GL_ARB_depth_buffer_float)]
+pub mod GL_ARB_depth_buffer_float {
     pub const GL_DEPTH_COMPONENT32F             : GLenum = 0x8CAC;
     pub const GL_DEPTH32F_STENCIL8              : GLenum = 0x8CAD;
     pub const GL_FLOAT_32_UNSIGNED_INT_24_8_REV : GLenum = 0x8DAD;
 }
 
-#[cfg(arb_framebuffer_object)]
-pub mod arb_framebuffer_object {
+#[cfg(GL_ARB_framebuffer_object)]
+pub mod GL_ARB_framebuffer_object {
     pub const GL_INVALID_FRAMEBUFFER_OPERATION  : GLenum = 0x0506;
     pub const GL_FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING : GLenum = 0x8210;
     pub const GL_FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE : GLenum = 0x8211;
@@ -1589,18 +1589,18 @@ pub mod arb_framebuffer_object {
     pub const GL_MAX_SAMPLES                    : GLenum = 0x8D57;
 }
 
-#[cfg(arb_framebuffer_srgb)]
-pub mod arb_framebuffer_srgb {
+#[cfg(GL_ARB_framebuffer_srgb)]
+pub mod GL_ARB_framebuffer_srgb {
     pub const GL_FRAMEBUFFER_SRGB               : GLenum = 0x8DB9;
 }
 
-#[cfg(arb_half_float_vertex)]
-pub mod arb_half_float_vertex {
+#[cfg(GL_ARB_half_float_vertex)]
+pub mod GL_ARB_half_float_vertex {
     pub const GL_HALF_FLOAT                     : GLenum = 0x140B;
 }
 
-#[cfg(arb_map_buffer_range)]
-pub mod arb_map_buffer_range {
+#[cfg(GL_ARB_map_buffer_range)]
+pub mod GL_ARB_map_buffer_range {
     pub const GL_MAP_READ_BIT                   : GLenum = 0x0001;
     pub const GL_MAP_WRITE_BIT                  : GLenum = 0x0002;
     pub const GL_MAP_INVALIDATE_RANGE_BIT       : GLenum = 0x0004;
@@ -1609,16 +1609,16 @@ pub mod arb_map_buffer_range {
     pub const GL_MAP_UNSYNCHRONIZED_BIT         : GLenum = 0x0020;
 }
 
-#[cfg(arb_texture_compression_rgtc)]
-pub mod arb_texture_compression_rgtc {
+#[cfg(GL_ARB_texture_compression_rgtc)]
+pub mod GL_ARB_texture_compression_rgtc {
     pub const GL_COMPRESSED_RED_RGTC1           : GLenum = 0x8DBB;
     pub const GL_COMPRESSED_SIGNED_RED_RGTC1    : GLenum = 0x8DBC;
     pub const GL_COMPRESSED_RG_RGTC2            : GLenum = 0x8DBD;
     pub const GL_COMPRESSED_SIGNED_RG_RGTC2     : GLenum = 0x8DBE;
 }
 
-#[cfg(arb_texture_rg)]
-pub mod arb_texture_rg {
+#[cfg(GL_ARB_texture_rg)]
+pub mod GL_ARB_texture_rg {
     pub const GL_RG                             : GLenum = 0x8227;
     pub const GL_RG_INTEGER                     : GLenum = 0x8228;
     pub const GL_R8                             : GLenum = 0x8229;
@@ -1643,13 +1643,13 @@ pub mod arb_texture_rg {
     pub const GL_RG32UI                         : GLenum = 0x823C;
 }
 
-#[cfg(arb_vertex_array_object)]
-pub mod arb_vertex_array_object {
+#[cfg(GL_ARB_vertex_array_object)]
+pub mod GL_ARB_vertex_array_object {
     pub const GL_VERTEX_ARRAY_BINDING           : GLenum = 0x85B5;
 }
 
-#[cfg(arb_uniform_buffer_object)]
-pub mod arb_uniform_buffer_object {
+#[cfg(GL_ARB_uniform_buffer_object)]
+pub mod GL_ARB_uniform_buffer_object {
     pub const GL_UNIFORM_BUFFER                 : GLenum = 0x8A11;
     pub const GL_UNIFORM_BUFFER_BINDING         : GLenum = 0x8A28;
     pub const GL_UNIFORM_BUFFER_START           : GLenum = 0x8A29;
@@ -1685,42 +1685,42 @@ pub mod arb_uniform_buffer_object {
     pub const GL_INVALID_INDEX                  : u32 = 0xFFFFFFFFu32;
 }
 
-#[cfg(arb_copy_buffer)]
-pub mod arb_copy_buffer {
+#[cfg(GL_ARB_copy_buffer)]
+pub mod GL_ARB_copy_buffer {
     pub const GL_COPY_READ_BUFFER_BINDING       : GLenum = 0x8F36;
     pub const GL_COPY_READ_BUFFER               : GLenum = GL_COPY_READ_BUFFER_BINDING;
     pub const GL_COPY_WRITE_BUFFER_BINDING      : GLenum = 0x8F37;
     pub const GL_COPY_WRITE_BUFFER              : GLenum = GL_COPY_WRITE_BUFFER_BINDING;
 }
 
-#[cfg(arb_depth_clamp)]
-pub mod arb_depth_clamp {
+#[cfg(GL_ARB_depth_clamp)]
+pub mod GL_ARB_depth_clamp {
     pub const GL_DEPTH_CLAMP                    : GLenum = 0x864F;
 }
 
-#[cfg(arb_draw_elements_base_vertex)]
-pub mod arb_draw_elements_base_vertex {
+#[cfg(GL_ARB_draw_elements_base_vertex)]
+pub mod GL_ARB_draw_elements_base_vertex {
 }
 
-#[cfg(arb_fragment_coord_conventions)]
-pub mod arb_fragment_coord_conventions {
+#[cfg(GL_ARB_fragment_coord_conventions)]
+pub mod GL_ARB_fragment_coord_conventions {
 }
 
-#[cfg(arb_provoking_vertex)]
-pub mod arb_provoking_vertex {
+#[cfg(GL_ARB_provoking_vertex)]
+pub mod GL_ARB_provoking_vertex {
     pub const GL_QUADS_FOLLOW_PROVOKING_VERTEX_CONVENTION : GLenum = 0x8E4C;
     pub const GL_FIRST_VERTEX_CONVENTION        : GLenum = 0x8E4D;
     pub const GL_LAST_VERTEX_CONVENTION         : GLenum = 0x8E4E;
     pub const GL_PROVOKING_VERTEX               : GLenum = 0x8E4F;
 }
 
-#[cfg(arb_seamless_cube_map)]
-pub mod arb_seamless_cube_map {
+#[cfg(GL_ARB_seamless_cube_map)]
+pub mod GL_ARB_seamless_cube_map {
     pub const GL_TEXTURE_CUBE_MAP_SEAMLESS      : GLenum = 0x884F;
 }
 
-#[cfg(arb_sync)]
-pub mod arb_sync {
+#[cfg(GL_ARB_sync)]
+pub mod GL_ARB_sync {
     pub const GL_MAX_SERVER_WAIT_TIMEOUT        : GLenum = 0x9111;
     pub const GL_OBJECT_TYPE                    : GLenum = 0x9112;
     pub const GL_SYNC_CONDITION                 : GLenum = 0x9113;
@@ -1738,8 +1738,8 @@ pub mod arb_sync {
     pub const GL_TIMEOUT_IGNORED                : u64 = 0xFFFFFFFFFFFFFFFFu64;
 }
 
-#[cfg(arb_texture_multisample)]
-pub mod arb_texture_multisample {
+#[cfg(GL_ARB_texture_multisample)]
+pub mod GL_ARB_texture_multisample {
     pub const GL_SAMPLE_POSITION                : GLenum = 0x8E50;
     pub const GL_SAMPLE_MASK                    : GLenum = 0x8E51;
     pub const GL_SAMPLE_MASK_VALUE              : GLenum = 0x8E52;
@@ -1763,23 +1763,23 @@ pub mod arb_texture_multisample {
     pub const GL_MAX_INTEGER_SAMPLES            : GLenum = 0x9110;
 }
 
-#[cfg(arb_vertex_array_bgra)]
-pub mod arb_vertex_array_bgra {
+#[cfg(GL_ARB_vertex_array_bgra)]
+pub mod GL_ARB_vertex_array_bgra {
     /* reuse GL_BGRA */
 }
 
-#[cfg(arb_draw_buffers_blend)]
-pub mod arb_draw_buffers_blend {
+#[cfg(GL_ARB_draw_buffers_blend)]
+pub mod GL_ARB_draw_buffers_blend {
 }
 
-#[cfg(arb_sample_shading)]
-pub mod arb_sample_shading {
+#[cfg(GL_ARB_sample_shading)]
+pub mod GL_ARB_sample_shading {
     pub const GL_SAMPLE_SHADING_ARB             : GLenum = 0x8C36;
     pub const GL_MIN_SAMPLE_SHADING_VALUE_ARB   : GLenum = 0x8C37;
 }
 
-#[cfg(arb_texture_cube_map_array)]
-pub mod arb_texture_cube_map_array {
+#[cfg(GL_ARB_texture_cube_map_array)]
+pub mod GL_ARB_texture_cube_map_array {
     pub const GL_TEXTURE_CUBE_MAP_ARRAY_ARB     : GLenum = 0x9009;
     pub const GL_TEXTURE_BINDING_CUBE_MAP_ARRAY_ARB : GLenum = 0x900A;
     pub const GL_PROXY_TEXTURE_CUBE_MAP_ARRAY_ARB : GLenum = 0x900B;
@@ -1789,34 +1789,34 @@ pub mod arb_texture_cube_map_array {
     pub const GL_UNSIGNED_INT_SAMPLER_CUBE_MAP_ARRAY_ARB : GLenum = 0x900F;
 }
 
-#[cfg(arb_texture_gather)]
-pub mod arb_texture_gather {
+#[cfg(GL_ARB_texture_gather)]
+pub mod GL_ARB_texture_gather {
     pub const GL_MIN_PROGRAM_TEXTURE_GATHER_OFFSET_ARB : GLenum = 0x8E5E;
     pub const GL_MAX_PROGRAM_TEXTURE_GATHER_OFFSET_ARB : GLenum = 0x8E5F;
     pub const GL_MAX_PROGRAM_TEXTURE_GATHER_COMPONENTS_ARB : GLenum = 0x8F9F;
 }
 
-#[cfg(arb_texture_query_lod)]
-pub mod arb_texture_query_lod {
+#[cfg(GL_ARB_texture_query_lod)]
+pub mod GL_ARB_texture_query_lod {
 }
 
-#[cfg(arb_shading_language_include)]
-pub mod arb_shading_language_include {
+#[cfg(GL_ARB_shading_language_include)]
+pub mod GL_ARB_shading_language_include {
     pub const GL_SHADER_INCLUDE_ARB             : GLenum = 0x8DAE;
     pub const GL_NAMED_STRING_LENGTH_ARB        : GLenum = 0x8DE9;
     pub const GL_NAMED_STRING_TYPE_ARB          : GLenum = 0x8DEA;
 }
 
-#[cfg(arb_texture_compression_bptc)]
-pub mod arb_texture_compression_bptc {
+#[cfg(GL_ARB_texture_compression_bptc)]
+pub mod GL_ARB_texture_compression_bptc {
     pub const GL_COMPRESSED_RGBA_BPTC_UNORM_ARB : GLenum = 0x8E8C;
     pub const GL_COMPRESSED_SRGB_ALPHA_BPTC_UNORM_ARB : GLenum = 0x8E8D;
     pub const GL_COMPRESSED_RGB_BPTC_SIGNED_FLOAT_ARB : GLenum = 0x8E8E;
     pub const GL_COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT_ARB : GLenum = 0x8E8F;
 }
 
-#[cfg(arb_blend_func_extended)]
-pub mod arb_blend_func_extended {
+#[cfg(GL_ARB_blend_func_extended)]
+pub mod GL_ARB_blend_func_extended {
     pub const GL_SRC1_COLOR                     : GLenum = 0x88F9;
     /* reuse GL_SRC1_ALPHA */
     pub const GL_ONE_MINUS_SRC1_COLOR           : GLenum = 0x88FA;
@@ -1824,31 +1824,31 @@ pub mod arb_blend_func_extended {
     pub const GL_MAX_DUAL_SOURCE_DRAW_BUFFERS   : GLenum = 0x88FC;
 }
 
-#[cfg(arb_explicit_attrib_location)]
-pub mod arb_explicit_attrib_location {
+#[cfg(GL_ARB_explicit_attrib_location)]
+pub mod GL_ARB_explicit_attrib_location {
 }
 
-#[cfg(arb_occlusion_query2)]
-pub mod arb_occlusion_query2 {
+#[cfg(GL_ARB_occlusion_query2)]
+pub mod GL_ARB_occlusion_query2 {
     pub const GL_ANY_SAMPLES_PASSED             : GLenum = 0x8C2F;
 }
 
-#[cfg(arb_sampler_objects)]
-pub mod arb_sampler_objects {
+#[cfg(GL_ARB_sampler_objects)]
+pub mod GL_ARB_sampler_objects {
     pub const GL_SAMPLER_BINDING                : GLenum = 0x8919;
 }
 
-#[cfg(arb_shader_bit_encoding)]
-pub mod arb_shader_bit_encoding {
+#[cfg(GL_ARB_shader_bit_encoding)]
+pub mod GL_ARB_shader_bit_encoding {
 }
 
-#[cfg(arb_texture_rgb10_a2ui)]
-pub mod arb_texture_rgb10_a2ui {
+#[cfg(GL_ARB_texture_rgb10_a2ui)]
+pub mod GL_ARB_texture_rgb10_a2ui {
     pub const GL_RGB10_A2UI                     : GLenum = 0x906F;
 }
 
-#[cfg(arb_texture_swizzle)]
-pub mod arb_texture_swizzle {
+#[cfg(GL_ARB_texture_swizzle)]
+pub mod GL_ARB_texture_swizzle {
     pub const GL_TEXTURE_SWIZZLE_R              : GLenum = 0x8E42;
     pub const GL_TEXTURE_SWIZZLE_G              : GLenum = 0x8E43;
     pub const GL_TEXTURE_SWIZZLE_B              : GLenum = 0x8E44;
@@ -1856,26 +1856,26 @@ pub mod arb_texture_swizzle {
     pub const GL_TEXTURE_SWIZZLE_RGBA           : GLenum = 0x8E46;
 }
 
-#[cfg(arb_timer_query)]
-pub mod arb_timer_query {
+#[cfg(GL_ARB_timer_query)]
+pub mod GL_ARB_timer_query {
     pub const GL_TIME_ELAPSED                   : GLenum = 0x88BF;
     pub const GL_TIMESTAMP                      : GLenum = 0x8E28;
 }
 
-#[cfg(arb_vertex_type_2_10_10_10_rev)]
-pub mod arb_vertex_type_2_10_10_10_rev {
+#[cfg(GL_ARB_vertex_type_2_10_10_10_rev)]
+pub mod GL_ARB_vertex_type_2_10_10_10_rev {
     /* reuse GL_UNSIGNED_INT_2_10_10_10_REV */
     pub const GL_INT_2_10_10_10_REV             : GLenum = 0x8D9F;
 }
 
-#[cfg(arb_draw_indirect)]
-pub mod arb_draw_indirect {
+#[cfg(GL_ARB_draw_indirect)]
+pub mod GL_ARB_draw_indirect {
     pub const GL_DRAW_INDIRECT_BUFFER           : GLenum = 0x8F3F;
     pub const GL_DRAW_INDIRECT_BUFFER_BINDING   : GLenum = 0x8F43;
 }
 
-#[cfg(arb_gpu_shader5)]
-pub mod arb_gpu_shader5 {
+#[cfg(GL_ARB_gpu_shader5)]
+pub mod GL_ARB_gpu_shader5 {
     pub const GL_GEOMETRY_SHADER_INVOCATIONS    : GLenum = 0x887F;
     pub const GL_MAX_GEOMETRY_SHADER_INVOCATIONS : GLenum = 0x8E5A;
     pub const GL_MIN_FRAGMENT_INTERPOLATION_OFFSET : GLenum = 0x8E5B;
@@ -1884,8 +1884,8 @@ pub mod arb_gpu_shader5 {
     /* reuse GL_MAX_VERTEX_STREAMS */
 }
 
-#[cfg(arb_gpu_shader_fp64)]
-pub mod arb_gpu_shader_fp64 {
+#[cfg(GL_ARB_gpu_shader_fp64)]
+pub mod GL_ARB_gpu_shader_fp64 {
     /* reuse GL_DOUBLE */
     pub const GL_DOUBLE_VEC2                    : GLenum = 0x8FFC;
     pub const GL_DOUBLE_VEC3                    : GLenum = 0x8FFD;
@@ -1901,8 +1901,8 @@ pub mod arb_gpu_shader_fp64 {
     pub const GL_DOUBLE_MAT4x3                  : GLenum = 0x8F4E;
 }
 
-#[cfg(arb_shader_subroutine)]
-pub mod arb_shader_subroutine {
+#[cfg(GL_ARB_shader_subroutine)]
+pub mod GL_ARB_shader_subroutine {
     pub const GL_ACTIVE_SUBROUTINES             : GLenum = 0x8DE5;
     pub const GL_ACTIVE_SUBROUTINE_UNIFORMS     : GLenum = 0x8DE6;
     pub const GL_ACTIVE_SUBROUTINE_UNIFORM_LOCATIONS : GLenum = 0x8E47;
@@ -1916,8 +1916,8 @@ pub mod arb_shader_subroutine {
     /* reuse GL_UNIFORM_NAME_LENGTH */
 }
 
-#[cfg(arb_tessellation_shader)]
-pub mod arb_tessellation_shader {
+#[cfg(GL_ARB_tessellation_shader)]
+pub mod GL_ARB_tessellation_shader {
     pub const GL_PATCHES                        : GLenum = 0x000E;
     pub const GL_PATCH_VERTICES                 : GLenum = 0x8E72;
     pub const GL_PATCH_DEFAULT_INNER_LEVEL      : GLenum = 0x8E73;
@@ -1957,15 +1957,15 @@ pub mod arb_tessellation_shader {
     pub const GL_TESS_CONTROL_SHADER            : GLenum = 0x8E88;
 }
 
-#[cfg(arb_texture_buffer_object_rgb32)]
-pub mod arb_texture_buffer_object_rgb32 {
+#[cfg(GL_ARB_texture_buffer_object_rgb32)]
+pub mod GL_ARB_texture_buffer_object_rgb32 {
     /* reuse GL_RGB32F */
     /* reuse GL_RGB32UI */
     /* reuse GL_RGB32I */
 }
 
-#[cfg(arb_transform_feedback2)]
-pub mod arb_transform_feedback2 {
+#[cfg(GL_ARB_transform_feedback2)]
+pub mod GL_ARB_transform_feedback2 {
     pub const GL_TRANSFORM_FEEDBACK             : GLenum = 0x8E22;
     pub const GL_TRANSFORM_FEEDBACK_PAUSED      : GLenum = 0x8E23;
     pub const GL_TRANSFORM_FEEDBACK_BUFFER_PAUSED : GLenum = GL_TRANSFORM_FEEDBACK_PAUSED;
@@ -1974,14 +1974,14 @@ pub mod arb_transform_feedback2 {
     pub const GL_TRANSFORM_FEEDBACK_BINDING     : GLenum = 0x8E25;
 }
 
-#[cfg(arb_transform_feedback3)]
-pub mod arb_transform_feedback3 {
+#[cfg(GL_ARB_transform_feedback3)]
+pub mod GL_ARB_transform_feedback3 {
     pub const GL_MAX_TRANSFORM_FEEDBACK_BUFFERS : GLenum = 0x8E70;
     pub const GL_MAX_VERTEX_STREAMS             : GLenum = 0x8E71;
 }
 
-#[cfg(arb_es2_compatibility)]
-pub mod arb_es2_compatibility {
+#[cfg(GL_ARB_es2_compatibility)]
+pub mod GL_ARB_es2_compatibility {
     pub const GL_FIXED                          : GLenum = 0x140C;
     pub const GL_IMPLEMENTATION_COLOR_READ_TYPE : GLenum = 0x8B9A;
     pub const GL_IMPLEMENTATION_COLOR_READ_FORMAT : GLenum = 0x8B9B;
@@ -2000,16 +2000,16 @@ pub mod arb_es2_compatibility {
     pub const GL_RGB565                         : GLenum = 0x8D62;
 }
 
-#[cfg(arb_get_program_binary)]
-pub mod arb_get_program_binary {
+#[cfg(GL_ARB_get_program_binary)]
+pub mod GL_ARB_get_program_binary {
     pub const GL_PROGRAM_BINARY_RETRIEVABLE_HINT : GLenum = 0x8257;
     pub const GL_PROGRAM_BINARY_LENGTH          : GLenum = 0x8741;
     pub const GL_NUM_PROGRAM_BINARY_FORMATS     : GLenum = 0x87FE;
     pub const GL_PROGRAM_BINARY_FORMATS         : GLenum = 0x87FF;
 }
 
-#[cfg(arb_separate_shader_objects)]
-pub mod arb_separate_shader_objects {
+#[cfg(GL_ARB_separate_shader_objects)]
+pub mod GL_ARB_separate_shader_objects {
     pub const GL_VERTEX_SHADER_BIT              : GLenum = 0x00000001;
     pub const GL_FRAGMENT_SHADER_BIT            : GLenum = 0x00000002;
     pub const GL_GEOMETRY_SHADER_BIT            : GLenum = 0x00000004;
@@ -2021,12 +2021,12 @@ pub mod arb_separate_shader_objects {
     pub const GL_PROGRAM_PIPELINE_BINDING       : GLenum = 0x825A;
 }
 
-#[cfg(arb_shader_precision)]
-pub mod arb_shader_precision {
+#[cfg(GL_ARB_shader_precision)]
+pub mod GL_ARB_shader_precision {
 }
 
-#[cfg(arb_vertex_attrib_64bit)]
-pub mod arb_vertex_attrib_64bit {
+#[cfg(GL_ARB_vertex_attrib_64bit)]
+pub mod GL_ARB_vertex_attrib_64bit {
     /* reuse GL_RGB32I */
     /* reuse GL_DOUBLE_VEC2 */
     /* reuse GL_DOUBLE_VEC3 */
@@ -2042,8 +2042,8 @@ pub mod arb_vertex_attrib_64bit {
     /* reuse GL_DOUBLE_MAT4x3 */
 }
 
-#[cfg(arb_viewport_array)]
-pub mod arb_viewport_array {
+#[cfg(GL_ARB_viewport_array)]
+pub mod GL_ARB_viewport_array {
     /* reuse GL_SCISSOR_BOX */
     /* reuse GL_VIEWPORT */
     /* reuse GL_DEPTH_RANGE */
@@ -2059,14 +2059,14 @@ pub mod arb_viewport_array {
     /* reuse GL_PROVOKING_VERTEX */
 }
 
-#[cfg(arb_cl_event)]
-pub mod arb_cl_event {
+#[cfg(GL_ARB_cl_event)]
+pub mod GL_ARB_cl_event {
     pub const GL_SYNC_CL_EVENT_ARB              : GLenum = 0x8240;
     pub const GL_SYNC_CL_EVENT_COMPLETE_ARB     : GLenum = 0x8241;
 }
 
-#[cfg(arb_debug_output)]
-pub mod arb_debug_output {
+#[cfg(GL_ARB_debug_output)]
+pub mod GL_ARB_debug_output {
     pub const GL_DEBUG_OUTPUT_SYNCHRONOUS_ARB   : GLenum = 0x8242;
     pub const GL_DEBUG_NEXT_LOGGED_MESSAGE_LENGTH_ARB : GLenum = 0x8243;
     pub const GL_DEBUG_CALLBACK_FUNCTION_ARB    : GLenum = 0x8244;
@@ -2091,8 +2091,8 @@ pub mod arb_debug_output {
     pub const GL_DEBUG_SEVERITY_LOW_ARB         : GLenum = 0x9148;
 }
 
-#[cfg(arb_robustness)]
-pub mod arb_robustness {
+#[cfg(GL_ARB_robustness)]
+pub mod GL_ARB_robustness {
     /* reuse GL_NO_ERROR */
     pub const GL_CONTEXT_FLAG_ROBUST_ACCESS_BIT_ARB : GLenum = 0x00000004;
     pub const GL_LOSE_CONTEXT_ON_RESET_ARB      : GLenum = 0x8252;
@@ -2103,24 +2103,24 @@ pub mod arb_robustness {
     pub const GL_NO_RESET_NOTIFICATION_ARB      : GLenum = 0x8261;
 }
 
-#[cfg(arb_shader_stencil_export)]
-pub mod arb_shader_stencil_export {
+#[cfg(GL_ARB_shader_stencil_export)]
+pub mod GL_ARB_shader_stencil_export {
 }
 
-#[cfg(arb_base_instance)]
-pub mod arb_base_instance {
+#[cfg(GL_ARB_base_instance)]
+pub mod GL_ARB_base_instance {
 }
 
-#[cfg(arb_shading_language_420pack)]
-pub mod arb_shading_language_420pack {
+#[cfg(GL_ARB_shading_language_420pack)]
+pub mod GL_ARB_shading_language_420pack {
 }
 
-#[cfg(arb_transform_feedback_instanced)]
-pub mod arb_transform_feedback_instanced {
+#[cfg(GL_ARB_transform_feedback_instanced)]
+pub mod GL_ARB_transform_feedback_instanced {
 }
 
-#[cfg(arb_compressed_texture_pixel_storage)]
-pub mod arb_compressed_texture_pixel_storage {
+#[cfg(GL_ARB_compressed_texture_pixel_storage)]
+pub mod GL_ARB_compressed_texture_pixel_storage {
     pub const GL_UNPACK_COMPRESSED_BLOCK_WIDTH  : GLenum = 0x9127;
     pub const GL_UNPACK_COMPRESSED_BLOCK_HEIGHT : GLenum = 0x9128;
     pub const GL_UNPACK_COMPRESSED_BLOCK_DEPTH  : GLenum = 0x9129;
@@ -2131,22 +2131,22 @@ pub mod arb_compressed_texture_pixel_storage {
     pub const GL_PACK_COMPRESSED_BLOCK_SIZE     : GLenum = 0x912E;
 }
 
-#[cfg(arb_conservative_depth)]
-pub mod arb_conservative_depth {
+#[cfg(GL_ARB_conservative_depth)]
+pub mod GL_ARB_conservative_depth {
 }
 
-#[cfg(arb_internalformat_query)]
-pub mod arb_internalformat_query {
+#[cfg(GL_ARB_internalformat_query)]
+pub mod GL_ARB_internalformat_query {
     pub const GL_NUM_SAMPLE_COUNTS              : GLenum = 0x9380;
 }
 
-#[cfg(arb_map_buffer_alignment)]
-pub mod arb_map_buffer_alignment {
+#[cfg(GL_ARB_map_buffer_alignment)]
+pub mod GL_ARB_map_buffer_alignment {
     pub const GL_MIN_MAP_BUFFER_ALIGNMENT       : GLenum = 0x90BC;
 }
 
-#[cfg(arb_shader_atomic_counters)]
-pub mod arb_shader_atomic_counters {
+#[cfg(GL_ARB_shader_atomic_counters)]
+pub mod GL_ARB_shader_atomic_counters {
     pub const GL_ATOMIC_COUNTER_BUFFER          : GLenum = 0x92C0;
     pub const GL_ATOMIC_COUNTER_BUFFER_BINDING  : GLenum = 0x92C1;
     pub const GL_ATOMIC_COUNTER_BUFFER_START    : GLenum = 0x92C2;
@@ -2178,8 +2178,8 @@ pub mod arb_shader_atomic_counters {
     pub const GL_UNSIGNED_INT_ATOMIC_COUNTER    : GLenum = 0x92DB;
 }
 
-#[cfg(arb_shader_image_load_store)]
-pub mod arb_shader_image_load_store {
+#[cfg(GL_ARB_shader_image_load_store)]
+pub mod GL_ARB_shader_image_load_store {
     pub const GL_VERTEX_ATTRIB_ARRAY_BARRIER_BIT : GLenum = 0x00000001;
     pub const GL_ELEMENT_ARRAY_BARRIER_BIT      : GLenum = 0x00000002;
     pub const GL_UNIFORM_BARRIER_BIT            : GLenum = 0x00000004;
@@ -2246,17 +2246,17 @@ pub mod arb_shader_image_load_store {
     pub const GL_MAX_COMBINED_IMAGE_UNIFORMS    : GLenum = 0x90CF;
 }
 
-#[cfg(arb_shading_language_packing)]
-pub mod arb_shading_language_packing {
+#[cfg(GL_ARB_shading_language_packing)]
+pub mod GL_ARB_shading_language_packing {
 }
 
-#[cfg(arb_texture_storage)]
-pub mod arb_texture_storage {
+#[cfg(GL_ARB_texture_storage)]
+pub mod GL_ARB_texture_storage {
     pub const GL_TEXTURE_IMMUTABLE_FORMAT       : GLenum = 0x912F;
 }
 
-#[cfg(khr_texture_compression_astc_ldr)]
-pub mod khr_texture_compression_astc_ldr {
+#[cfg(GL_KHR_texture_compression_astc_ldr)]
+pub mod GL_KHR_texture_compression_astc_ldr {
     pub const GL_COMPRESSED_RGBA_ASTC_4x4_KHR   : GLenum = 0x93B0;
     pub const GL_COMPRESSED_RGBA_ASTC_5x4_KHR   : GLenum = 0x93B1;
     pub const GL_COMPRESSED_RGBA_ASTC_5x5_KHR   : GLenum = 0x93B2;
@@ -2287,8 +2287,8 @@ pub mod khr_texture_compression_astc_ldr {
     pub const GL_COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR : GLenum = 0x93DD;
 }
 
-#[cfg(khr_debug)]
-pub mod khr_debug {
+#[cfg(GL_KHR_debug)]
+pub mod GL_KHR_debug {
     pub const GL_DEBUG_OUTPUT_SYNCHRONOUS       : GLenum = 0x8242;
     pub const GL_DEBUG_NEXT_LOGGED_MESSAGE_LENGTH : GLenum = 0x8243;
     pub const GL_DEBUG_CALLBACK_FUNCTION        : GLenum = 0x8244;
@@ -2332,16 +2332,16 @@ pub mod khr_debug {
     /* reuse GL_STACK_OVERFLOW */
 }
 
-#[cfg(arb_arrays_of_arrays)]
-pub mod arb_arrays_of_arrays {
+#[cfg(GL_ARB_arrays_of_arrays)]
+pub mod GL_ARB_arrays_of_arrays {
 }
 
-#[cfg(arb_clear_buffer_object)]
-pub mod arb_clear_buffer_object {
+#[cfg(GL_ARB_clear_buffer_object)]
+pub mod GL_ARB_clear_buffer_object {
 }
 
-#[cfg(arb_compute_shader)]
-pub mod arb_compute_shader {
+#[cfg(GL_ARB_compute_shader)]
+pub mod GL_ARB_compute_shader {
     pub const GL_COMPUTE_SHADER                 : GLenum = 0x91B9;
     pub const GL_MAX_COMPUTE_UNIFORM_BLOCKS     : GLenum = 0x91BB;
     pub const GL_MAX_COMPUTE_TEXTURE_IMAGE_UNITS : GLenum = 0x91BC;
@@ -2362,12 +2362,12 @@ pub mod arb_compute_shader {
     pub const GL_COMPUTE_SHADER_BIT             : GLenum = 0x00000020;
 }
 
-#[cfg(arb_copy_image)]
-pub mod arb_copy_image {
+#[cfg(GL_ARB_copy_image)]
+pub mod GL_ARB_copy_image {
 }
 
-#[cfg(arb_texture_view)]
-pub mod arb_texture_view {
+#[cfg(GL_ARB_texture_view)]
+pub mod GL_ARB_texture_view {
     pub const GL_TEXTURE_VIEW_MIN_LEVEL         : GLenum = 0x82DB;
     pub const GL_TEXTURE_VIEW_NUM_LEVELS        : GLenum = 0x82DC;
     pub const GL_TEXTURE_VIEW_MIN_LAYER         : GLenum = 0x82DD;
@@ -2375,8 +2375,8 @@ pub mod arb_texture_view {
     pub const GL_TEXTURE_IMMUTABLE_LEVELS       : GLenum = 0x82DF;
 }
 
-#[cfg(arb_vertex_attrib_binding)]
-pub mod arb_vertex_attrib_binding {
+#[cfg(GL_ARB_vertex_attrib_binding)]
+pub mod GL_ARB_vertex_attrib_binding {
     pub const GL_VERTEX_ATTRIB_BINDING          : GLenum = 0x82D4;
     pub const GL_VERTEX_ATTRIB_RELATIVE_OFFSET  : GLenum = 0x82D5;
     pub const GL_VERTEX_BINDING_DIVISOR         : GLenum = 0x82D6;
@@ -2386,12 +2386,12 @@ pub mod arb_vertex_attrib_binding {
     pub const GL_MAX_VERTEX_ATTRIB_BINDINGS     : GLenum = 0x82DA;
 }
 
-#[cfg(arb_robustness_isolation)]
-pub mod arb_robustness_isolation {
+#[cfg(GL_ARB_robustness_isolation)]
+pub mod GL_ARB_robustness_isolation {
 }
 
-#[cfg(arb_es3_compatibility)]
-pub mod arb_es3_compatibility {
+#[cfg(GL_ARB_es3_compatibility)]
+pub mod GL_ARB_es3_compatibility {
     pub const GL_COMPRESSED_RGB8_ETC2           : GLenum = 0x9274;
     pub const GL_COMPRESSED_SRGB8_ETC2          : GLenum = 0x9275;
     pub const GL_COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2 : GLenum = 0x9276;
@@ -2407,17 +2407,17 @@ pub mod arb_es3_compatibility {
     pub const GL_MAX_ELEMENT_INDEX              : GLenum = 0x8D6B;
 }
 
-#[cfg(arb_explicit_uniform_location)]
-pub mod arb_explicit_uniform_location {
+#[cfg(GL_ARB_explicit_uniform_location)]
+pub mod GL_ARB_explicit_uniform_location {
     pub const GL_MAX_UNIFORM_LOCATIONS          : GLenum = 0x826E;
 }
 
-#[cfg(arb_fragment_layer_viewport)]
-pub mod arb_fragment_layer_viewport {
+#[cfg(GL_ARB_fragment_layer_viewport)]
+pub mod GL_ARB_fragment_layer_viewport {
 }
 
-#[cfg(arb_framebuffer_no_attachments)]
-pub mod arb_framebuffer_no_attachments {
+#[cfg(GL_ARB_framebuffer_no_attachments)]
+pub mod GL_ARB_framebuffer_no_attachments {
     pub const GL_FRAMEBUFFER_DEFAULT_WIDTH      : GLenum = 0x9310;
     pub const GL_FRAMEBUFFER_DEFAULT_HEIGHT     : GLenum = 0x9311;
     pub const GL_FRAMEBUFFER_DEFAULT_LAYERS     : GLenum = 0x9312;
@@ -2429,8 +2429,8 @@ pub mod arb_framebuffer_no_attachments {
     pub const GL_MAX_FRAMEBUFFER_SAMPLES        : GLenum = 0x9318;
 }
 
-#[cfg(arb_internalformat_query2)]
-pub mod arb_internalformat_query2 {
+#[cfg(GL_ARB_internalformat_query2)]
+pub mod GL_ARB_internalformat_query2 {
     /* reuse GL_IMAGE_FORMAT_COMPATIBILITY_TYPE */
     /* reuse GL_NUM_SAMPLE_COUNTS */
     /* reuse GL_RENDERBUFFER */
@@ -2548,16 +2548,16 @@ pub mod arb_internalformat_query2 {
     pub const GL_VIEW_CLASS_BPTC_FLOAT          : GLenum = 0x82D3;
 }
 
-#[cfg(arb_invalidate_subdata)]
-pub mod arb_invalidate_subdata {
+#[cfg(GL_ARB_invalidate_subdata)]
+pub mod GL_ARB_invalidate_subdata {
 }
 
-#[cfg(arb_multi_draw_indirect)]
-pub mod arb_multi_draw_indirect {
+#[cfg(GL_ARB_multi_draw_indirect)]
+pub mod GL_ARB_multi_draw_indirect {
 }
 
-#[cfg(arb_program_interface_query)]
-pub mod arb_program_interface_query {
+#[cfg(GL_ARB_program_interface_query)]
+pub mod GL_ARB_program_interface_query {
     pub const GL_UNIFORM                        : GLenum = 0x92E1;
     pub const GL_UNIFORM_BLOCK                  : GLenum = 0x92E2;
     pub const GL_PROGRAM_INPUT                  : GLenum = 0x92E3;
@@ -2610,16 +2610,16 @@ pub mod arb_program_interface_query {
     /* reuse GL_COMPATIBLE_SUBROUTINES */
 }
 
-#[cfg(arb_robust_buffer_access_behavior)]
-pub mod arb_robust_buffer_access_behavior {
+#[cfg(GL_ARB_robust_buffer_access_behavior)]
+pub mod GL_ARB_robust_buffer_access_behavior {
 }
 
-#[cfg(arb_shader_image_size)]
-pub mod arb_shader_image_size {
+#[cfg(GL_ARB_shader_image_size)]
+pub mod GL_ARB_shader_image_size {
 }
 
-#[cfg(arb_shader_storage_buffer_object)]
-pub mod arb_shader_storage_buffer_object {
+#[cfg(GL_ARB_shader_storage_buffer_object)]
+pub mod GL_ARB_shader_storage_buffer_object {
     pub const GL_SHADER_STORAGE_BUFFER          : GLenum = 0x90D2;
     pub const GL_SHADER_STORAGE_BUFFER_BINDING  : GLenum = 0x90D3;
     pub const GL_SHADER_STORAGE_BUFFER_START    : GLenum = 0x90D4;
@@ -2639,22 +2639,22 @@ pub mod arb_shader_storage_buffer_object {
     /* reuse GL_MAX_COMBINED_IMAGE_UNITS_AND_FRAGMENT_OUTPUTS */
 }
 
-#[cfg(arb_stencil_texturing)]
-pub mod arb_stencil_texturing {
+#[cfg(GL_ARB_stencil_texturing)]
+pub mod GL_ARB_stencil_texturing {
     pub const GL_DEPTH_STENCIL_TEXTURE_MODE     : GLenum = 0x90EA;
 }
 
-#[cfg(arb_texture_buffer_range)]
-pub mod arb_texture_buffer_range {
+#[cfg(GL_ARB_texture_buffer_range)]
+pub mod GL_ARB_texture_buffer_range {
     pub const GL_TEXTURE_BUFFER_OFFSET          : GLenum = 0x919D;
     pub const GL_TEXTURE_BUFFER_SIZE            : GLenum = 0x919E;
     pub const GL_TEXTURE_BUFFER_OFFSET_ALIGNMENT : GLenum = 0x919F;
 }
 
-#[cfg(arb_texture_query_levels)]
-pub mod arb_texture_query_levels {
+#[cfg(GL_ARB_texture_query_levels)]
+pub mod GL_ARB_texture_query_levels {
 }
 
-#[cfg(arb_texture_storage_multisample)]
-pub mod arb_texture_storage_multisample {
+#[cfg(GL_ARB_texture_storage_multisample)]
+pub mod GL_ARB_texture_storage_multisample {
 }
