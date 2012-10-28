@@ -1,3 +1,9 @@
+/**
+ * These symbol exports mean you can link to the entire set of glcore
+ * bindings with a simple `use glcore::*;`.
+ */
+
+/* Constant Exports */
 
 #[cfg(GL_VERSION_1_1)]
 pub use consts::GL_VERSION_1_1::*;
@@ -309,6 +315,8 @@ pub use consts::GL_ARB_texture_query_levels::*;
 pub use consts::GL_ARB_texture_storage_multisample::*;
 
 
+/* Function Exports */
+
 #[cfg(GL_VERSION_1_0)]
 pub use functions::GL_VERSION_1_0::*;
 
@@ -615,6 +623,8 @@ pub use functions::GL_ARB_texture_query_levels::*;
 #[cfg(GL_ARB_texture_storage_multisample)]
 pub use functions::GL_ARB_texture_storage_multisample::*;
 
+
+/* Type Exports */
 
 #[cfg(GL_VERSION_1_0)]
 pub use types::GL_VERSION_1_0::*;
