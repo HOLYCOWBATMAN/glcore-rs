@@ -11,7 +11,7 @@ extern mod linkhack {}
 #[cfg(GL_VERSION_1_0)]
 pub mod GL_VERSION_1_0 {
     #[nolink]
-    extern {
+    extern "C" {
         fn glCullFace(++mode: GLenum);
         fn glFrontFace(++mode: GLenum);
         fn glHint(++target: GLenum, ++mode: GLenum);
@@ -114,7 +114,7 @@ pub mod GL_VERSION_1_0 {
 #[cfg(GL_VERSION_1_1)]
 pub mod GL_VERSION_1_1 {
     #[nolink]
-    extern {
+    extern "C" {
         fn glDrawArrays(++mode: GLenum, ++first: GLint, ++count: GLsizei);
         fn glDrawElements(++mode: GLenum, ++count: GLsizei, ++gltype: GLenum, ++indices: *GLvoid);
         fn glGetPointerv(++pname: GLenum, ++params: **GLvoid);
@@ -149,7 +149,7 @@ pub mod GL_VERSION_1_1 {
 #[cfg(GL_VERSION_1_2)]
 pub mod GL_VERSION_1_2 {
     #[nolink]
-    extern {
+    extern "C" {
         fn glBlendColor(++red: GLfloat, ++green: GLfloat, ++blue: GLfloat, ++alpha: GLfloat);
         fn glBlendEquation(++mode: GLenum);
         fn glDrawRangeElements(++mode: GLenum, ++start: GLuint, ++end: GLuint, ++count: GLsizei, ++gltype: GLenum, ++indices: *GLvoid);
@@ -168,7 +168,7 @@ pub mod GL_VERSION_1_2 {
 #[cfg(GL_VERSION_1_3)]
 pub mod GL_VERSION_1_3 {
     #[nolink]
-    extern {
+    extern "C" {
         fn glActiveTexture(++texture: GLenum);
         fn glSampleCoverage(++value: GLfloat, ++invert: GLboolean);
         fn glCompressedTexImage3D(++target: GLenum, ++level: GLint, ++internalformat: GLenum, ++width: GLsizei, ++height: GLsizei, ++depth: GLsizei, ++border: GLint, ++imageSize: GLsizei, ++data: *GLvoid);
@@ -193,7 +193,7 @@ pub mod GL_VERSION_1_3 {
 #[cfg(GL_VERSION_1_4)]
 pub mod GL_VERSION_1_4 {
     #[nolink]
-    extern {
+    extern "C" {
         fn glBlendFuncSeparate(++sfactorRGB: GLenum, ++dfactorRGB: GLenum, ++sfactorAlpha: GLenum, ++dfactorAlpha: GLenum);
         fn glMultiDrawArrays(++mode: GLenum, ++first: *GLint, ++count: *GLsizei, ++drawcount: GLsizei);
         fn glMultiDrawElements(++mode: GLenum, ++count: *GLsizei, ++gltype: GLenum, ++indices: **GLvoid, ++drawcount: GLsizei);
@@ -214,7 +214,7 @@ pub mod GL_VERSION_1_4 {
 #[cfg(GL_VERSION_1_5)]
 pub mod GL_VERSION_1_5 {
     #[nolink]
-    extern {
+    extern "C" {
         fn glGenQueries(++n: GLsizei, ++ids: *GLuint);
         fn glDeleteQueries(++n: GLsizei, ++ids: *GLuint);
         fn glIsQuery(++id: GLuint) -> GLboolean;
@@ -259,7 +259,7 @@ pub mod GL_VERSION_1_5 {
 #[cfg(GL_VERSION_2_0)]
 pub mod GL_VERSION_2_0 {
     #[nolink]
-    extern {
+    extern "C" {
         fn glBlendEquationSeparate(++modeRGB: GLenum, ++modeAlpha: GLenum);
         fn glDrawBuffers(++n: GLsizei, ++bufs: *GLenum);
         fn glStencilOpSeparate(++face: GLenum, ++sfail: GLenum, ++dpfail: GLenum, ++dppass: GLenum);
@@ -452,7 +452,7 @@ pub mod GL_VERSION_2_0 {
 #[cfg(GL_VERSION_2_1)]
 pub mod GL_VERSION_2_1 {
     #[nolink]
-    extern {
+    extern "C" {
         fn glUniformMatrix2x3fv(++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLfloat);
         fn glUniformMatrix3x2fv(++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLfloat);
         fn glUniformMatrix2x4fv(++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLfloat);
@@ -475,7 +475,7 @@ pub mod GL_VERSION_3_0 {
     /* ARB_map_buffer_range */
     /* ARB_vertex_array_object */
     #[nolink]
-    extern {
+    extern "C" {
         fn glColorMaski(++index: GLuint, ++r: GLboolean, ++g: GLboolean, ++b: GLboolean, ++a: GLboolean);
         fn glGetBooleani_v(++target: GLenum, ++index: GLuint, ++data: *GLboolean);
         fn glGetIntegeri_v(++target: GLenum, ++index: GLuint, ++data: *GLint);
@@ -601,7 +601,7 @@ pub mod GL_VERSION_3_1 {
     /* ARB_copy_buffer */
     /* ARB_uniform_buffer_object */
     #[nolink]
-    extern {
+    extern "C" {
         fn glDrawArraysInstanced(++mode: GLenum, ++first: GLint, ++count: GLsizei, ++instancecount: GLsizei);
         fn glDrawElementsInstanced(++mode: GLenum, ++count: GLsizei, ++gltype: GLenum, ++indices: *GLvoid, ++instancecount: GLsizei);
         fn glTexBuffer(++target: GLenum, ++internalformat: GLenum, ++buffer: GLuint);
@@ -621,7 +621,7 @@ pub mod GL_VERSION_3_2 {
     /* ARB_sync */
     /* ARB_texture_multisample */
     #[nolink]
-    extern {
+    extern "C" {
         fn glGetInteger64i_v(++target: GLenum, ++index: GLuint, ++data: *GLint64);
         fn glGetBufferParameteri64v(++target: GLenum, ++pname: GLenum, ++params: *GLint64);
         fn glFramebufferTexture(++target: GLenum, ++attachment: GLenum, ++texture: GLuint, ++level: GLint);
@@ -644,7 +644,7 @@ pub mod GL_VERSION_3_3 {
     /* ARB_timer_query */
     /* ARB_vertex_type_2_10_10_10_rev */
     #[nolink]
-    extern {
+    extern "C" {
         fn glVertexAttribDivisor(++index: GLuint, ++divisor: GLuint);
     }
     type PFNGLVERTEXATTRIBDIVISORPROC = *u8;
@@ -665,7 +665,7 @@ pub mod GL_VERSION_4_0 {
     /* ARB_transform_feedback2 */
     /* ARB_transform_feedback3 */
     #[nolink]
-    extern {
+    extern "C" {
         fn glMinSampleShading(++value: GLfloat);
         fn glBlendEquationi(++buf: GLuint, ++mode: GLenum);
         fn glBlendEquationSeparatei(++buf: GLuint, ++modeRGB: GLenum, ++modeAlpha: GLenum);
@@ -740,7 +740,7 @@ pub mod GL_ARB_depth_buffer_float {
 #[cfg(GL_ARB_framebuffer_object)]
 pub mod GL_ARB_framebuffer_object {
     #[nolink]
-    extern {
+    extern "C" {
         fn glIsRenderbuffer(++renderbuffer: GLuint) -> GLboolean;
         fn glBindRenderbuffer(++target: GLenum, ++renderbuffer: GLuint);
         fn glDeleteRenderbuffers(++n: GLsizei, ++renderbuffers: *GLuint);
@@ -795,7 +795,7 @@ pub mod GL_ARB_half_float_vertex {
 #[cfg(GL_ARB_map_buffer_range)]
 pub mod GL_ARB_map_buffer_range {
     #[nolink]
-    extern {
+    extern "C" {
         fn glMapBufferRange(++target: GLenum, ++offset: GLintptr, ++length: GLsizeiptr, ++access: GLbitfield) -> *GLvoid;
         fn glFlushMappedBufferRange(++target: GLenum, ++offset: GLintptr, ++length: GLsizeiptr);
     }
@@ -814,7 +814,7 @@ pub mod GL_ARB_texture_rg {
 #[cfg(GL_ARB_vertex_array_object)]
 pub mod GL_ARB_vertex_array_object {
     #[nolink]
-    extern {
+    extern "C" {
         fn glBindVertexArray(++array: GLuint);
         fn glDeleteVertexArrays(++n: GLsizei, ++arrays: *GLuint);
         fn glGenVertexArrays(++n: GLsizei, ++arrays: *GLuint);
@@ -829,7 +829,7 @@ pub mod GL_ARB_vertex_array_object {
 #[cfg(GL_ARB_uniform_buffer_object)]
 pub mod GL_ARB_uniform_buffer_object {
     #[nolink]
-    extern {
+    extern "C" {
         fn glGetUniformIndices(++program: GLuint, ++uniformCount: GLsizei, ++uniformNames: **GLchar, ++uniformIndices: *GLuint);
         fn glGetActiveUniformsiv(++program: GLuint, ++uniformCount: GLsizei, ++uniformIndices: *GLuint, ++pname: GLenum, ++params: *GLint);
         fn glGetActiveUniformName(++program: GLuint, ++uniformIndex: GLuint, ++bufSize: GLsizei, ++length: *GLsizei, ++uniformName: *GLchar);
@@ -850,7 +850,7 @@ pub mod GL_ARB_uniform_buffer_object {
 #[cfg(GL_ARB_copy_buffer)]
 pub mod GL_ARB_copy_buffer {
     #[nolink]
-    extern {
+    extern "C" {
         fn glCopyBufferSubData(++readTarget: GLenum, ++writeTarget: GLenum, ++readOffset: GLintptr, ++writeOffset: GLintptr, ++size: GLsizeiptr);
     }
     type PFNGLCOPYBUFFERSUBDATAPROC = *u8;
@@ -863,7 +863,7 @@ pub mod GL_ARB_depth_clamp {
 #[cfg(GL_ARB_draw_elements_base_vertex)]
 pub mod GL_ARB_draw_elements_base_vertex {
     #[nolink]
-    extern {
+    extern "C" {
         fn glDrawElementsBaseVertex(++mode: GLenum, ++count: GLsizei, ++gltype: GLenum, ++indices: *GLvoid, ++basevertex: GLint);
         fn glDrawRangeElementsBaseVertex(++mode: GLenum, ++start: GLuint, ++end: GLuint, ++count: GLsizei, ++gltype: GLenum, ++indices: *GLvoid, ++basevertex: GLint);
         fn glDrawElementsInstancedBaseVertex(++mode: GLenum, ++count: GLsizei, ++gltype: GLenum, ++indices: *GLvoid, ++instancecount: GLsizei, ++basevertex: GLint);
@@ -882,7 +882,7 @@ pub mod GL_ARB_fragment_coord_conventions {
 #[cfg(GL_ARB_provoking_vertex)]
 pub mod GL_ARB_provoking_vertex {
     #[nolink]
-    extern {
+    extern "C" {
         fn glProvokingVertex(++mode: GLenum);
     }
     type PFNGLPROVOKINGVERTEXPROC = *u8;
@@ -895,7 +895,7 @@ pub mod GL_ARB_seamless_cube_map {
 #[cfg(GL_ARB_sync)]
 pub mod GL_ARB_sync {
     #[nolink]
-    extern {
+    extern "C" {
         fn glFenceSync(++condition: GLenum, ++flags: GLbitfield) -> GLsync;
         fn glIsSync(++sync: GLsync) -> GLboolean;
         fn glDeleteSync(++sync: GLsync);
@@ -916,7 +916,7 @@ pub mod GL_ARB_sync {
 #[cfg(GL_ARB_texture_multisample)]
 pub mod GL_ARB_texture_multisample {
     #[nolink]
-    extern {
+    extern "C" {
         fn glTexImage2DMultisample(++target: GLenum, ++samples: GLsizei, ++internalformat: GLint, ++width: GLsizei, ++height: GLsizei, ++fixedsamplelocations: GLboolean);
         fn glTexImage3DMultisample(++target: GLenum, ++samples: GLsizei, ++internalformat: GLint, ++width: GLsizei, ++height: GLsizei, ++depth: GLsizei, ++fixedsamplelocations: GLboolean);
         fn glGetMultisamplefv(++pname: GLenum, ++index: GLuint, ++val: *GLfloat);
@@ -935,7 +935,7 @@ pub mod GL_ARB_vertex_array_bgra {
 #[cfg(GL_ARB_draw_buffers_blend)]
 pub mod GL_ARB_draw_buffers_blend {
     #[nolink]
-    extern {
+    extern "C" {
         fn glBlendEquationiARB(++buf: GLuint, ++mode: GLenum);
         fn glBlendEquationSeparateiARB(++buf: GLuint, ++modeRGB: GLenum, ++modeAlpha: GLenum);
         fn glBlendFunciARB(++buf: GLuint, ++src: GLenum, ++dst: GLenum);
@@ -950,7 +950,7 @@ pub mod GL_ARB_draw_buffers_blend {
 #[cfg(GL_ARB_sample_shading)]
 pub mod GL_ARB_sample_shading {
     #[nolink]
-    extern {
+    extern "C" {
         fn glMinSampleShadingARB(++value: GLfloat);
     }
     type PFNGLMINSAMPLESHADINGARBPROC = *u8;
@@ -971,7 +971,7 @@ pub mod GL_ARB_texture_query_lod {
 #[cfg(GL_ARB_shading_language_include)]
 pub mod GL_ARB_shading_language_include {
     #[nolink]
-    extern {
+    extern "C" {
         fn glNamedStringARB(++gltype: GLenum, ++namelen: GLint, ++name: *GLchar, ++stringlen: GLint, ++string: *GLchar);
         fn glDeleteNamedStringARB(++namelen: GLint, ++name: *GLchar);
         fn glCompileShaderIncludeARB(++shader: GLuint, ++count: GLsizei, ++path: **GLchar, ++length: *GLint);
@@ -994,7 +994,7 @@ pub mod GL_ARB_texture_compression_bptc {
 #[cfg(GL_ARB_blend_func_extended)]
 pub mod GL_ARB_blend_func_extended {
     #[nolink]
-    extern {
+    extern "C" {
         fn glBindFragDataLocationIndexed(++program: GLuint, ++colorNumber: GLuint, ++index: GLuint, ++name: *GLchar);
         fn glGetFragDataIndex(++program: GLuint, ++name: *GLchar) -> GLint;
     }
@@ -1013,7 +1013,7 @@ pub mod GL_ARB_occlusion_query2 {
 #[cfg(GL_ARB_sampler_objects)]
 pub mod GL_ARB_sampler_objects {
     #[nolink]
-    extern {
+    extern "C" {
         fn glGenSamplers(++count: GLsizei, ++samplers: *GLuint);
         fn glDeleteSamplers(++count: GLsizei, ++samplers: *GLuint);
         fn glIsSampler(++sampler: GLuint) -> GLboolean;
@@ -1060,7 +1060,7 @@ pub mod GL_ARB_texture_swizzle {
 #[cfg(GL_ARB_timer_query)]
 pub mod GL_ARB_timer_query {
     #[nolink]
-    extern {
+    extern "C" {
         fn glQueryCounter(++id: GLuint, ++target: GLenum);
         fn glGetQueryObjecti64v(++id: GLuint, ++pname: GLenum, ++params: *GLint64);
         fn glGetQueryObjectui64v(++id: GLuint, ++pname: GLenum, ++params: *GLuint64);
@@ -1073,7 +1073,7 @@ pub mod GL_ARB_timer_query {
 #[cfg(GL_ARB_vertex_type_2_10_10_10_rev)]
 pub mod GL_ARB_vertex_type_2_10_10_10_rev {
     #[nolink]
-    extern {
+    extern "C" {
         fn glVertexP2ui(++gltype: GLenum, ++value: GLuint);
         fn glVertexP2uiv(++gltype: GLenum, ++value: *GLuint);
         fn glVertexP3ui(++gltype: GLenum, ++value: GLuint);
@@ -1156,7 +1156,7 @@ pub mod GL_ARB_vertex_type_2_10_10_10_rev {
 #[cfg(GL_ARB_draw_indirect)]
 pub mod GL_ARB_draw_indirect {
     #[nolink]
-    extern {
+    extern "C" {
         fn glDrawArraysIndirect(++mode: GLenum, ++indirect: *GLvoid);
         fn glDrawElementsIndirect(++mode: GLenum, ++gltype: GLenum, ++indirect: *GLvoid);
     }
@@ -1171,7 +1171,7 @@ pub mod GL_ARB_gpu_shader5 {
 #[cfg(GL_ARB_gpu_shader_fp64)]
 pub mod GL_ARB_gpu_shader_fp64 {
     #[nolink]
-    extern {
+    extern "C" {
         fn glUniform1d(++location: GLint, ++x: GLdouble);
         fn glUniform2d(++location: GLint, ++x: GLdouble, ++y: GLdouble);
         fn glUniform3d(++location: GLint, ++x: GLdouble, ++y: GLdouble, ++z: GLdouble);
@@ -1214,7 +1214,7 @@ pub mod GL_ARB_gpu_shader_fp64 {
 #[cfg(GL_ARB_shader_subroutine)]
 pub mod GL_ARB_shader_subroutine {
     #[nolink]
-    extern {
+    extern "C" {
         fn glGetSubroutineUniformLocation(++program: GLuint, ++shadertype: GLenum, ++name: *GLchar) -> GLint;
         fn glGetSubroutineIndex(++program: GLuint, ++shadertype: GLenum, ++name: *GLchar) -> GLuint;
         fn glGetActiveSubroutineUniformiv(++program: GLuint, ++shadertype: GLenum, ++index: GLuint, ++pname: GLenum, ++values: *GLint);
@@ -1237,7 +1237,7 @@ pub mod GL_ARB_shader_subroutine {
 #[cfg(GL_ARB_tessellation_shader)]
 pub mod GL_ARB_tessellation_shader {
     #[nolink]
-    extern {
+    extern "C" {
         fn glPatchParameteri(++pname: GLenum, ++value: GLint);
         fn glPatchParameterfv(++pname: GLenum, ++values: *GLfloat);
     }
@@ -1252,7 +1252,7 @@ pub mod GL_ARB_texture_buffer_object_rgb32 {
 #[cfg(GL_ARB_transform_feedback2)]
 pub mod GL_ARB_transform_feedback2 {
     #[nolink]
-    extern {
+    extern "C" {
         fn glBindTransformFeedback(++target: GLenum, ++id: GLuint);
         fn glDeleteTransformFeedbacks(++n: GLsizei, ++ids: *GLuint);
         fn glGenTransformFeedbacks(++n: GLsizei, ++ids: *GLuint);
@@ -1273,7 +1273,7 @@ pub mod GL_ARB_transform_feedback2 {
 #[cfg(GL_ARB_transform_feedback3)]
 pub mod GL_ARB_transform_feedback3 {
     #[nolink]
-    extern {
+    extern "C" {
         fn glDrawTransformFeedbackStream(++mode: GLenum, ++id: GLuint, ++stream: GLuint);
         fn glBeginQueryIndexed(++target: GLenum, ++index: GLuint, ++id: GLuint);
         fn glEndQueryIndexed(++target: GLenum, ++index: GLuint);
@@ -1288,7 +1288,7 @@ pub mod GL_ARB_transform_feedback3 {
 #[cfg(GL_ARB_es2_compatibility)]
 pub mod GL_ARB_es2_compatibility {
     #[nolink]
-    extern {
+    extern "C" {
         fn glReleaseShaderCompiler();
         fn glShaderBinary(++count: GLsizei, ++shaders: *GLuint, ++binaryformat: GLenum, ++binary: *GLvoid, ++length: GLsizei);
         fn glGetShaderPrecisionFormat(++shadertype: GLenum, ++precisiontype: GLenum, ++range: *GLint, ++precision: *GLint);
@@ -1305,7 +1305,7 @@ pub mod GL_ARB_es2_compatibility {
 #[cfg(GL_ARB_get_program_binary)]
 pub mod GL_ARB_get_program_binary {
     #[nolink]
-    extern {
+    extern "C" {
         fn glGetProgramBinary(++program: GLuint, ++bufSize: GLsizei, ++length: *GLsizei, ++binaryFormat: *GLenum, ++binary: *GLvoid);
         fn glProgramBinary(++program: GLuint, ++binaryFormat: GLenum, ++binary: *GLvoid, ++length: GLsizei);
         fn glProgramParameteri(++program: GLuint, ++pname: GLenum, ++value: GLint);
@@ -1318,7 +1318,7 @@ pub mod GL_ARB_get_program_binary {
 #[cfg(GL_ARB_separate_shader_objects)]
 pub mod GL_ARB_separate_shader_objects {
     #[nolink]
-    extern {
+    extern "C" {
         fn glUseProgramStages(++pipeline: GLuint, ++stages: GLbitfield, ++program: GLuint);
         fn glActiveShaderProgram(++pipeline: GLuint, ++program: GLuint);
         fn glCreateShaderProgramv(++gltype: GLenum, ++count: GLsizei, ++strings: **GLchar) -> GLuint;
@@ -1445,7 +1445,7 @@ pub mod GL_ARB_separate_shader_objects {
 #[cfg(GL_ARB_vertex_attrib_64bit)]
 pub mod GL_ARB_vertex_attrib_64bit {
     #[nolink]
-    extern {
+    extern "C" {
         fn glVertexAttribL1d(++index: GLuint, ++x: GLdouble);
         fn glVertexAttribL2d(++index: GLuint, ++x: GLdouble, ++y: GLdouble);
         fn glVertexAttribL3d(++index: GLuint, ++x: GLdouble, ++y: GLdouble, ++z: GLdouble);
@@ -1472,7 +1472,7 @@ pub mod GL_ARB_vertex_attrib_64bit {
 #[cfg(GL_ARB_viewport_array)]
 pub mod GL_ARB_viewport_array {
     #[nolink]
-    extern {
+    extern "C" {
         fn glViewportArrayv(++first: GLuint, ++count: GLsizei, ++v: *GLfloat);
         fn glViewportIndexedf(++index: GLuint, ++x: GLfloat, ++y: GLfloat, ++w: GLfloat, ++h: GLfloat);
         fn glViewportIndexedfv(++index: GLuint, ++v: *GLfloat);
@@ -1499,7 +1499,7 @@ pub mod GL_ARB_viewport_array {
 #[cfg(GL_ARB_cl_event)]
 pub mod GL_ARB_cl_event {
     #[nolink]
-    extern {
+    extern "C" {
         fn glCreateSyncFromCLeventARB(++context: *Struct__cl_context, ++event: *Struct__cl_event, ++flags: GLbitfield) -> GLsync;
     }
     type PFNGLCREATESYNCFROMCLEVENTARBPROC = *u8;
@@ -1508,7 +1508,7 @@ pub mod GL_ARB_cl_event {
 #[cfg(GL_ARB_debug_output)]
 pub mod GL_ARB_debug_output {
     #[nolink]
-    extern {
+    extern "C" {
         fn glDebugMessageControlARB(++source: GLenum, ++gltype: GLenum, ++severity: GLenum, ++count: GLsizei, ++ids: *GLuint, ++enabled: GLboolean);
         fn glDebugMessageInsertARB(++source: GLenum, ++gltype: GLenum, ++id: GLuint, ++severity: GLenum, ++length: GLsizei, ++buf: *GLchar);
         fn glDebugMessageCallbackARB(++callback: GLDEBUGPROCARB, ++userParam: *GLvoid);
@@ -1523,7 +1523,7 @@ pub mod GL_ARB_debug_output {
 #[cfg(GL_ARB_robustness)]
 pub mod GL_ARB_robustness {
     #[nolink]
-    extern {
+    extern "C" {
         fn glGetGraphicsResetStatusARB() -> GLenum;
         fn glGetnTexImageARB(++target: GLenum, ++level: GLint, ++format: GLenum, ++gltype: GLenum, ++bufSize: GLsizei, ++img: *GLvoid);
         fn glReadnPixelsARB(++x: GLint, ++y: GLint, ++width: GLsizei, ++height: GLsizei, ++format: GLenum, ++gltype: GLenum, ++bufSize: GLsizei, ++data: *GLvoid);
@@ -1550,7 +1550,7 @@ pub mod GL_ARB_shader_stencil_export {
 #[cfg(GL_ARB_base_instance)]
 pub mod GL_ARB_base_instance {
     #[nolink]
-    extern {
+    extern "C" {
         fn glDrawArraysInstancedBaseInstance(++mode: GLenum, ++first: GLint, ++count: GLsizei, ++instancecount: GLsizei, ++baseinstance: GLuint);
         fn glDrawElementsInstancedBaseInstance(++mode: GLenum, ++count: GLsizei, ++gltype: GLenum, ++indices: *libc::c_void, ++instancecount: GLsizei, ++baseinstance: GLuint);
         fn glDrawElementsInstancedBaseVertexBaseInstance(++mode: GLenum, ++count: GLsizei, ++gltype: GLenum, ++indices: *libc::c_void, ++instancecount: GLsizei, ++basevertex: GLint, ++baseinstance: GLuint);
@@ -1567,7 +1567,7 @@ pub mod GL_ARB_shading_language_420pack {
 #[cfg(GL_ARB_transform_feedback_instanced)]
 pub mod GL_ARB_transform_feedback_instanced {
     #[nolink]
-    extern {
+    extern "C" {
         fn glDrawTransformFeedbackInstanced(++mode: GLenum, ++id: GLuint, ++instancecount: GLsizei);
         fn glDrawTransformFeedbackStreamInstanced(++mode: GLenum, ++id: GLuint, ++stream: GLuint, ++instancecount: GLsizei);
     }
@@ -1586,7 +1586,7 @@ pub mod GL_ARB_conservative_depth {
 #[cfg(GL_ARB_internalformat_query)]
 pub mod GL_ARB_internalformat_query {
     #[nolink]
-    extern {
+    extern "C" {
         fn glGetInternalformativ(++target: GLenum, ++internalformat: GLenum, ++pname: GLenum, ++bufSize: GLsizei, ++params: *GLint);
     }
     type PFNGLGETINTERNALFORMATIVPROC = *u8;
@@ -1599,7 +1599,7 @@ pub mod GL_ARB_map_buffer_alignment {
 #[cfg(GL_ARB_shader_atomic_counters)]
 pub mod GL_ARB_shader_atomic_counters {
     #[nolink]
-    extern {
+    extern "C" {
         fn glGetActiveAtomicCounterBufferiv(++program: GLuint, ++bufferIndex: GLuint, ++pname: GLenum, ++params: *GLint);
     }
     type PFNGLGETACTIVEATOMICCOUNTERBUFFERIVPROC = *u8;
@@ -1608,7 +1608,7 @@ pub mod GL_ARB_shader_atomic_counters {
 #[cfg(GL_ARB_shader_image_load_store)]
 pub mod GL_ARB_shader_image_load_store {
     #[nolink]
-    extern {
+    extern "C" {
         fn glBindImageTexture(++unit: GLuint, ++texture: GLuint, ++level: GLint, ++layered: GLboolean, ++layer: GLint, ++access: GLenum, ++format: GLenum);
         fn glMemoryBarrier(++barriers: GLbitfield);
     }
@@ -1623,7 +1623,7 @@ pub mod GL_ARB_shading_language_packing {
 #[cfg(GL_ARB_texture_storage)]
 pub mod GL_ARB_texture_storage {
     #[nolink]
-    extern {
+    extern "C" {
         fn glTexStorage1D(++target: GLenum, ++levels: GLsizei, ++internalformat: GLenum, ++width: GLsizei);
         fn glTexStorage2D(++target: GLenum, ++levels: GLsizei, ++internalformat: GLenum, ++width: GLsizei, ++height: GLsizei);
         fn glTexStorage3D(++target: GLenum, ++levels: GLsizei, ++internalformat: GLenum, ++width: GLsizei, ++height: GLsizei, ++depth: GLsizei);
@@ -1646,7 +1646,7 @@ pub mod GL_KHR_texture_compression_astc_ldr {
 #[cfg(GL_KHR_debug)]
 pub mod GL_KHR_debug {
     #[nolink]
-    extern {
+    extern "C" {
         fn glDebugMessageControl(++source: GLenum, ++gltype: GLenum, ++severity: GLenum, ++count: GLsizei, ++ids: *GLuint, ++enabled: GLboolean);
         fn glDebugMessageInsert(++source: GLenum, ++gltype: GLenum, ++id: GLuint, ++severity: GLenum, ++length: GLsizei, ++buf: *GLchar);
         fn glDebugMessageCallback(++callback: GLDEBUGPROC, ++userParam: *libc::c_void);
@@ -1677,7 +1677,7 @@ pub mod GL_ARB_arrays_of_arrays {
 #[cfg(GL_ARB_clear_buffer_object)]
 pub mod GL_ARB_clear_buffer_object {
     #[nolink]
-    extern {
+    extern "C" {
         fn glClearBufferData(++target: GLenum, ++internalformat: GLenum, ++format: GLenum, ++gltype: GLenum, ++data: *libc::c_void);
         fn glClearBufferSubData(++target: GLenum, ++internalformat: GLenum, ++offset: GLintptr, ++size: GLsizeiptr, ++format: GLenum, ++gltype: GLenum, ++data: *libc::c_void);
         fn glClearNamedBufferDataEXT(++buffer: GLuint, ++internalformat: GLenum, ++format: GLenum, ++gltype: GLenum, ++data: *libc::c_void);
@@ -1692,7 +1692,7 @@ pub mod GL_ARB_clear_buffer_object {
 #[cfg(GL_ARB_compute_shader)]
 pub mod GL_ARB_compute_shader {
     #[nolink]
-    extern {
+    extern "C" {
         fn glDispatchCompute(++num_groups_x: GLuint, ++num_groups_y: GLuint, ++num_groups_z: GLuint);
         fn glDispatchComputeIndirect(++indirect: GLintptr);
     }
@@ -1703,7 +1703,7 @@ pub mod GL_ARB_compute_shader {
 #[cfg(GL_ARB_copy_image)]
 pub mod GL_ARB_copy_image {
     #[nolink]
-    extern {
+    extern "C" {
         fn glCopyImageSubData(++srcName: GLuint, ++srcTarget: GLenum, ++srcLevel: GLint, ++srcX: GLint, ++srcY: GLint, ++srcZ: GLint, ++dstName: GLuint, ++dstTarget: GLenum, ++dstLevel: GLint, ++dstX: GLint, ++dstY: GLint, ++dstZ: GLint, ++srcWidth: GLsizei, ++srcHeight: GLsizei, ++srcDepth: GLsizei);
     }
     type PFNGLCOPYIMAGESUBDATAPROC = *u8;
@@ -1712,7 +1712,7 @@ pub mod GL_ARB_copy_image {
 #[cfg(GL_ARB_texture_view)]
 pub mod GL_ARB_texture_view {
     #[nolink]
-    extern {
+    extern "C" {
         fn glTextureView(++texture: GLuint, ++target: GLenum, ++origtexture: GLuint, ++internalformat: GLenum, ++minlevel: GLuint, ++numlevels: GLuint, ++minlayer: GLuint, ++numlayers: GLuint);
     }
     type PFNGLTEXTUREVIEWPROC = *u8;
@@ -1721,7 +1721,7 @@ pub mod GL_ARB_texture_view {
 #[cfg(GL_ARB_vertex_attrib_binding)]
 pub mod GL_ARB_vertex_attrib_binding {
     #[nolink]
-    extern {
+    extern "C" {
         fn glBindVertexBuffer(++bindingindex: GLuint, ++buffer: GLuint, ++offset: GLintptr, ++stride: GLsizei);
         fn glVertexAttribFormat(++attribindex: GLuint, ++size: GLint, ++gltype: GLenum, ++normalized: GLboolean, ++relativeoffset: GLuint);
         fn glVertexAttribIFormat(++attribindex: GLuint, ++size: GLint, ++gltype: GLenum, ++relativeoffset: GLuint);
@@ -1768,7 +1768,7 @@ pub mod GL_ARB_fragment_layer_viewport {
 #[cfg(GL_ARB_framebuffer_no_attachments)]
 pub mod GL_ARB_framebuffer_no_attachments {
     #[nolink]
-    extern {
+    extern "C" {
         fn glFramebufferParameteri(++target: GLenum, ++pname: GLenum, ++param: GLint);
         fn glGetFramebufferParameteriv(++target: GLenum, ++pname: GLenum, ++params: *GLint);
         fn glNamedFramebufferParameteriEXT(++framebuffer: GLuint, ++pname: GLenum, ++param: GLint);
@@ -1783,7 +1783,7 @@ pub mod GL_ARB_framebuffer_no_attachments {
 #[cfg(GL_ARB_internalformat_query2)]
 pub mod GL_ARB_internalformat_query2 {
     #[nolink]
-    extern {
+    extern "C" {
         fn glGetInternalformati64v(++target: GLenum, ++internalformat: GLenum, ++pname: GLenum, ++bufSize: GLsizei, ++params: *GLint64);
     }
     type PFNGLGETINTERNALFORMATI64VPROC = *u8;
@@ -1792,7 +1792,7 @@ pub mod GL_ARB_internalformat_query2 {
 #[cfg(GL_ARB_invalidate_subdata)]
 pub mod GL_ARB_invalidate_subdata {
     #[nolink]
-    extern {
+    extern "C" {
         fn glInvalidateTexSubImage(++texture: GLuint, ++level: GLint, ++xoffset: GLint, ++yoffset: GLint, ++zoffset: GLint, ++width: GLsizei, ++height: GLsizei, ++depth: GLsizei);
         fn glInvalidateTexImage(++texture: GLuint, ++level: GLint);
         fn glInvalidateBufferSubData(++buffer: GLuint, ++offset: GLintptr, ++length: GLsizeiptr);
@@ -1811,7 +1811,7 @@ pub mod GL_ARB_invalidate_subdata {
 #[cfg(GL_ARB_multi_draw_indirect)]
 pub mod GL_ARB_multi_draw_indirect {
     #[nolink]
-    extern {
+    extern "C" {
         fn glMultiDrawArraysIndirect(++mode: GLenum, ++indirect: *libc::c_void, ++drawcount: GLsizei, ++stride: GLsizei);
         fn glMultiDrawElementsIndirect(++mode: GLenum, ++gltype: GLenum, ++indirect: *libc::c_void, ++drawcount: GLsizei, ++stride: GLsizei);
     }
@@ -1822,7 +1822,7 @@ pub mod GL_ARB_multi_draw_indirect {
 #[cfg(GL_ARB_program_interface_query)]
 pub mod GL_ARB_program_interface_query {
     #[nolink]
-    extern {
+    extern "C" {
         fn glGetProgramInterfaceiv(++program: GLuint, ++programInterface: GLenum, ++pname: GLenum, ++params: *GLint);
         fn glGetProgramResourceIndex(++program: GLuint, ++programInterface: GLenum, ++name: *GLchar) -> GLuint;
         fn glGetProgramResourceName(++program: GLuint, ++programInterface: GLenum, ++index: GLuint, ++bufSize: GLsizei, ++length: *GLsizei, ++name: *GLchar);
@@ -1849,7 +1849,7 @@ pub mod GL_ARB_shader_image_size {
 #[cfg(GL_ARB_shader_storage_buffer_object)]
 pub mod GL_ARB_shader_storage_buffer_object {
     #[nolink]
-    extern {
+    extern "C" {
         fn glShaderStorageBlockBinding(++program: GLuint, ++storageBlockIndex: GLuint, ++storageBlockBinding: GLuint);
     }
     type PFNGLSHADERSTORAGEBLOCKBINDINGPROC = *u8;
@@ -1862,7 +1862,7 @@ pub mod GL_ARB_stencil_texturing {
 #[cfg(GL_ARB_texture_buffer_range)]
 pub mod GL_ARB_texture_buffer_range {
     #[nolink]
-    extern {
+    extern "C" {
         fn glTexBufferRange(++target: GLenum, ++internalformat: GLenum, ++buffer: GLuint, ++offset: GLintptr, ++size: GLsizeiptr);
         fn glTextureBufferRangeEXT(++texture: GLuint, ++target: GLenum, ++internalformat: GLenum, ++buffer: GLuint, ++offset: GLintptr, ++size: GLsizeiptr);
     }
@@ -1877,7 +1877,7 @@ pub mod GL_ARB_texture_query_levels {
 #[cfg(GL_ARB_texture_storage_multisample)]
 pub mod GL_ARB_texture_storage_multisample {
     #[nolink]
-    extern {
+    extern "C" {
         fn glTexStorage2DMultisample(++target: GLenum, ++samples: GLsizei, ++internalformat: GLenum, ++width: GLsizei, ++height: GLsizei, ++fixedsamplelocations: GLboolean);
         fn glTexStorage3DMultisample(++target: GLenum, ++samples: GLsizei, ++internalformat: GLenum, ++width: GLsizei, ++height: GLsizei, ++depth: GLsizei, ++fixedsamplelocations: GLboolean);
         fn glTextureStorage2DMultisampleEXT(++texture: GLuint, ++target: GLenum, ++samples: GLsizei, ++internalformat: GLenum, ++width: GLsizei, ++height: GLsizei, ++fixedsamplelocations: GLboolean);
