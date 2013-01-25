@@ -153,5 +153,9 @@ osx-lion:
 	--cfg GL_VERSION_3_1 \
 	--cfg GL_VERSION_3_2
 
+targeted:
+	@mkdir -p lib
+	@rustc src/glcore.rc --out-dir lib --lib `./find_local_extensions.sh`
+
 clean:
 	rm -R -f lib
