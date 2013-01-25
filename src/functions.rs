@@ -12,54 +12,54 @@ extern mod linkhack {}
 pub mod GL_VERSION_1_0 {
     #[nolink]
     extern "C" {
-        fn glCullFace(++mode: GLenum);
-        fn glFrontFace(++mode: GLenum);
-        fn glHint(++target: GLenum, ++mode: GLenum);
-        fn glLineWidth(++width: GLfloat);
-        fn glPointSize(++size: GLfloat);
-        fn glPolygonMode(++face: GLenum, ++mode: GLenum);
-        fn glScissor(++x: GLint, ++y: GLint, ++width: GLsizei, ++height: GLsizei);
-        fn glTexParameterf(++target: GLenum, ++pname: GLenum, ++param: GLfloat);
-        fn glTexParameterfv(++target: GLenum, ++pname: GLenum, ++params: *GLfloat);
-        fn glTexParameteri(++target: GLenum, ++pname: GLenum, ++param: GLint);
-        fn glTexParameteriv(++target: GLenum, ++pname: GLenum, ++params: *GLint);
-        fn glTexImage1D(++target: GLenum, ++level: GLint, ++internalformat: GLint, ++width: GLsizei, ++border: GLint, ++format: GLenum, ++gltype: GLenum, ++pixels: *GLvoid);
-        fn glTexImage2D(++target: GLenum, ++level: GLint, ++internalformat: GLint, ++width: GLsizei, ++height: GLsizei, ++border: GLint, ++format: GLenum, ++gltype: GLenum, ++pixels: *GLvoid);
-        fn glDrawBuffer(++mode: GLenum);
-        fn glClear(++mask: GLbitfield);
-        fn glClearColor(++red: GLfloat, ++green: GLfloat, ++blue: GLfloat, ++alpha: GLfloat);
-        fn glClearStencil(++s: GLint);
-        fn glClearDepth(++depth: GLdouble);
-        fn glStencilMask(++mask: GLuint);
-        fn glColorMask(++red: GLboolean, ++green: GLboolean, ++blue: GLboolean, ++alpha: GLboolean);
-        fn glDepthMask(++flag: GLboolean);
-        fn glDisable(++cap: GLenum);
-        fn glEnable(++cap: GLenum);
+        fn glCullFace(++mode: ::GLenum);
+        fn glFrontFace(++mode: ::GLenum);
+        fn glHint(++target: ::GLenum, ++mode: ::GLenum);
+        fn glLineWidth(++width: ::GLfloat);
+        fn glPointSize(++size: ::GLfloat);
+        fn glPolygonMode(++face: ::GLenum, ++mode: ::GLenum);
+        fn glScissor(++x: ::GLint, ++y: ::GLint, ++width: ::GLsizei, ++height: ::GLsizei);
+        fn glTexParameterf(++target: ::GLenum, ++pname: ::GLenum, ++param: ::GLfloat);
+        fn glTexParameterfv(++target: ::GLenum, ++pname: ::GLenum, ++params: *::GLfloat);
+        fn glTexParameteri(++target: ::GLenum, ++pname: ::GLenum, ++param: ::GLint);
+        fn glTexParameteriv(++target: ::GLenum, ++pname: ::GLenum, ++params: *::GLint);
+        fn glTexImage1D(++target: ::GLenum, ++level: ::GLint, ++internalformat: ::GLint, ++width: ::GLsizei, ++border: ::GLint, ++format: ::GLenum, ++gltype: ::GLenum, ++pixels: *::GLvoid);
+        fn glTexImage2D(++target: ::GLenum, ++level: ::GLint, ++internalformat: ::GLint, ++width: ::GLsizei, ++height: ::GLsizei, ++border: ::GLint, ++format: ::GLenum, ++gltype: ::GLenum, ++pixels: *::GLvoid);
+        fn glDrawBuffer(++mode: ::GLenum);
+        fn glClear(++mask: ::GLbitfield);
+        fn glClearColor(++red: ::GLfloat, ++green: ::GLfloat, ++blue: ::GLfloat, ++alpha: ::GLfloat);
+        fn glClearStencil(++s: ::GLint);
+        fn glClearDepth(++depth: ::GLdouble);
+        fn glStencilMask(++mask: ::GLuint);
+        fn glColorMask(++red: ::GLboolean, ++green: ::GLboolean, ++blue: ::GLboolean, ++alpha: ::GLboolean);
+        fn glDepthMask(++flag: ::GLboolean);
+        fn glDisable(++cap: ::GLenum);
+        fn glEnable(++cap: ::GLenum);
         fn glFinish();
         fn glFlush();
-        fn glBlendFunc(++sfactor: GLenum, ++dfactor: GLenum);
-        fn glLogicOp(++opcode: GLenum);
-        fn glStencilFunc(++func: GLenum, ++glref: GLint, ++mask: GLuint);
-        fn glStencilOp(++glfail: GLenum, ++zfail: GLenum, ++zpass: GLenum);
-        fn glDepthFunc(++func: GLenum);
-        fn glPixelStoref(++pname: GLenum, ++param: GLfloat);
-        fn glPixelStorei(++pname: GLenum, ++param: GLint);
-        fn glReadBuffer(++mode: GLenum);
-        fn glReadPixels(++x: GLint, ++y: GLint, ++width: GLsizei, ++height: GLsizei, ++format: GLenum, ++gltype: GLenum, ++pixels: *GLvoid);
-        fn glGetBooleanv(++pname: GLenum, ++params: *GLboolean);
-        fn glGetDoublev(++pname: GLenum, ++params: *GLdouble);
-        fn glGetError() -> GLenum;
-        fn glGetFloatv(++pname: GLenum, ++params: *GLfloat);
-        fn glGetIntegerv(++pname: GLenum, ++params: *GLint);
-        fn glGetString(++name: GLenum) -> *GLubyte;
-        fn glGetTexImage(++target: GLenum, ++level: GLint, ++format: GLenum, ++gltype: GLenum, ++pixels: *GLvoid);
-        fn glGetTexParameterfv(++target: GLenum, ++pname: GLenum, ++params: *GLfloat);
-        fn glGetTexParameteriv(++target: GLenum, ++pname: GLenum, ++params: *GLint);
-        fn glGetTexLevelParameterfv(++target: GLenum, ++level: GLint, ++pname: GLenum, ++params: *GLfloat);
-        fn glGetTexLevelParameteriv(++target: GLenum, ++level: GLint, ++pname: GLenum, ++params: *GLint);
-        fn glIsEnabled(++cap: GLenum) -> GLboolean;
-        fn glDepthRange(++near: GLdouble, ++far: GLdouble);
-        fn glViewport(++x: GLint, ++y: GLint, ++width: GLsizei, ++height: GLsizei);
+        fn glBlendFunc(++sfactor: ::GLenum, ++dfactor: ::GLenum);
+        fn glLogicOp(++opcode: ::GLenum);
+        fn glStencilFunc(++func: ::GLenum, ++glref: ::GLint, ++mask: ::GLuint);
+        fn glStencilOp(++glfail: ::GLenum, ++zfail: ::GLenum, ++zpass: ::GLenum);
+        fn glDepthFunc(++func: ::GLenum);
+        fn glPixelStoref(++pname: ::GLenum, ++param: ::GLfloat);
+        fn glPixelStorei(++pname: ::GLenum, ++param: ::GLint);
+        fn glReadBuffer(++mode: ::GLenum);
+        fn glReadPixels(++x: ::GLint, ++y: ::GLint, ++width: ::GLsizei, ++height: ::GLsizei, ++format: ::GLenum, ++gltype: ::GLenum, ++pixels: *::GLvoid);
+        fn glGetBooleanv(++pname: ::GLenum, ++params: *::GLboolean);
+        fn glGetDoublev(++pname: ::GLenum, ++params: *::GLdouble);
+        fn glGetError() -> ::GLenum;
+        fn glGetFloatv(++pname: ::GLenum, ++params: *::GLfloat);
+        fn glGetIntegerv(++pname: ::GLenum, ++params: *::GLint);
+        fn glGetString(++name: ::GLenum) -> *::GLubyte;
+        fn glGetTexImage(++target: ::GLenum, ++level: ::GLint, ++format: ::GLenum, ++gltype: ::GLenum, ++pixels: *::GLvoid);
+        fn glGetTexParameterfv(++target: ::GLenum, ++pname: ::GLenum, ++params: *::GLfloat);
+        fn glGetTexParameteriv(++target: ::GLenum, ++pname: ::GLenum, ++params: *::GLint);
+        fn glGetTexLevelParameterfv(++target: ::GLenum, ++level: ::GLint, ++pname: ::GLenum, ++params: *::GLfloat);
+        fn glGetTexLevelParameteriv(++target: ::GLenum, ++level: ::GLint, ++pname: ::GLenum, ++params: *::GLint);
+        fn glIsEnabled(++cap: ::GLenum) -> ::GLboolean;
+        fn glDepthRange(++near: ::GLdouble, ++far: ::GLdouble);
+        fn glViewport(++x: ::GLint, ++y: ::GLint, ++width: ::GLsizei, ++height: ::GLsizei);
     }
     type PFNGLCULLFACEPROC = *u8;
     type PFNGLFRONTFACEPROC = *u8;
@@ -115,20 +115,20 @@ pub mod GL_VERSION_1_0 {
 pub mod GL_VERSION_1_1 {
     #[nolink]
     extern "C" {
-        fn glDrawArrays(++mode: GLenum, ++first: GLint, ++count: GLsizei);
-        fn glDrawElements(++mode: GLenum, ++count: GLsizei, ++gltype: GLenum, ++indices: *GLvoid);
-        fn glGetPointerv(++pname: GLenum, ++params: **GLvoid);
-        fn glPolygonOffset(++factor: GLfloat, ++units: GLfloat);
-        fn glCopyTexImage1D(++target: GLenum, ++level: GLint, ++internalformat: GLenum, ++x: GLint, ++y: GLint, ++width: GLsizei, ++border: GLint);
-        fn glCopyTexImage2D(++target: GLenum, ++level: GLint, ++internalformat: GLenum, ++x: GLint, ++y: GLint, ++width: GLsizei, ++height: GLsizei, ++border: GLint);
-        fn glCopyTexSubImage1D(++target: GLenum, ++level: GLint, ++xoffset: GLint, ++x: GLint, ++y: GLint, ++width: GLsizei);
-        fn glCopyTexSubImage2D(++target: GLenum, ++level: GLint, ++xoffset: GLint, ++yoffset: GLint, ++x: GLint, ++y: GLint, ++width: GLsizei, ++height: GLsizei);
-        fn glTexSubImage1D(++target: GLenum, ++level: GLint, ++xoffset: GLint, ++width: GLsizei, ++format: GLenum, ++gltype: GLenum, ++pixels: *GLvoid);
-        fn glTexSubImage2D(++target: GLenum, ++level: GLint, ++xoffset: GLint, ++yoffset: GLint, ++width: GLsizei, ++height: GLsizei, ++format: GLenum, ++gltype: GLenum, ++pixels: *GLvoid);
-        fn glBindTexture(++target: GLenum, ++texture: GLuint);
-        fn glDeleteTextures(++n: GLsizei, ++textures: *GLuint);
-        fn glGenTextures(++n: GLsizei, ++textures: *GLuint);
-        fn glIsTexture(++texture: GLuint) -> GLboolean;
+        fn glDrawArrays(++mode: ::GLenum, ++first: ::GLint, ++count: ::GLsizei);
+        fn glDrawElements(++mode: ::GLenum, ++count: ::GLsizei, ++gltype: ::GLenum, ++indices: *::GLvoid);
+        fn glGetPointerv(++pname: ::GLenum, ++params: **::GLvoid);
+        fn glPolygonOffset(++factor: ::GLfloat, ++units: ::GLfloat);
+        fn glCopyTexImage1D(++target: ::GLenum, ++level: ::GLint, ++internalformat: ::GLenum, ++x: ::GLint, ++y: ::GLint, ++width: ::GLsizei, ++border: ::GLint);
+        fn glCopyTexImage2D(++target: ::GLenum, ++level: ::GLint, ++internalformat: ::GLenum, ++x: ::GLint, ++y: ::GLint, ++width: ::GLsizei, ++height: ::GLsizei, ++border: ::GLint);
+        fn glCopyTexSubImage1D(++target: ::GLenum, ++level: ::GLint, ++xoffset: ::GLint, ++x: ::GLint, ++y: ::GLint, ++width: ::GLsizei);
+        fn glCopyTexSubImage2D(++target: ::GLenum, ++level: ::GLint, ++xoffset: ::GLint, ++yoffset: ::GLint, ++x: ::GLint, ++y: ::GLint, ++width: ::GLsizei, ++height: ::GLsizei);
+        fn glTexSubImage1D(++target: ::GLenum, ++level: ::GLint, ++xoffset: ::GLint, ++width: ::GLsizei, ++format: ::GLenum, ++gltype: ::GLenum, ++pixels: *::GLvoid);
+        fn glTexSubImage2D(++target: ::GLenum, ++level: ::GLint, ++xoffset: ::GLint, ++yoffset: ::GLint, ++width: ::GLsizei, ++height: ::GLsizei, ++format: ::GLenum, ++gltype: ::GLenum, ++pixels: *::GLvoid);
+        fn glBindTexture(++target: ::GLenum, ++texture: ::GLuint);
+        fn glDeleteTextures(++n: ::GLsizei, ++textures: *::GLuint);
+        fn glGenTextures(++n: ::GLsizei, ++textures: *::GLuint);
+        fn glIsTexture(++texture: ::GLuint) -> ::GLboolean;
     }
     type PFNGLDRAWARRAYSPROC = *u8;
     type PFNGLDRAWELEMENTSPROC = *u8;
@@ -150,12 +150,12 @@ pub mod GL_VERSION_1_1 {
 pub mod GL_VERSION_1_2 {
     #[nolink]
     extern "C" {
-        fn glBlendColor(++red: GLfloat, ++green: GLfloat, ++blue: GLfloat, ++alpha: GLfloat);
-        fn glBlendEquation(++mode: GLenum);
-        fn glDrawRangeElements(++mode: GLenum, ++start: GLuint, ++end: GLuint, ++count: GLsizei, ++gltype: GLenum, ++indices: *GLvoid);
-        fn glTexImage3D(++target: GLenum, ++level: GLint, ++internalformat: GLint, ++width: GLsizei, ++height: GLsizei, ++depth: GLsizei, ++border: GLint, ++format: GLenum, ++gltype: GLenum, ++pixels: *GLvoid);
-        fn glTexSubImage3D(++target: GLenum, ++level: GLint, ++xoffset: GLint, ++yoffset: GLint, ++zoffset: GLint, ++width: GLsizei, ++height: GLsizei, ++depth: GLsizei, ++format: GLenum, ++gltype: GLenum, ++pixels: *GLvoid);
-        fn glCopyTexSubImage3D(++target: GLenum, ++level: GLint, ++xoffset: GLint, ++yoffset: GLint, ++zoffset: GLint, ++x: GLint, ++y: GLint, ++width: GLsizei, ++height: GLsizei);
+        fn glBlendColor(++red: ::GLfloat, ++green: ::GLfloat, ++blue: ::GLfloat, ++alpha: ::GLfloat);
+        fn glBlendEquation(++mode: ::GLenum);
+        fn glDrawRangeElements(++mode: ::GLenum, ++start: ::GLuint, ++end: ::GLuint, ++count: ::GLsizei, ++gltype: ::GLenum, ++indices: *::GLvoid);
+        fn glTexImage3D(++target: ::GLenum, ++level: ::GLint, ++internalformat: ::GLint, ++width: ::GLsizei, ++height: ::GLsizei, ++depth: ::GLsizei, ++border: ::GLint, ++format: ::GLenum, ++gltype: ::GLenum, ++pixels: *::GLvoid);
+        fn glTexSubImage3D(++target: ::GLenum, ++level: ::GLint, ++xoffset: ::GLint, ++yoffset: ::GLint, ++zoffset: ::GLint, ++width: ::GLsizei, ++height: ::GLsizei, ++depth: ::GLsizei, ++format: ::GLenum, ++gltype: ::GLenum, ++pixels: *::GLvoid);
+        fn glCopyTexSubImage3D(++target: ::GLenum, ++level: ::GLint, ++xoffset: ::GLint, ++yoffset: ::GLint, ++zoffset: ::GLint, ++x: ::GLint, ++y: ::GLint, ++width: ::GLsizei, ++height: ::GLsizei);
     }
     type PFNGLBLENDCOLORPROC = *u8;
     type PFNGLBLENDEQUATIONPROC = *u8;
@@ -169,15 +169,15 @@ pub mod GL_VERSION_1_2 {
 pub mod GL_VERSION_1_3 {
     #[nolink]
     extern "C" {
-        fn glActiveTexture(++texture: GLenum);
-        fn glSampleCoverage(++value: GLfloat, ++invert: GLboolean);
-        fn glCompressedTexImage3D(++target: GLenum, ++level: GLint, ++internalformat: GLenum, ++width: GLsizei, ++height: GLsizei, ++depth: GLsizei, ++border: GLint, ++imageSize: GLsizei, ++data: *GLvoid);
-        fn glCompressedTexImage2D(++target: GLenum, ++level: GLint, ++internalformat: GLenum, ++width: GLsizei, ++height: GLsizei, ++border: GLint, ++imageSize: GLsizei, ++data: *GLvoid);
-        fn glCompressedTexImage1D(++target: GLenum, ++level: GLint, ++internalformat: GLenum, ++width: GLsizei, ++border: GLint, ++imageSize: GLsizei, ++data: *GLvoid);
-        fn glCompressedTexSubImage3D(++target: GLenum, ++level: GLint, ++xoffset: GLint, ++yoffset: GLint, ++zoffset: GLint, ++width: GLsizei, ++height: GLsizei, ++depth: GLsizei, ++format: GLenum, ++imageSize: GLsizei, ++data: *GLvoid);
-        fn glCompressedTexSubImage2D(++target: GLenum, ++level: GLint, ++xoffset: GLint, ++yoffset: GLint, ++width: GLsizei, ++height: GLsizei, ++format: GLenum, ++imageSize: GLsizei, ++data: *GLvoid);
-        fn glCompressedTexSubImage1D(++target: GLenum, ++level: GLint, ++xoffset: GLint, ++width: GLsizei, ++format: GLenum, ++imageSize: GLsizei, ++data: *GLvoid);
-        fn glGetCompressedTexImage(++target: GLenum, ++level: GLint, ++img: *GLvoid);
+        fn glActiveTexture(++texture: ::GLenum);
+        fn glSampleCoverage(++value: ::GLfloat, ++invert: ::GLboolean);
+        fn glCompressedTexImage3D(++target: ::GLenum, ++level: ::GLint, ++internalformat: ::GLenum, ++width: ::GLsizei, ++height: ::GLsizei, ++depth: ::GLsizei, ++border: ::GLint, ++imageSize: ::GLsizei, ++data: *::GLvoid);
+        fn glCompressedTexImage2D(++target: ::GLenum, ++level: ::GLint, ++internalformat: ::GLenum, ++width: ::GLsizei, ++height: ::GLsizei, ++border: ::GLint, ++imageSize: ::GLsizei, ++data: *::GLvoid);
+        fn glCompressedTexImage1D(++target: ::GLenum, ++level: ::GLint, ++internalformat: ::GLenum, ++width: ::GLsizei, ++border: ::GLint, ++imageSize: ::GLsizei, ++data: *::GLvoid);
+        fn glCompressedTexSubImage3D(++target: ::GLenum, ++level: ::GLint, ++xoffset: ::GLint, ++yoffset: ::GLint, ++zoffset: ::GLint, ++width: ::GLsizei, ++height: ::GLsizei, ++depth: ::GLsizei, ++format: ::GLenum, ++imageSize: ::GLsizei, ++data: *::GLvoid);
+        fn glCompressedTexSubImage2D(++target: ::GLenum, ++level: ::GLint, ++xoffset: ::GLint, ++yoffset: ::GLint, ++width: ::GLsizei, ++height: ::GLsizei, ++format: ::GLenum, ++imageSize: ::GLsizei, ++data: *::GLvoid);
+        fn glCompressedTexSubImage1D(++target: ::GLenum, ++level: ::GLint, ++xoffset: ::GLint, ++width: ::GLsizei, ++format: ::GLenum, ++imageSize: ::GLsizei, ++data: *::GLvoid);
+        fn glGetCompressedTexImage(++target: ::GLenum, ++level: ::GLint, ++img: *::GLvoid);
     }
     type PFNGLACTIVETEXTUREPROC = *u8;
     type PFNGLSAMPLECOVERAGEPROC = *u8;
@@ -194,13 +194,13 @@ pub mod GL_VERSION_1_3 {
 pub mod GL_VERSION_1_4 {
     #[nolink]
     extern "C" {
-        fn glBlendFuncSeparate(++sfactorRGB: GLenum, ++dfactorRGB: GLenum, ++sfactorAlpha: GLenum, ++dfactorAlpha: GLenum);
-        fn glMultiDrawArrays(++mode: GLenum, ++first: *GLint, ++count: *GLsizei, ++drawcount: GLsizei);
-        fn glMultiDrawElements(++mode: GLenum, ++count: *GLsizei, ++gltype: GLenum, ++indices: **GLvoid, ++drawcount: GLsizei);
-        fn glPointParameterf(++pname: GLenum, ++param: GLfloat);
-        fn glPointParameterfv(++pname: GLenum, ++params: *GLfloat);
-        fn glPointParameteri(++pname: GLenum, ++param: GLint);
-        fn glPointParameteriv(++pname: GLenum, ++params: *GLint);
+        fn glBlendFuncSeparate(++sfactorRGB: ::GLenum, ++dfactorRGB: ::GLenum, ++sfactorAlpha: ::GLenum, ++dfactorAlpha: ::GLenum);
+        fn glMultiDrawArrays(++mode: ::GLenum, ++first: *::GLint, ++count: *::GLsizei, ++drawcount: ::GLsizei);
+        fn glMultiDrawElements(++mode: ::GLenum, ++count: *::GLsizei, ++gltype: ::GLenum, ++indices: **::GLvoid, ++drawcount: ::GLsizei);
+        fn glPointParameterf(++pname: ::GLenum, ++param: ::GLfloat);
+        fn glPointParameterfv(++pname: ::GLenum, ++params: *::GLfloat);
+        fn glPointParameteri(++pname: ::GLenum, ++param: ::GLint);
+        fn glPointParameteriv(++pname: ::GLenum, ++params: *::GLint);
     }
     type PFNGLBLENDFUNCSEPARATEPROC = *u8;
     type PFNGLMULTIDRAWARRAYSPROC = *u8;
@@ -215,25 +215,25 @@ pub mod GL_VERSION_1_4 {
 pub mod GL_VERSION_1_5 {
     #[nolink]
     extern "C" {
-        fn glGenQueries(++n: GLsizei, ++ids: *GLuint);
-        fn glDeleteQueries(++n: GLsizei, ++ids: *GLuint);
-        fn glIsQuery(++id: GLuint) -> GLboolean;
-        fn glBeginQuery(++target: GLenum, ++id: GLuint);
-        fn glEndQuery(++target: GLenum);
-        fn glGetQueryiv(++target: GLenum, ++pname: GLenum, ++params: *GLint);
-        fn glGetQueryObjectiv(++id: GLuint, ++pname: GLenum, ++params: *GLint);
-        fn glGetQueryObjectuiv(++id: GLuint, ++pname: GLenum, ++params: *GLuint);
-        fn glBindBuffer(++target: GLenum, ++buffer: GLuint);
-        fn glDeleteBuffers(++n: GLsizei, ++buffers: *GLuint);
-        fn glGenBuffers(++n: GLsizei, ++buffers: *GLuint);
-        fn glIsBuffer(++buffer: GLuint) -> GLboolean;
-        fn glBufferData(++target: GLenum, ++size: GLsizeiptr, ++data: *GLvoid, ++usage: GLenum);
-        fn glBufferSubData(++target: GLenum, ++offset: GLintptr, ++size: GLsizeiptr, ++data: *GLvoid);
-        fn glGetBufferSubData(++target: GLenum, ++offset: GLintptr, ++size: GLsizeiptr, ++data: *GLvoid);
-        fn glMapBuffer(++target: GLenum, ++access: GLenum) -> *GLvoid;
-        fn glUnmapBuffer(++target: GLenum) -> GLboolean;
-        fn glGetBufferParameteriv(++target: GLenum, ++pname: GLenum, ++params: *GLint);
-        fn glGetBufferPointerv(++target: GLenum, ++pname: GLenum, ++params: **GLvoid);
+        fn glGenQueries(++n: ::GLsizei, ++ids: *::GLuint);
+        fn glDeleteQueries(++n: ::GLsizei, ++ids: *::GLuint);
+        fn glIsQuery(++id: ::GLuint) -> ::GLboolean;
+        fn glBeginQuery(++target: ::GLenum, ++id: ::GLuint);
+        fn glEndQuery(++target: ::GLenum);
+        fn glGetQueryiv(++target: ::GLenum, ++pname: ::GLenum, ++params: *::GLint);
+        fn glGetQueryObjectiv(++id: ::GLuint, ++pname: ::GLenum, ++params: *::GLint);
+        fn glGetQueryObjectuiv(++id: ::GLuint, ++pname: ::GLenum, ++params: *::GLuint);
+        fn glBindBuffer(++target: ::GLenum, ++buffer: ::GLuint);
+        fn glDeleteBuffers(++n: ::GLsizei, ++buffers: *::GLuint);
+        fn glGenBuffers(++n: ::GLsizei, ++buffers: *::GLuint);
+        fn glIsBuffer(++buffer: ::GLuint) -> ::GLboolean;
+        fn glBufferData(++target: ::GLenum, ++size: ::GLsizeiptr, ++data: *::GLvoid, ++usage: ::GLenum);
+        fn glBufferSubData(++target: ::GLenum, ++offset: ::GLintptr, ++size: ::GLsizeiptr, ++data: *::GLvoid);
+        fn glGetBufferSubData(++target: ::GLenum, ++offset: ::GLintptr, ++size: ::GLsizeiptr, ++data: *::GLvoid);
+        fn glMapBuffer(++target: ::GLenum, ++access: ::GLenum) -> *::GLvoid;
+        fn glUnmapBuffer(++target: ::GLenum) -> ::GLboolean;
+        fn glGetBufferParameteriv(++target: ::GLenum, ++pname: ::GLenum, ++params: *::GLint);
+        fn glGetBufferPointerv(++target: ::GLenum, ++pname: ::GLenum, ++params: **::GLvoid);
     }
     type PFNGLGENQUERIESPROC = *u8;
     type PFNGLDELETEQUERIESPROC = *u8;
@@ -260,99 +260,99 @@ pub mod GL_VERSION_1_5 {
 pub mod GL_VERSION_2_0 {
     #[nolink]
     extern "C" {
-        fn glBlendEquationSeparate(++modeRGB: GLenum, ++modeAlpha: GLenum);
-        fn glDrawBuffers(++n: GLsizei, ++bufs: *GLenum);
-        fn glStencilOpSeparate(++face: GLenum, ++sfail: GLenum, ++dpfail: GLenum, ++dppass: GLenum);
-        fn glStencilFuncSeparate(++face: GLenum, ++func: GLenum, ++glref: GLint, ++mask: GLuint);
-        fn glStencilMaskSeparate(++face: GLenum, ++mask: GLuint);
-        fn glAttachShader(++program: GLuint, ++shader: GLuint);
-        fn glBindAttribLocation(++program: GLuint, ++index: GLuint, ++name: *GLchar);
-        fn glCompileShader(++shader: GLuint);
-        fn glCreateProgram() -> GLuint;
-        fn glCreateShader(++gltype: GLenum) -> GLuint;
-        fn glDeleteProgram(++program: GLuint);
-        fn glDeleteShader(++shader: GLuint);
-        fn glDetachShader(++program: GLuint, ++shader: GLuint);
-        fn glDisableVertexAttribArray(++index: GLuint);
-        fn glEnableVertexAttribArray(++index: GLuint);
-        fn glGetActiveAttrib(++program: GLuint, ++index: GLuint, ++bufSize: GLsizei, ++length: *GLsizei, ++size: *GLint, ++gltype: *GLenum, ++name: *GLchar);
-        fn glGetActiveUniform(++program: GLuint, ++index: GLuint, ++bufSize: GLsizei, ++length: *GLsizei, ++size: *GLint, ++gltype: *GLenum, ++name: *GLchar);
-        fn glGetAttachedShaders(++program: GLuint, ++maxCount: GLsizei, ++count: *GLsizei, ++obj: *GLuint);
-        fn glGetAttribLocation(++program: GLuint, ++name: *GLchar) -> GLint;
-        fn glGetProgramiv(++program: GLuint, ++pname: GLenum, ++params: *GLint);
-        fn glGetProgramInfoLog(++program: GLuint, ++bufSize: GLsizei, ++length: *GLsizei, ++infoLog: *GLchar);
-        fn glGetShaderiv(++shader: GLuint, ++pname: GLenum, ++params: *GLint);
-        fn glGetShaderInfoLog(++shader: GLuint, ++bufSize: GLsizei, ++length: *GLsizei, ++infoLog: *GLchar);
-        fn glGetShaderSource(++shader: GLuint, ++bufSize: GLsizei, ++length: *GLsizei, ++source: *GLchar);
-        fn glGetUniformLocation(++program: GLuint, ++name: *GLchar) -> GLint;
-        fn glGetUniformfv(++program: GLuint, ++location: GLint, ++params: *GLfloat);
-        fn glGetUniformiv(++program: GLuint, ++location: GLint, ++params: *GLint);
-        fn glGetVertexAttribdv(++index: GLuint, ++pname: GLenum, ++params: *GLdouble);
-        fn glGetVertexAttribfv(++index: GLuint, ++pname: GLenum, ++params: *GLfloat);
-        fn glGetVertexAttribiv(++index: GLuint, ++pname: GLenum, ++params: *GLint);
-        fn glGetVertexAttribPointerv(++index: GLuint, ++pname: GLenum, ++pointer: **GLvoid);
-        fn glIsProgram(++program: GLuint) -> GLboolean;
-        fn glIsShader(++shader: GLuint) -> GLboolean;
-        fn glLinkProgram(++program: GLuint);
-        fn glShaderSource(++shader: GLuint, ++count: GLsizei, ++string: **GLchar, ++length: *GLint);
-        fn glUseProgram(++program: GLuint);
-        fn glUniform1f(++location: GLint, ++v0: GLfloat);
-        fn glUniform2f(++location: GLint, ++v0: GLfloat, ++v1: GLfloat);
-        fn glUniform3f(++location: GLint, ++v0: GLfloat, ++v1: GLfloat, ++v2: GLfloat);
-        fn glUniform4f(++location: GLint, ++v0: GLfloat, ++v1: GLfloat, ++v2: GLfloat, ++v3: GLfloat);
-        fn glUniform1i(++location: GLint, ++v0: GLint);
-        fn glUniform2i(++location: GLint, ++v0: GLint, ++v1: GLint);
-        fn glUniform3i(++location: GLint, ++v0: GLint, ++v1: GLint, ++v2: GLint);
-        fn glUniform4i(++location: GLint, ++v0: GLint, ++v1: GLint, ++v2: GLint, ++v3: GLint);
-        fn glUniform1fv(++location: GLint, ++count: GLsizei, ++value: *GLfloat);
-        fn glUniform2fv(++location: GLint, ++count: GLsizei, ++value: *GLfloat);
-        fn glUniform3fv(++location: GLint, ++count: GLsizei, ++value: *GLfloat);
-        fn glUniform4fv(++location: GLint, ++count: GLsizei, ++value: *GLfloat);
-        fn glUniform1iv(++location: GLint, ++count: GLsizei, ++value: *GLint);
-        fn glUniform2iv(++location: GLint, ++count: GLsizei, ++value: *GLint);
-        fn glUniform3iv(++location: GLint, ++count: GLsizei, ++value: *GLint);
-        fn glUniform4iv(++location: GLint, ++count: GLsizei, ++value: *GLint);
-        fn glUniformMatrix2fv(++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLfloat);
-        fn glUniformMatrix3fv(++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLfloat);
-        fn glUniformMatrix4fv(++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLfloat);
-        fn glValidateProgram(++program: GLuint);
-        fn glVertexAttrib1d(++index: GLuint, ++x: GLdouble);
-        fn glVertexAttrib1dv(++index: GLuint, ++v: *GLdouble);
-        fn glVertexAttrib1f(++index: GLuint, ++x: GLfloat);
-        fn glVertexAttrib1fv(++index: GLuint, ++v: *GLfloat);
-        fn glVertexAttrib1s(++index: GLuint, ++x: GLshort);
-        fn glVertexAttrib1sv(++index: GLuint, ++v: *GLshort);
-        fn glVertexAttrib2d(++index: GLuint, ++x: GLdouble, ++y: GLdouble);
-        fn glVertexAttrib2dv(++index: GLuint, ++v: *GLdouble);
-        fn glVertexAttrib2f(++index: GLuint, ++x: GLfloat, ++y: GLfloat);
-        fn glVertexAttrib2fv(++index: GLuint, ++v: *GLfloat);
-        fn glVertexAttrib2s(++index: GLuint, ++x: GLshort, ++y: GLshort);
-        fn glVertexAttrib2sv(++index: GLuint, ++v: *GLshort);
-        fn glVertexAttrib3d(++index: GLuint, ++x: GLdouble, ++y: GLdouble, ++z: GLdouble);
-        fn glVertexAttrib3dv(++index: GLuint, ++v: *GLdouble);
-        fn glVertexAttrib3f(++index: GLuint, ++x: GLfloat, ++y: GLfloat, ++z: GLfloat);
-        fn glVertexAttrib3fv(++index: GLuint, ++v: *GLfloat);
-        fn glVertexAttrib3s(++index: GLuint, ++x: GLshort, ++y: GLshort, ++z: GLshort);
-        fn glVertexAttrib3sv(++index: GLuint, ++v: *GLshort);
-        fn glVertexAttrib4Nbv(++index: GLuint, ++v: *GLbyte);
-        fn glVertexAttrib4Niv(++index: GLuint, ++v: *GLint);
-        fn glVertexAttrib4Nsv(++index: GLuint, ++v: *GLshort);
-        fn glVertexAttrib4Nub(++index: GLuint, ++x: GLubyte, ++y: GLubyte, ++z: GLubyte, ++w: GLubyte);
-        fn glVertexAttrib4Nubv(++index: GLuint, ++v: *GLubyte);
-        fn glVertexAttrib4Nuiv(++index: GLuint, ++v: *GLuint);
-        fn glVertexAttrib4Nusv(++index: GLuint, ++v: *GLushort);
-        fn glVertexAttrib4bv(++index: GLuint, ++v: *GLbyte);
-        fn glVertexAttrib4d(++index: GLuint, ++x: GLdouble, ++y: GLdouble, ++z: GLdouble, ++w: GLdouble);
-        fn glVertexAttrib4dv(++index: GLuint, ++v: *GLdouble);
-        fn glVertexAttrib4f(++index: GLuint, ++x: GLfloat, ++y: GLfloat, ++z: GLfloat, ++w: GLfloat);
-        fn glVertexAttrib4fv(++index: GLuint, ++v: *GLfloat);
-        fn glVertexAttrib4iv(++index: GLuint, ++v: *GLint);
-        fn glVertexAttrib4s(++index: GLuint, ++x: GLshort, ++y: GLshort, ++z: GLshort, ++w: GLshort);
-        fn glVertexAttrib4sv(++index: GLuint, ++v: *GLshort);
-        fn glVertexAttrib4ubv(++index: GLuint, ++v: *GLubyte);
-        fn glVertexAttrib4uiv(++index: GLuint, ++v: *GLuint);
-        fn glVertexAttrib4usv(++index: GLuint, ++v: *GLushort);
-        fn glVertexAttribPointer(++index: GLuint, ++size: GLint, ++gltype: GLenum, ++normalized: GLboolean, ++stride: GLsizei, ++pointer: *GLvoid);
+        fn glBlendEquationSeparate(++modeRGB: ::GLenum, ++modeAlpha: ::GLenum);
+        fn glDrawBuffers(++n: ::GLsizei, ++bufs: *::GLenum);
+        fn glStencilOpSeparate(++face: ::GLenum, ++sfail: ::GLenum, ++dpfail: ::GLenum, ++dppass: ::GLenum);
+        fn glStencilFuncSeparate(++face: ::GLenum, ++func: ::GLenum, ++glref: ::GLint, ++mask: ::GLuint);
+        fn glStencilMaskSeparate(++face: ::GLenum, ++mask: ::GLuint);
+        fn glAttachShader(++program: ::GLuint, ++shader: ::GLuint);
+        fn glBindAttribLocation(++program: ::GLuint, ++index: ::GLuint, ++name: *::GLchar);
+        fn glCompileShader(++shader: ::GLuint);
+        fn glCreateProgram() -> ::GLuint;
+        fn glCreateShader(++gltype: ::GLenum) -> ::GLuint;
+        fn glDeleteProgram(++program: ::GLuint);
+        fn glDeleteShader(++shader: ::GLuint);
+        fn glDetachShader(++program: ::GLuint, ++shader: ::GLuint);
+        fn glDisableVertexAttribArray(++index: ::GLuint);
+        fn glEnableVertexAttribArray(++index: ::GLuint);
+        fn glGetActiveAttrib(++program: ::GLuint, ++index: ::GLuint, ++bufSize: ::GLsizei, ++length: *::GLsizei, ++size: *::GLint, ++gltype: *::GLenum, ++name: *::GLchar);
+        fn glGetActiveUniform(++program: ::GLuint, ++index: ::GLuint, ++bufSize: ::GLsizei, ++length: *::GLsizei, ++size: *::GLint, ++gltype: *::GLenum, ++name: *::GLchar);
+        fn glGetAttachedShaders(++program: ::GLuint, ++maxCount: ::GLsizei, ++count: *::GLsizei, ++obj: *::GLuint);
+        fn glGetAttribLocation(++program: ::GLuint, ++name: *::GLchar) -> ::GLint;
+        fn glGetProgramiv(++program: ::GLuint, ++pname: ::GLenum, ++params: *::GLint);
+        fn glGetProgramInfoLog(++program: ::GLuint, ++bufSize: ::GLsizei, ++length: *::GLsizei, ++infoLog: *::GLchar);
+        fn glGetShaderiv(++shader: ::GLuint, ++pname: ::GLenum, ++params: *::GLint);
+        fn glGetShaderInfoLog(++shader: ::GLuint, ++bufSize: ::GLsizei, ++length: *::GLsizei, ++infoLog: *::GLchar);
+        fn glGetShaderSource(++shader: ::GLuint, ++bufSize: ::GLsizei, ++length: *::GLsizei, ++source: *::GLchar);
+        fn glGetUniformLocation(++program: ::GLuint, ++name: *::GLchar) -> ::GLint;
+        fn glGetUniformfv(++program: ::GLuint, ++location: ::GLint, ++params: *::GLfloat);
+        fn glGetUniformiv(++program: ::GLuint, ++location: ::GLint, ++params: *::GLint);
+        fn glGetVertexAttribdv(++index: ::GLuint, ++pname: ::GLenum, ++params: *::GLdouble);
+        fn glGetVertexAttribfv(++index: ::GLuint, ++pname: ::GLenum, ++params: *::GLfloat);
+        fn glGetVertexAttribiv(++index: ::GLuint, ++pname: ::GLenum, ++params: *::GLint);
+        fn glGetVertexAttribPointerv(++index: ::GLuint, ++pname: ::GLenum, ++pointer: **::GLvoid);
+        fn glIsProgram(++program: ::GLuint) -> ::GLboolean;
+        fn glIsShader(++shader: ::GLuint) -> ::GLboolean;
+        fn glLinkProgram(++program: ::GLuint);
+        fn glShaderSource(++shader: ::GLuint, ++count: ::GLsizei, ++string: **::GLchar, ++length: *::GLint);
+        fn glUseProgram(++program: ::GLuint);
+        fn glUniform1f(++location: ::GLint, ++v0: ::GLfloat);
+        fn glUniform2f(++location: ::GLint, ++v0: ::GLfloat, ++v1: ::GLfloat);
+        fn glUniform3f(++location: ::GLint, ++v0: ::GLfloat, ++v1: ::GLfloat, ++v2: ::GLfloat);
+        fn glUniform4f(++location: ::GLint, ++v0: ::GLfloat, ++v1: ::GLfloat, ++v2: ::GLfloat, ++v3: ::GLfloat);
+        fn glUniform1i(++location: ::GLint, ++v0: ::GLint);
+        fn glUniform2i(++location: ::GLint, ++v0: ::GLint, ++v1: ::GLint);
+        fn glUniform3i(++location: ::GLint, ++v0: ::GLint, ++v1: ::GLint, ++v2: ::GLint);
+        fn glUniform4i(++location: ::GLint, ++v0: ::GLint, ++v1: ::GLint, ++v2: ::GLint, ++v3: ::GLint);
+        fn glUniform1fv(++location: ::GLint, ++count: ::GLsizei, ++value: *::GLfloat);
+        fn glUniform2fv(++location: ::GLint, ++count: ::GLsizei, ++value: *::GLfloat);
+        fn glUniform3fv(++location: ::GLint, ++count: ::GLsizei, ++value: *::GLfloat);
+        fn glUniform4fv(++location: ::GLint, ++count: ::GLsizei, ++value: *::GLfloat);
+        fn glUniform1iv(++location: ::GLint, ++count: ::GLsizei, ++value: *::GLint);
+        fn glUniform2iv(++location: ::GLint, ++count: ::GLsizei, ++value: *::GLint);
+        fn glUniform3iv(++location: ::GLint, ++count: ::GLsizei, ++value: *::GLint);
+        fn glUniform4iv(++location: ::GLint, ++count: ::GLsizei, ++value: *::GLint);
+        fn glUniformMatrix2fv(++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLfloat);
+        fn glUniformMatrix3fv(++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLfloat);
+        fn glUniformMatrix4fv(++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLfloat);
+        fn glValidateProgram(++program: ::GLuint);
+        fn glVertexAttrib1d(++index: ::GLuint, ++x: ::GLdouble);
+        fn glVertexAttrib1dv(++index: ::GLuint, ++v: *::GLdouble);
+        fn glVertexAttrib1f(++index: ::GLuint, ++x: ::GLfloat);
+        fn glVertexAttrib1fv(++index: ::GLuint, ++v: *::GLfloat);
+        fn glVertexAttrib1s(++index: ::GLuint, ++x: ::GLshort);
+        fn glVertexAttrib1sv(++index: ::GLuint, ++v: *::GLshort);
+        fn glVertexAttrib2d(++index: ::GLuint, ++x: ::GLdouble, ++y: ::GLdouble);
+        fn glVertexAttrib2dv(++index: ::GLuint, ++v: *::GLdouble);
+        fn glVertexAttrib2f(++index: ::GLuint, ++x: ::GLfloat, ++y: ::GLfloat);
+        fn glVertexAttrib2fv(++index: ::GLuint, ++v: *::GLfloat);
+        fn glVertexAttrib2s(++index: ::GLuint, ++x: ::GLshort, ++y: ::GLshort);
+        fn glVertexAttrib2sv(++index: ::GLuint, ++v: *::GLshort);
+        fn glVertexAttrib3d(++index: ::GLuint, ++x: ::GLdouble, ++y: ::GLdouble, ++z: ::GLdouble);
+        fn glVertexAttrib3dv(++index: ::GLuint, ++v: *::GLdouble);
+        fn glVertexAttrib3f(++index: ::GLuint, ++x: ::GLfloat, ++y: ::GLfloat, ++z: ::GLfloat);
+        fn glVertexAttrib3fv(++index: ::GLuint, ++v: *::GLfloat);
+        fn glVertexAttrib3s(++index: ::GLuint, ++x: ::GLshort, ++y: ::GLshort, ++z: ::GLshort);
+        fn glVertexAttrib3sv(++index: ::GLuint, ++v: *::GLshort);
+        fn glVertexAttrib4Nbv(++index: ::GLuint, ++v: *::GLbyte);
+        fn glVertexAttrib4Niv(++index: ::GLuint, ++v: *::GLint);
+        fn glVertexAttrib4Nsv(++index: ::GLuint, ++v: *::GLshort);
+        fn glVertexAttrib4Nub(++index: ::GLuint, ++x: ::GLubyte, ++y: ::GLubyte, ++z: ::GLubyte, ++w: ::GLubyte);
+        fn glVertexAttrib4Nubv(++index: ::GLuint, ++v: *::GLubyte);
+        fn glVertexAttrib4Nuiv(++index: ::GLuint, ++v: *::GLuint);
+        fn glVertexAttrib4Nusv(++index: ::GLuint, ++v: *::GLushort);
+        fn glVertexAttrib4bv(++index: ::GLuint, ++v: *::GLbyte);
+        fn glVertexAttrib4d(++index: ::GLuint, ++x: ::GLdouble, ++y: ::GLdouble, ++z: ::GLdouble, ++w: ::GLdouble);
+        fn glVertexAttrib4dv(++index: ::GLuint, ++v: *::GLdouble);
+        fn glVertexAttrib4f(++index: ::GLuint, ++x: ::GLfloat, ++y: ::GLfloat, ++z: ::GLfloat, ++w: ::GLfloat);
+        fn glVertexAttrib4fv(++index: ::GLuint, ++v: *::GLfloat);
+        fn glVertexAttrib4iv(++index: ::GLuint, ++v: *::GLint);
+        fn glVertexAttrib4s(++index: ::GLuint, ++x: ::GLshort, ++y: ::GLshort, ++z: ::GLshort, ++w: ::GLshort);
+        fn glVertexAttrib4sv(++index: ::GLuint, ++v: *::GLshort);
+        fn glVertexAttrib4ubv(++index: ::GLuint, ++v: *::GLubyte);
+        fn glVertexAttrib4uiv(++index: ::GLuint, ++v: *::GLuint);
+        fn glVertexAttrib4usv(++index: ::GLuint, ++v: *::GLushort);
+        fn glVertexAttribPointer(++index: ::GLuint, ++size: ::GLint, ++gltype: ::GLenum, ++normalized: ::GLboolean, ++stride: ::GLsizei, ++pointer: *::GLvoid);
     }
     type PFNGLBLENDEQUATIONSEPARATEPROC = *u8;
     type PFNGLDRAWBUFFERSPROC = *u8;
@@ -453,12 +453,12 @@ pub mod GL_VERSION_2_0 {
 pub mod GL_VERSION_2_1 {
     #[nolink]
     extern "C" {
-        fn glUniformMatrix2x3fv(++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLfloat);
-        fn glUniformMatrix3x2fv(++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLfloat);
-        fn glUniformMatrix2x4fv(++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLfloat);
-        fn glUniformMatrix4x2fv(++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLfloat);
-        fn glUniformMatrix3x4fv(++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLfloat);
-        fn glUniformMatrix4x3fv(++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLfloat);
+        fn glUniformMatrix2x3fv(++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLfloat);
+        fn glUniformMatrix3x2fv(++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLfloat);
+        fn glUniformMatrix2x4fv(++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLfloat);
+        fn glUniformMatrix4x2fv(++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLfloat);
+        fn glUniformMatrix3x4fv(++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLfloat);
+        fn glUniformMatrix4x3fv(++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLfloat);
     }
     type PFNGLUNIFORMMATRIX2X3FVPROC = *u8;
     type PFNGLUNIFORMMATRIX3X2FVPROC = *u8;
@@ -476,64 +476,64 @@ pub mod GL_VERSION_3_0 {
     /* ARB_vertex_array_object */
     #[nolink]
     extern "C" {
-        fn glColorMaski(++index: GLuint, ++r: GLboolean, ++g: GLboolean, ++b: GLboolean, ++a: GLboolean);
-        fn glGetBooleani_v(++target: GLenum, ++index: GLuint, ++data: *GLboolean);
-        fn glGetIntegeri_v(++target: GLenum, ++index: GLuint, ++data: *GLint);
-        fn glEnablei(++target: GLenum, ++index: GLuint);
-        fn glDisablei(++target: GLenum, ++index: GLuint);
-        fn glIsEnabledi(++target: GLenum, ++index: GLuint) -> GLboolean;
-        fn glBeginTransformFeedback(++primitiveMode: GLenum);
+        fn glColorMaski(++index: ::GLuint, ++r: ::GLboolean, ++g: ::GLboolean, ++b: ::GLboolean, ++a: ::GLboolean);
+        fn glGetBooleani_v(++target: ::GLenum, ++index: ::GLuint, ++data: *::GLboolean);
+        fn glGetIntegeri_v(++target: ::GLenum, ++index: ::GLuint, ++data: *::GLint);
+        fn glEnablei(++target: ::GLenum, ++index: ::GLuint);
+        fn glDisablei(++target: ::GLenum, ++index: ::GLuint);
+        fn glIsEnabledi(++target: ::GLenum, ++index: ::GLuint) -> ::GLboolean;
+        fn glBeginTransformFeedback(++primitiveMode: ::GLenum);
         fn glEndTransformFeedback();
-        fn glBindBufferRange(++target: GLenum, ++index: GLuint, ++buffer: GLuint, ++offset: GLintptr, ++size: GLsizeiptr);
-        fn glBindBufferBase(++target: GLenum, ++index: GLuint, ++buffer: GLuint);
-        fn glTransformFeedbackVaryings(++program: GLuint, ++count: GLsizei, ++varyings: **GLchar, ++bufferMode: GLenum);
-        fn glGetTransformFeedbackVarying(++program: GLuint, ++index: GLuint, ++bufSize: GLsizei, ++length: *GLsizei, ++size: *GLsizei, ++gltype: *GLenum, ++name: *GLchar);
-        fn glClampColor(++target: GLenum, ++clamp: GLenum);
-        fn glBeginConditionalRender(++id: GLuint, ++mode: GLenum);
+        fn glBindBufferRange(++target: ::GLenum, ++index: ::GLuint, ++buffer: ::GLuint, ++offset: ::GLintptr, ++size: ::GLsizeiptr);
+        fn glBindBufferBase(++target: ::GLenum, ++index: ::GLuint, ++buffer: ::GLuint);
+        fn glTransformFeedbackVaryings(++program: ::GLuint, ++count: ::GLsizei, ++varyings: **::GLchar, ++bufferMode: ::GLenum);
+        fn glGetTransformFeedbackVarying(++program: ::GLuint, ++index: ::GLuint, ++bufSize: ::GLsizei, ++length: *::GLsizei, ++size: *::GLsizei, ++gltype: *::GLenum, ++name: *::GLchar);
+        fn glClampColor(++target: ::GLenum, ++clamp: ::GLenum);
+        fn glBeginConditionalRender(++id: ::GLuint, ++mode: ::GLenum);
         fn glEndConditionalRender();
-        fn glVertexAttribIPointer(++index: GLuint, ++size: GLint, ++gltype: GLenum, ++stride: GLsizei, ++pointer: *GLvoid);
-        fn glGetVertexAttribIiv(++index: GLuint, ++pname: GLenum, ++params: *GLint);
-        fn glGetVertexAttribIuiv(++index: GLuint, ++pname: GLenum, ++params: *GLuint);
-        fn glVertexAttribI1i(++index: GLuint, ++x: GLint);
-        fn glVertexAttribI2i(++index: GLuint, ++x: GLint, ++y: GLint);
-        fn glVertexAttribI3i(++index: GLuint, ++x: GLint, ++y: GLint, ++z: GLint);
-        fn glVertexAttribI4i(++index: GLuint, ++x: GLint, ++y: GLint, ++z: GLint, ++w: GLint);
-        fn glVertexAttribI1ui(++index: GLuint, ++x: GLuint);
-        fn glVertexAttribI2ui(++index: GLuint, ++x: GLuint, ++y: GLuint);
-        fn glVertexAttribI3ui(++index: GLuint, ++x: GLuint, ++y: GLuint, ++z: GLuint);
-        fn glVertexAttribI4ui(++index: GLuint, ++x: GLuint, ++y: GLuint, ++z: GLuint, ++w: GLuint);
-        fn glVertexAttribI1iv(++index: GLuint, ++v: *GLint);
-        fn glVertexAttribI2iv(++index: GLuint, ++v: *GLint);
-        fn glVertexAttribI3iv(++index: GLuint, ++v: *GLint);
-        fn glVertexAttribI4iv(++index: GLuint, ++v: *GLint);
-        fn glVertexAttribI1uiv(++index: GLuint, ++v: *GLuint);
-        fn glVertexAttribI2uiv(++index: GLuint, ++v: *GLuint);
-        fn glVertexAttribI3uiv(++index: GLuint, ++v: *GLuint);
-        fn glVertexAttribI4uiv(++index: GLuint, ++v: *GLuint);
-        fn glVertexAttribI4bv(++index: GLuint, ++v: *GLbyte);
-        fn glVertexAttribI4sv(++index: GLuint, ++v: *GLshort);
-        fn glVertexAttribI4ubv(++index: GLuint, ++v: *GLubyte);
-        fn glVertexAttribI4usv(++index: GLuint, ++v: *GLushort);
-        fn glGetUniformuiv(++program: GLuint, ++location: GLint, ++params: *GLuint);
-        fn glBindFragDataLocation(++program: GLuint, ++color: GLuint, ++name: *GLchar);
-        fn glGetFragDataLocation(++program: GLuint, ++name: *GLchar) -> GLint;
-        fn glUniform1ui(++location: GLint, ++v0: GLuint);
-        fn glUniform2ui(++location: GLint, ++v0: GLuint, ++v1: GLuint);
-        fn glUniform3ui(++location: GLint, ++v0: GLuint, ++v1: GLuint, ++v2: GLuint);
-        fn glUniform4ui(++location: GLint, ++v0: GLuint, ++v1: GLuint, ++v2: GLuint, ++v3: GLuint);
-        fn glUniform1uiv(++location: GLint, ++count: GLsizei, ++value: *GLuint);
-        fn glUniform2uiv(++location: GLint, ++count: GLsizei, ++value: *GLuint);
-        fn glUniform3uiv(++location: GLint, ++count: GLsizei, ++value: *GLuint);
-        fn glUniform4uiv(++location: GLint, ++count: GLsizei, ++value: *GLuint);
-        fn glTexParameterIiv(++target: GLenum, ++pname: GLenum, ++params: *GLint);
-        fn glTexParameterIuiv(++target: GLenum, ++pname: GLenum, ++params: *GLuint);
-        fn glGetTexParameterIiv(++target: GLenum, ++pname: GLenum, ++params: *GLint);
-        fn glGetTexParameterIuiv(++target: GLenum, ++pname: GLenum, ++params: *GLuint);
-        fn glClearBufferiv(++buffer: GLenum, ++drawbuffer: GLint, ++value: *GLint);
-        fn glClearBufferuiv(++buffer: GLenum, ++drawbuffer: GLint, ++value: *GLuint);
-        fn glClearBufferfv(++buffer: GLenum, ++drawbuffer: GLint, ++value: *GLfloat);
-        fn glClearBufferfi(++buffer: GLenum, ++drawbuffer: GLint, ++depth: GLfloat, ++stencil: GLint);
-        fn glGetStringi(++name: GLenum, ++index: GLuint) -> *GLubyte;
+        fn glVertexAttribIPointer(++index: ::GLuint, ++size: ::GLint, ++gltype: ::GLenum, ++stride: ::GLsizei, ++pointer: *::GLvoid);
+        fn glGetVertexAttribIiv(++index: ::GLuint, ++pname: ::GLenum, ++params: *::GLint);
+        fn glGetVertexAttribIuiv(++index: ::GLuint, ++pname: ::GLenum, ++params: *::GLuint);
+        fn glVertexAttribI1i(++index: ::GLuint, ++x: ::GLint);
+        fn glVertexAttribI2i(++index: ::GLuint, ++x: ::GLint, ++y: ::GLint);
+        fn glVertexAttribI3i(++index: ::GLuint, ++x: ::GLint, ++y: ::GLint, ++z: ::GLint);
+        fn glVertexAttribI4i(++index: ::GLuint, ++x: ::GLint, ++y: ::GLint, ++z: ::GLint, ++w: ::GLint);
+        fn glVertexAttribI1ui(++index: ::GLuint, ++x: ::GLuint);
+        fn glVertexAttribI2ui(++index: ::GLuint, ++x: ::GLuint, ++y: ::GLuint);
+        fn glVertexAttribI3ui(++index: ::GLuint, ++x: ::GLuint, ++y: ::GLuint, ++z: ::GLuint);
+        fn glVertexAttribI4ui(++index: ::GLuint, ++x: ::GLuint, ++y: ::GLuint, ++z: ::GLuint, ++w: ::GLuint);
+        fn glVertexAttribI1iv(++index: ::GLuint, ++v: *::GLint);
+        fn glVertexAttribI2iv(++index: ::GLuint, ++v: *::GLint);
+        fn glVertexAttribI3iv(++index: ::GLuint, ++v: *::GLint);
+        fn glVertexAttribI4iv(++index: ::GLuint, ++v: *::GLint);
+        fn glVertexAttribI1uiv(++index: ::GLuint, ++v: *::GLuint);
+        fn glVertexAttribI2uiv(++index: ::GLuint, ++v: *::GLuint);
+        fn glVertexAttribI3uiv(++index: ::GLuint, ++v: *::GLuint);
+        fn glVertexAttribI4uiv(++index: ::GLuint, ++v: *::GLuint);
+        fn glVertexAttribI4bv(++index: ::GLuint, ++v: *::GLbyte);
+        fn glVertexAttribI4sv(++index: ::GLuint, ++v: *::GLshort);
+        fn glVertexAttribI4ubv(++index: ::GLuint, ++v: *::GLubyte);
+        fn glVertexAttribI4usv(++index: ::GLuint, ++v: *::GLushort);
+        fn glGetUniformuiv(++program: ::GLuint, ++location: ::GLint, ++params: *::GLuint);
+        fn glBindFragDataLocation(++program: ::GLuint, ++color: ::GLuint, ++name: *::GLchar);
+        fn glGetFragDataLocation(++program: ::GLuint, ++name: *::GLchar) -> ::GLint;
+        fn glUniform1ui(++location: ::GLint, ++v0: ::GLuint);
+        fn glUniform2ui(++location: ::GLint, ++v0: ::GLuint, ++v1: ::GLuint);
+        fn glUniform3ui(++location: ::GLint, ++v0: ::GLuint, ++v1: ::GLuint, ++v2: ::GLuint);
+        fn glUniform4ui(++location: ::GLint, ++v0: ::GLuint, ++v1: ::GLuint, ++v2: ::GLuint, ++v3: ::GLuint);
+        fn glUniform1uiv(++location: ::GLint, ++count: ::GLsizei, ++value: *::GLuint);
+        fn glUniform2uiv(++location: ::GLint, ++count: ::GLsizei, ++value: *::GLuint);
+        fn glUniform3uiv(++location: ::GLint, ++count: ::GLsizei, ++value: *::GLuint);
+        fn glUniform4uiv(++location: ::GLint, ++count: ::GLsizei, ++value: *::GLuint);
+        fn glTexParameterIiv(++target: ::GLenum, ++pname: ::GLenum, ++params: *::GLint);
+        fn glTexParameterIuiv(++target: ::GLenum, ++pname: ::GLenum, ++params: *::GLuint);
+        fn glGetTexParameterIiv(++target: ::GLenum, ++pname: ::GLenum, ++params: *::GLint);
+        fn glGetTexParameterIuiv(++target: ::GLenum, ++pname: ::GLenum, ++params: *::GLuint);
+        fn glClearBufferiv(++buffer: ::GLenum, ++drawbuffer: ::GLint, ++value: *::GLint);
+        fn glClearBufferuiv(++buffer: ::GLenum, ++drawbuffer: ::GLint, ++value: *::GLuint);
+        fn glClearBufferfv(++buffer: ::GLenum, ++drawbuffer: ::GLint, ++value: *::GLfloat);
+        fn glClearBufferfi(++buffer: ::GLenum, ++drawbuffer: ::GLint, ++depth: ::GLfloat, ++stencil: ::GLint);
+        fn glGetStringi(++name: ::GLenum, ++index: ::GLuint) -> *::GLubyte;
     }
     type PFNGLCOLORMASKIPROC = *u8;
     type PFNGLGETBOOLEANI_VPROC = *u8;
@@ -602,10 +602,10 @@ pub mod GL_VERSION_3_1 {
     /* ARB_uniform_buffer_object */
     #[nolink]
     extern "C" {
-        fn glDrawArraysInstanced(++mode: GLenum, ++first: GLint, ++count: GLsizei, ++instancecount: GLsizei);
-        fn glDrawElementsInstanced(++mode: GLenum, ++count: GLsizei, ++gltype: GLenum, ++indices: *GLvoid, ++instancecount: GLsizei);
-        fn glTexBuffer(++target: GLenum, ++internalformat: GLenum, ++buffer: GLuint);
-        fn glPrimitiveRestartIndex(++index: GLuint);
+        fn glDrawArraysInstanced(++mode: ::GLenum, ++first: ::GLint, ++count: ::GLsizei, ++instancecount: ::GLsizei);
+        fn glDrawElementsInstanced(++mode: ::GLenum, ++count: ::GLsizei, ++gltype: ::GLenum, ++indices: *::GLvoid, ++instancecount: ::GLsizei);
+        fn glTexBuffer(++target: ::GLenum, ++internalformat: ::GLenum, ++buffer: ::GLuint);
+        fn glPrimitiveRestartIndex(++index: ::GLuint);
     }
     type PFNGLDRAWARRAYSINSTANCEDPROC = *u8;
     type PFNGLDRAWELEMENTSINSTANCEDPROC = *u8;
@@ -622,9 +622,9 @@ pub mod GL_VERSION_3_2 {
     /* ARB_texture_multisample */
     #[nolink]
     extern "C" {
-        fn glGetInteger64i_v(++target: GLenum, ++index: GLuint, ++data: *GLint64);
-        fn glGetBufferParameteri64v(++target: GLenum, ++pname: GLenum, ++params: *GLint64);
-        fn glFramebufferTexture(++target: GLenum, ++attachment: GLenum, ++texture: GLuint, ++level: GLint);
+        fn glGetInteger64i_v(++target: ::GLenum, ++index: ::GLuint, ++data: *::GLint64);
+        fn glGetBufferParameteri64v(++target: ::GLenum, ++pname: ::GLenum, ++params: *::GLint64);
+        fn glFramebufferTexture(++target: ::GLenum, ++attachment: ::GLenum, ++texture: ::GLuint, ++level: ::GLint);
     }
     type PFNGLGETINTEGER64I_VPROC = *u8;
     type PFNGLGETBUFFERPARAMETERI64VPROC = *u8;
@@ -645,7 +645,7 @@ pub mod GL_VERSION_3_3 {
     /* ARB_vertex_type_2_10_10_10_rev */
     #[nolink]
     extern "C" {
-        fn glVertexAttribDivisor(++index: GLuint, ++divisor: GLuint);
+        fn glVertexAttribDivisor(++index: ::GLuint, ++divisor: ::GLuint);
     }
     type PFNGLVERTEXATTRIBDIVISORPROC = *u8;
 }
@@ -666,11 +666,11 @@ pub mod GL_VERSION_4_0 {
     /* ARB_transform_feedback3 */
     #[nolink]
     extern "C" {
-        fn glMinSampleShading(++value: GLfloat);
-        fn glBlendEquationi(++buf: GLuint, ++mode: GLenum);
-        fn glBlendEquationSeparatei(++buf: GLuint, ++modeRGB: GLenum, ++modeAlpha: GLenum);
-        fn glBlendFunci(++buf: GLuint, ++src: GLenum, ++dst: GLenum);
-        fn glBlendFuncSeparatei(++buf: GLuint, ++srcRGB: GLenum, ++dstRGB: GLenum, ++srcAlpha: GLenum, ++dstAlpha: GLenum);
+        fn glMinSampleShading(++value: ::GLfloat);
+        fn glBlendEquationi(++buf: ::GLuint, ++mode: ::GLenum);
+        fn glBlendEquationSeparatei(++buf: ::GLuint, ++modeRGB: ::GLenum, ++modeAlpha: ::GLenum);
+        fn glBlendFunci(++buf: ::GLuint, ++src: ::GLenum, ++dst: ::GLenum);
+        fn glBlendFuncSeparatei(++buf: ::GLuint, ++srcRGB: ::GLenum, ++dstRGB: ::GLenum, ++srcAlpha: ::GLenum, ++dstAlpha: ::GLenum);
     }
     type PFNGLMINSAMPLESHADINGPROC = *u8;
     type PFNGLBLENDEQUATIONIPROC = *u8;
@@ -741,26 +741,26 @@ pub mod GL_ARB_depth_buffer_float {
 pub mod GL_ARB_framebuffer_object {
     #[nolink]
     extern "C" {
-        fn glIsRenderbuffer(++renderbuffer: GLuint) -> GLboolean;
-        fn glBindRenderbuffer(++target: GLenum, ++renderbuffer: GLuint);
-        fn glDeleteRenderbuffers(++n: GLsizei, ++renderbuffers: *GLuint);
-        fn glGenRenderbuffers(++n: GLsizei, ++renderbuffers: *GLuint);
-        fn glRenderbufferStorage(++target: GLenum, ++internalformat: GLenum, ++width: GLsizei, ++height: GLsizei);
-        fn glGetRenderbufferParameteriv(++target: GLenum, ++pname: GLenum, ++params: *GLint);
-        fn glIsFramebuffer(++framebuffer: GLuint) -> GLboolean;
-        fn glBindFramebuffer(++target: GLenum, ++framebuffer: GLuint);
-        fn glDeleteFramebuffers(++n: GLsizei, ++framebuffers: *GLuint);
-        fn glGenFramebuffers(++n: GLsizei, ++framebuffers: *GLuint);
-        fn glCheckFramebufferStatus(++target: GLenum) -> GLenum;
-        fn glFramebufferTexture1D(++target: GLenum, ++attachment: GLenum, ++textarget: GLenum, ++texture: GLuint, ++level: GLint);
-        fn glFramebufferTexture2D(++target: GLenum, ++attachment: GLenum, ++textarget: GLenum, ++texture: GLuint, ++level: GLint);
-        fn glFramebufferTexture3D(++target: GLenum, ++attachment: GLenum, ++textarget: GLenum, ++texture: GLuint, ++level: GLint, ++zoffset: GLint);
-        fn glFramebufferRenderbuffer(++target: GLenum, ++attachment: GLenum, ++renderbuffertarget: GLenum, ++renderbuffer: GLuint);
-        fn glGetFramebufferAttachmentParameteriv(++target: GLenum, ++attachment: GLenum, ++pname: GLenum, ++params: *GLint);
-        fn glGenerateMipmap(++target: GLenum);
-        fn glBlitFramebuffer(++srcX0: GLint, ++srcY0: GLint, ++srcX1: GLint, ++srcY1: GLint, ++dstX0: GLint, ++dstY0: GLint, ++dstX1: GLint, ++dstY1: GLint, ++mask: GLbitfield, ++filter: GLenum);
-        fn glRenderbufferStorageMultisample(++target: GLenum, ++samples: GLsizei, ++internalformat: GLenum, ++width: GLsizei, ++height: GLsizei);
-        fn glFramebufferTextureLayer(++target: GLenum, ++attachment: GLenum, ++texture: GLuint, ++level: GLint, ++layer: GLint);
+        fn glIsRenderbuffer(++renderbuffer: ::GLuint) -> ::GLboolean;
+        fn glBindRenderbuffer(++target: ::GLenum, ++renderbuffer: ::GLuint);
+        fn glDeleteRenderbuffers(++n: ::GLsizei, ++renderbuffers: *::GLuint);
+        fn glGenRenderbuffers(++n: ::GLsizei, ++renderbuffers: *::GLuint);
+        fn glRenderbufferStorage(++target: ::GLenum, ++internalformat: ::GLenum, ++width: ::GLsizei, ++height: ::GLsizei);
+        fn glGetRenderbufferParameteriv(++target: ::GLenum, ++pname: ::GLenum, ++params: *::GLint);
+        fn glIsFramebuffer(++framebuffer: ::GLuint) -> ::GLboolean;
+        fn glBindFramebuffer(++target: ::GLenum, ++framebuffer: ::GLuint);
+        fn glDeleteFramebuffers(++n: ::GLsizei, ++framebuffers: *::GLuint);
+        fn glGenFramebuffers(++n: ::GLsizei, ++framebuffers: *::GLuint);
+        fn glCheckFramebufferStatus(++target: ::GLenum) -> ::GLenum;
+        fn glFramebufferTexture1D(++target: ::GLenum, ++attachment: ::GLenum, ++textarget: ::GLenum, ++texture: ::GLuint, ++level: ::GLint);
+        fn glFramebufferTexture2D(++target: ::GLenum, ++attachment: ::GLenum, ++textarget: ::GLenum, ++texture: ::GLuint, ++level: ::GLint);
+        fn glFramebufferTexture3D(++target: ::GLenum, ++attachment: ::GLenum, ++textarget: ::GLenum, ++texture: ::GLuint, ++level: ::GLint, ++zoffset: ::GLint);
+        fn glFramebufferRenderbuffer(++target: ::GLenum, ++attachment: ::GLenum, ++renderbuffertarget: ::GLenum, ++renderbuffer: ::GLuint);
+        fn glGetFramebufferAttachmentParameteriv(++target: ::GLenum, ++attachment: ::GLenum, ++pname: ::GLenum, ++params: *::GLint);
+        fn glGenerateMipmap(++target: ::GLenum);
+        fn glBlitFramebuffer(++srcX0: ::GLint, ++srcY0: ::GLint, ++srcX1: ::GLint, ++srcY1: ::GLint, ++dstX0: ::GLint, ++dstY0: ::GLint, ++dstX1: ::GLint, ++dstY1: ::GLint, ++mask: ::GLbitfield, ++filter: ::GLenum);
+        fn glRenderbufferStorageMultisample(++target: ::GLenum, ++samples: ::GLsizei, ++internalformat: ::GLenum, ++width: ::GLsizei, ++height: ::GLsizei);
+        fn glFramebufferTextureLayer(++target: ::GLenum, ++attachment: ::GLenum, ++texture: ::GLuint, ++level: ::GLint, ++layer: ::GLint);
     }
     type PFNGLISRENDERBUFFERPROC = *u8;
     type PFNGLBINDRENDERBUFFERPROC = *u8;
@@ -796,8 +796,8 @@ pub mod GL_ARB_half_float_vertex {
 pub mod GL_ARB_map_buffer_range {
     #[nolink]
     extern "C" {
-        fn glMapBufferRange(++target: GLenum, ++offset: GLintptr, ++length: GLsizeiptr, ++access: GLbitfield) -> *GLvoid;
-        fn glFlushMappedBufferRange(++target: GLenum, ++offset: GLintptr, ++length: GLsizeiptr);
+        fn glMapBufferRange(++target: ::GLenum, ++offset: ::GLintptr, ++length: ::GLsizeiptr, ++access: ::GLbitfield) -> *::GLvoid;
+        fn glFlushMappedBufferRange(++target: ::GLenum, ++offset: ::GLintptr, ++length: ::GLsizeiptr);
     }
     type PFNGLMAPBUFFERRANGEPROC = *u8;
     type PFNGLFLUSHMAPPEDBUFFERRANGEPROC = *u8;
@@ -815,10 +815,10 @@ pub mod GL_ARB_texture_rg {
 pub mod GL_ARB_vertex_array_object {
     #[nolink]
     extern "C" {
-        fn glBindVertexArray(++array: GLuint);
-        fn glDeleteVertexArrays(++n: GLsizei, ++arrays: *GLuint);
-        fn glGenVertexArrays(++n: GLsizei, ++arrays: *GLuint);
-        fn glIsVertexArray(++array: GLuint) -> GLboolean;
+        fn glBindVertexArray(++array: ::GLuint);
+        fn glDeleteVertexArrays(++n: ::GLsizei, ++arrays: *::GLuint);
+        fn glGenVertexArrays(++n: ::GLsizei, ++arrays: *::GLuint);
+        fn glIsVertexArray(++array: ::GLuint) -> ::GLboolean;
     }
     type PFNGLBINDVERTEXARRAYPROC = *u8;
     type PFNGLDELETEVERTEXARRAYSPROC = *u8;
@@ -830,13 +830,13 @@ pub mod GL_ARB_vertex_array_object {
 pub mod GL_ARB_uniform_buffer_object {
     #[nolink]
     extern "C" {
-        fn glGetUniformIndices(++program: GLuint, ++uniformCount: GLsizei, ++uniformNames: **GLchar, ++uniformIndices: *GLuint);
-        fn glGetActiveUniformsiv(++program: GLuint, ++uniformCount: GLsizei, ++uniformIndices: *GLuint, ++pname: GLenum, ++params: *GLint);
-        fn glGetActiveUniformName(++program: GLuint, ++uniformIndex: GLuint, ++bufSize: GLsizei, ++length: *GLsizei, ++uniformName: *GLchar);
-        fn glGetUniformBlockIndex(++program: GLuint, ++uniformBlockName: *GLchar) -> GLuint;
-        fn glGetActiveUniformBlockiv(++program: GLuint, ++uniformBlockIndex: GLuint, ++pname: GLenum, ++params: *GLint);
-        fn glGetActiveUniformBlockName(++program: GLuint, ++uniformBlockIndex: GLuint, ++bufSize: GLsizei, ++length: *GLsizei, ++uniformBlockName: *GLchar);
-        fn glUniformBlockBinding(++program: GLuint, ++uniformBlockIndex: GLuint, ++uniformBlockBinding: GLuint);
+        fn glGetUniformIndices(++program: ::GLuint, ++uniformCount: ::GLsizei, ++uniformNames: **::GLchar, ++uniformIndices: *::GLuint);
+        fn glGetActiveUniformsiv(++program: ::GLuint, ++uniformCount: ::GLsizei, ++uniformIndices: *::GLuint, ++pname: ::GLenum, ++params: *::GLint);
+        fn glGetActiveUniformName(++program: ::GLuint, ++uniformIndex: ::GLuint, ++bufSize: ::GLsizei, ++length: *::GLsizei, ++uniformName: *::GLchar);
+        fn glGetUniformBlockIndex(++program: ::GLuint, ++uniformBlockName: *::GLchar) -> ::GLuint;
+        fn glGetActiveUniformBlockiv(++program: ::GLuint, ++uniformBlockIndex: ::GLuint, ++pname: ::GLenum, ++params: *::GLint);
+        fn glGetActiveUniformBlockName(++program: ::GLuint, ++uniformBlockIndex: ::GLuint, ++bufSize: ::GLsizei, ++length: *::GLsizei, ++uniformBlockName: *::GLchar);
+        fn glUniformBlockBinding(++program: ::GLuint, ++uniformBlockIndex: ::GLuint, ++uniformBlockBinding: ::GLuint);
     }
     type PFNGLGETUNIFORMINDICESPROC = *u8;
     type PFNGLGETACTIVEUNIFORMSIVPROC = *u8;
@@ -851,7 +851,7 @@ pub mod GL_ARB_uniform_buffer_object {
 pub mod GL_ARB_copy_buffer {
     #[nolink]
     extern "C" {
-        fn glCopyBufferSubData(++readTarget: GLenum, ++writeTarget: GLenum, ++readOffset: GLintptr, ++writeOffset: GLintptr, ++size: GLsizeiptr);
+        fn glCopyBufferSubData(++readTarget: ::GLenum, ++writeTarget: ::GLenum, ++readOffset: ::GLintptr, ++writeOffset: ::GLintptr, ++size: ::GLsizeiptr);
     }
     type PFNGLCOPYBUFFERSUBDATAPROC = *u8;
 }
@@ -864,10 +864,10 @@ pub mod GL_ARB_depth_clamp {
 pub mod GL_ARB_draw_elements_base_vertex {
     #[nolink]
     extern "C" {
-        fn glDrawElementsBaseVertex(++mode: GLenum, ++count: GLsizei, ++gltype: GLenum, ++indices: *GLvoid, ++basevertex: GLint);
-        fn glDrawRangeElementsBaseVertex(++mode: GLenum, ++start: GLuint, ++end: GLuint, ++count: GLsizei, ++gltype: GLenum, ++indices: *GLvoid, ++basevertex: GLint);
-        fn glDrawElementsInstancedBaseVertex(++mode: GLenum, ++count: GLsizei, ++gltype: GLenum, ++indices: *GLvoid, ++instancecount: GLsizei, ++basevertex: GLint);
-        fn glMultiDrawElementsBaseVertex(++mode: GLenum, ++count: *GLsizei, ++gltype: GLenum, ++indices: **GLvoid, ++drawcount: GLsizei, ++basevertex: *GLint);
+        fn glDrawElementsBaseVertex(++mode: ::GLenum, ++count: ::GLsizei, ++gltype: ::GLenum, ++indices: *::GLvoid, ++basevertex: ::GLint);
+        fn glDrawRangeElementsBaseVertex(++mode: ::GLenum, ++start: ::GLuint, ++end: ::GLuint, ++count: ::GLsizei, ++gltype: ::GLenum, ++indices: *::GLvoid, ++basevertex: ::GLint);
+        fn glDrawElementsInstancedBaseVertex(++mode: ::GLenum, ++count: ::GLsizei, ++gltype: ::GLenum, ++indices: *::GLvoid, ++instancecount: ::GLsizei, ++basevertex: ::GLint);
+        fn glMultiDrawElementsBaseVertex(++mode: ::GLenum, ++count: *::GLsizei, ++gltype: ::GLenum, ++indices: **::GLvoid, ++drawcount: ::GLsizei, ++basevertex: *::GLint);
     }
     type PFNGLDRAWELEMENTSBASEVERTEXPROC = *u8;
     type PFNGLDRAWRANGEELEMENTSBASEVERTEXPROC = *u8;
@@ -883,7 +883,7 @@ pub mod GL_ARB_fragment_coord_conventions {
 pub mod GL_ARB_provoking_vertex {
     #[nolink]
     extern "C" {
-        fn glProvokingVertex(++mode: GLenum);
+        fn glProvokingVertex(++mode: ::GLenum);
     }
     type PFNGLPROVOKINGVERTEXPROC = *u8;
 }
@@ -896,13 +896,13 @@ pub mod GL_ARB_seamless_cube_map {
 pub mod GL_ARB_sync {
     #[nolink]
     extern "C" {
-        fn glFenceSync(++condition: GLenum, ++flags: GLbitfield) -> GLsync;
-        fn glIsSync(++sync: GLsync) -> GLboolean;
-        fn glDeleteSync(++sync: GLsync);
-        fn glClientWaitSync(++sync: GLsync, ++flags: GLbitfield, ++timeout: GLuint64) -> GLenum;
-        fn glWaitSync(++sync: GLsync, ++flags: GLbitfield, ++timeout: GLuint64);
-        fn glGetInteger64v(++pname: GLenum, ++params: *GLint64);
-        fn glGetSynciv(++sync: GLsync, ++pname: GLenum, ++bufSize: GLsizei, ++length: *GLsizei, ++values: *GLint);
+        fn glFenceSync(++condition: ::GLenum, ++flags: ::GLbitfield) -> ::GLsync;
+        fn glIsSync(++sync: ::GLsync) -> ::GLboolean;
+        fn glDeleteSync(++sync: ::GLsync);
+        fn glClientWaitSync(++sync: ::GLsync, ++flags: ::GLbitfield, ++timeout: ::GLuint64) -> ::GLenum;
+        fn glWaitSync(++sync: ::GLsync, ++flags: ::GLbitfield, ++timeout: ::GLuint64);
+        fn glGetInteger64v(++pname: ::GLenum, ++params: *::GLint64);
+        fn glGetSynciv(++sync: ::GLsync, ++pname: ::GLenum, ++bufSize: ::GLsizei, ++length: *::GLsizei, ++values: *::GLint);
     }
     type PFNGLFENCESYNCPROC = *u8;
     type PFNGLISSYNCPROC = *u8;
@@ -917,10 +917,10 @@ pub mod GL_ARB_sync {
 pub mod GL_ARB_texture_multisample {
     #[nolink]
     extern "C" {
-        fn glTexImage2DMultisample(++target: GLenum, ++samples: GLsizei, ++internalformat: GLint, ++width: GLsizei, ++height: GLsizei, ++fixedsamplelocations: GLboolean);
-        fn glTexImage3DMultisample(++target: GLenum, ++samples: GLsizei, ++internalformat: GLint, ++width: GLsizei, ++height: GLsizei, ++depth: GLsizei, ++fixedsamplelocations: GLboolean);
-        fn glGetMultisamplefv(++pname: GLenum, ++index: GLuint, ++val: *GLfloat);
-        fn glSampleMaski(++index: GLuint, ++mask: GLbitfield);
+        fn glTexImage2DMultisample(++target: ::GLenum, ++samples: ::GLsizei, ++internalformat: ::GLint, ++width: ::GLsizei, ++height: ::GLsizei, ++fixedsamplelocations: ::GLboolean);
+        fn glTexImage3DMultisample(++target: ::GLenum, ++samples: ::GLsizei, ++internalformat: ::GLint, ++width: ::GLsizei, ++height: ::GLsizei, ++depth: ::GLsizei, ++fixedsamplelocations: ::GLboolean);
+        fn glGetMultisamplefv(++pname: ::GLenum, ++index: ::GLuint, ++val: *::GLfloat);
+        fn glSampleMaski(++index: ::GLuint, ++mask: ::GLbitfield);
     }
     type PFNGLTEXIMAGE2DMULTISAMPLEPROC = *u8;
     type PFNGLTEXIMAGE3DMULTISAMPLEPROC = *u8;
@@ -936,10 +936,10 @@ pub mod GL_ARB_vertex_array_bgra {
 pub mod GL_ARB_draw_buffers_blend {
     #[nolink]
     extern "C" {
-        fn glBlendEquationiARB(++buf: GLuint, ++mode: GLenum);
-        fn glBlendEquationSeparateiARB(++buf: GLuint, ++modeRGB: GLenum, ++modeAlpha: GLenum);
-        fn glBlendFunciARB(++buf: GLuint, ++src: GLenum, ++dst: GLenum);
-        fn glBlendFuncSeparateiARB(++buf: GLuint, ++srcRGB: GLenum, ++dstRGB: GLenum, ++srcAlpha: GLenum, ++dstAlpha: GLenum);
+        fn glBlendEquationiARB(++buf: ::GLuint, ++mode: ::GLenum);
+        fn glBlendEquationSeparateiARB(++buf: ::GLuint, ++modeRGB: ::GLenum, ++modeAlpha: ::GLenum);
+        fn glBlendFunciARB(++buf: ::GLuint, ++src: ::GLenum, ++dst: ::GLenum);
+        fn glBlendFuncSeparateiARB(++buf: ::GLuint, ++srcRGB: ::GLenum, ++dstRGB: ::GLenum, ++srcAlpha: ::GLenum, ++dstAlpha: ::GLenum);
     }
     type PFNGLBLENDEQUATIONIARBPROC = *u8;
     type PFNGLBLENDEQUATIONSEPARATEIARBPROC = *u8;
@@ -951,7 +951,7 @@ pub mod GL_ARB_draw_buffers_blend {
 pub mod GL_ARB_sample_shading {
     #[nolink]
     extern "C" {
-        fn glMinSampleShadingARB(++value: GLfloat);
+        fn glMinSampleShadingARB(++value: ::GLfloat);
     }
     type PFNGLMINSAMPLESHADINGARBPROC = *u8;
 }
@@ -972,12 +972,12 @@ pub mod GL_ARB_texture_query_lod {
 pub mod GL_ARB_shading_language_include {
     #[nolink]
     extern "C" {
-        fn glNamedStringARB(++gltype: GLenum, ++namelen: GLint, ++name: *GLchar, ++stringlen: GLint, ++string: *GLchar);
-        fn glDeleteNamedStringARB(++namelen: GLint, ++name: *GLchar);
-        fn glCompileShaderIncludeARB(++shader: GLuint, ++count: GLsizei, ++path: **GLchar, ++length: *GLint);
-        fn glIsNamedStringARB(++namelen: GLint, ++name: *GLchar) -> GLboolean;
-        fn glGetNamedStringARB(++namelen: GLint, ++name: *GLchar, ++bufSize: GLsizei, ++stringlen: *GLint, ++string: *GLchar);
-        fn glGetNamedStringivARB(++namelen: GLint, ++name: *GLchar, ++pname: GLenum, ++params: *GLint);
+        fn glNamedStringARB(++gltype: ::GLenum, ++namelen: ::GLint, ++name: *::GLchar, ++stringlen: ::GLint, ++string: *::GLchar);
+        fn glDeleteNamedStringARB(++namelen: ::GLint, ++name: *::GLchar);
+        fn glCompileShaderIncludeARB(++shader: ::GLuint, ++count: ::GLsizei, ++path: **::GLchar, ++length: *::GLint);
+        fn glIsNamedStringARB(++namelen: ::GLint, ++name: *::GLchar) -> ::GLboolean;
+        fn glGetNamedStringARB(++namelen: ::GLint, ++name: *::GLchar, ++bufSize: ::GLsizei, ++stringlen: *::GLint, ++string: *::GLchar);
+        fn glGetNamedStringivARB(++namelen: ::GLint, ++name: *::GLchar, ++pname: ::GLenum, ++params: *::GLint);
     }
     type PFNGLNAMEDSTRINGARBPROC = *u8;
     type PFNGLDELETENAMEDSTRINGARBPROC = *u8;
@@ -995,8 +995,8 @@ pub mod GL_ARB_texture_compression_bptc {
 pub mod GL_ARB_blend_func_extended {
     #[nolink]
     extern "C" {
-        fn glBindFragDataLocationIndexed(++program: GLuint, ++colorNumber: GLuint, ++index: GLuint, ++name: *GLchar);
-        fn glGetFragDataIndex(++program: GLuint, ++name: *GLchar) -> GLint;
+        fn glBindFragDataLocationIndexed(++program: ::GLuint, ++colorNumber: ::GLuint, ++index: ::GLuint, ++name: *::GLchar);
+        fn glGetFragDataIndex(++program: ::GLuint, ++name: *::GLchar) -> ::GLint;
     }
     type PFNGLBINDFRAGDATALOCATIONINDEXEDPROC = *u8;
     type PFNGLGETFRAGDATAINDEXPROC = *u8;
@@ -1014,20 +1014,20 @@ pub mod GL_ARB_occlusion_query2 {
 pub mod GL_ARB_sampler_objects {
     #[nolink]
     extern "C" {
-        fn glGenSamplers(++count: GLsizei, ++samplers: *GLuint);
-        fn glDeleteSamplers(++count: GLsizei, ++samplers: *GLuint);
-        fn glIsSampler(++sampler: GLuint) -> GLboolean;
-        fn glBindSampler(++unit: GLuint, ++sampler: GLuint);
-        fn glSamplerParameteri(++sampler: GLuint, ++pname: GLenum, ++param: GLint);
-        fn glSamplerParameteriv(++sampler: GLuint, ++pname: GLenum, ++param: *GLint);
-        fn glSamplerParameterf(++sampler: GLuint, ++pname: GLenum, ++param: GLfloat);
-        fn glSamplerParameterfv(++sampler: GLuint, ++pname: GLenum, ++param: *GLfloat);
-        fn glSamplerParameterIiv(++sampler: GLuint, ++pname: GLenum, ++param: *GLint);
-        fn glSamplerParameterIuiv(++sampler: GLuint, ++pname: GLenum, ++param: *GLuint);
-        fn glGetSamplerParameteriv(++sampler: GLuint, ++pname: GLenum, ++params: *GLint);
-        fn glGetSamplerParameterIiv(++sampler: GLuint, ++pname: GLenum, ++params: *GLint);
-        fn glGetSamplerParameterfv(++sampler: GLuint, ++pname: GLenum, ++params: *GLfloat);
-        fn glGetSamplerParameterIuiv(++sampler: GLuint, ++pname: GLenum, ++params: *GLuint);
+        fn glGenSamplers(++count: ::GLsizei, ++samplers: *::GLuint);
+        fn glDeleteSamplers(++count: ::GLsizei, ++samplers: *::GLuint);
+        fn glIsSampler(++sampler: ::GLuint) -> ::GLboolean;
+        fn glBindSampler(++unit: ::GLuint, ++sampler: ::GLuint);
+        fn glSamplerParameteri(++sampler: ::GLuint, ++pname: ::GLenum, ++param: ::GLint);
+        fn glSamplerParameteriv(++sampler: ::GLuint, ++pname: ::GLenum, ++param: *::GLint);
+        fn glSamplerParameterf(++sampler: ::GLuint, ++pname: ::GLenum, ++param: ::GLfloat);
+        fn glSamplerParameterfv(++sampler: ::GLuint, ++pname: ::GLenum, ++param: *::GLfloat);
+        fn glSamplerParameterIiv(++sampler: ::GLuint, ++pname: ::GLenum, ++param: *::GLint);
+        fn glSamplerParameterIuiv(++sampler: ::GLuint, ++pname: ::GLenum, ++param: *::GLuint);
+        fn glGetSamplerParameteriv(++sampler: ::GLuint, ++pname: ::GLenum, ++params: *::GLint);
+        fn glGetSamplerParameterIiv(++sampler: ::GLuint, ++pname: ::GLenum, ++params: *::GLint);
+        fn glGetSamplerParameterfv(++sampler: ::GLuint, ++pname: ::GLenum, ++params: *::GLfloat);
+        fn glGetSamplerParameterIuiv(++sampler: ::GLuint, ++pname: ::GLenum, ++params: *::GLuint);
     }
     type PFNGLGENSAMPLERSPROC = *u8;
     type PFNGLDELETESAMPLERSPROC = *u8;
@@ -1061,9 +1061,9 @@ pub mod GL_ARB_texture_swizzle {
 pub mod GL_ARB_timer_query {
     #[nolink]
     extern "C" {
-        fn glQueryCounter(++id: GLuint, ++target: GLenum);
-        fn glGetQueryObjecti64v(++id: GLuint, ++pname: GLenum, ++params: *GLint64);
-        fn glGetQueryObjectui64v(++id: GLuint, ++pname: GLenum, ++params: *GLuint64);
+        fn glQueryCounter(++id: ::GLuint, ++target: ::GLenum);
+        fn glGetQueryObjecti64v(++id: ::GLuint, ++pname: ::GLenum, ++params: *::GLint64);
+        fn glGetQueryObjectui64v(++id: ::GLuint, ++pname: ::GLenum, ++params: *::GLuint64);
     }
     type PFNGLQUERYCOUNTERPROC = *u8;
     type PFNGLGETQUERYOBJECTI64VPROC = *u8;
@@ -1074,44 +1074,44 @@ pub mod GL_ARB_timer_query {
 pub mod GL_ARB_vertex_type_2_10_10_10_rev {
     #[nolink]
     extern "C" {
-        fn glVertexP2ui(++gltype: GLenum, ++value: GLuint);
-        fn glVertexP2uiv(++gltype: GLenum, ++value: *GLuint);
-        fn glVertexP3ui(++gltype: GLenum, ++value: GLuint);
-        fn glVertexP3uiv(++gltype: GLenum, ++value: *GLuint);
-        fn glVertexP4ui(++gltype: GLenum, ++value: GLuint);
-        fn glVertexP4uiv(++gltype: GLenum, ++value: *GLuint);
-        fn glTexCoordP1ui(++gltype: GLenum, ++coords: GLuint);
-        fn glTexCoordP1uiv(++gltype: GLenum, ++coords: *GLuint);
-        fn glTexCoordP2ui(++gltype: GLenum, ++coords: GLuint);
-        fn glTexCoordP2uiv(++gltype: GLenum, ++coords: *GLuint);
-        fn glTexCoordP3ui(++gltype: GLenum, ++coords: GLuint);
-        fn glTexCoordP3uiv(++gltype: GLenum, ++coords: *GLuint);
-        fn glTexCoordP4ui(++gltype: GLenum, ++coords: GLuint);
-        fn glTexCoordP4uiv(++gltype: GLenum, ++coords: *GLuint);
-        fn glMultiTexCoordP1ui(++texture: GLenum, ++gltype: GLenum, ++coords: GLuint);
-        fn glMultiTexCoordP1uiv(++texture: GLenum, ++gltype: GLenum, ++coords: *GLuint);
-        fn glMultiTexCoordP2ui(++texture: GLenum, ++gltype: GLenum, ++coords: GLuint);
-        fn glMultiTexCoordP2uiv(++texture: GLenum, ++gltype: GLenum, ++coords: *GLuint);
-        fn glMultiTexCoordP3ui(++texture: GLenum, ++gltype: GLenum, ++coords: GLuint);
-        fn glMultiTexCoordP3uiv(++texture: GLenum, ++gltype: GLenum, ++coords: *GLuint);
-        fn glMultiTexCoordP4ui(++texture: GLenum, ++gltype: GLenum, ++coords: GLuint);
-        fn glMultiTexCoordP4uiv(++texture: GLenum, ++gltype: GLenum, ++coords: *GLuint);
-        fn glNormalP3ui(++gltype: GLenum, ++coords: GLuint);
-        fn glNormalP3uiv(++gltype: GLenum, ++coords: *GLuint);
-        fn glColorP3ui(++gltype: GLenum, ++color: GLuint);
-        fn glColorP3uiv(++gltype: GLenum, ++color: *GLuint);
-        fn glColorP4ui(++gltype: GLenum, ++color: GLuint);
-        fn glColorP4uiv(++gltype: GLenum, ++color: *GLuint);
-        fn glSecondaryColorP3ui(++gltype: GLenum, ++color: GLuint);
-        fn glSecondaryColorP3uiv(++gltype: GLenum, ++color: *GLuint);
-        fn glVertexAttribP1ui(++index: GLuint, ++gltype: GLenum, ++normalized: GLboolean, ++value: GLuint);
-        fn glVertexAttribP1uiv(++index: GLuint, ++gltype: GLenum, ++normalized: GLboolean, ++value: *GLuint);
-        fn glVertexAttribP2ui(++index: GLuint, ++gltype: GLenum, ++normalized: GLboolean, ++value: GLuint);
-        fn glVertexAttribP2uiv(++index: GLuint, ++gltype: GLenum, ++normalized: GLboolean, ++value: *GLuint);
-        fn glVertexAttribP3ui(++index: GLuint, ++gltype: GLenum, ++normalized: GLboolean, ++value: GLuint);
-        fn glVertexAttribP3uiv(++index: GLuint, ++gltype: GLenum, ++normalized: GLboolean, ++value: *GLuint);
-        fn glVertexAttribP4ui(++index: GLuint, ++gltype: GLenum, ++normalized: GLboolean, ++value: GLuint);
-        fn glVertexAttribP4uiv(++index: GLuint, ++gltype: GLenum, ++normalized: GLboolean, ++value: *GLuint);
+        fn glVertexP2ui(++gltype: ::GLenum, ++value: ::GLuint);
+        fn glVertexP2uiv(++gltype: ::GLenum, ++value: *::GLuint);
+        fn glVertexP3ui(++gltype: ::GLenum, ++value: ::GLuint);
+        fn glVertexP3uiv(++gltype: ::GLenum, ++value: *::GLuint);
+        fn glVertexP4ui(++gltype: ::GLenum, ++value: ::GLuint);
+        fn glVertexP4uiv(++gltype: ::GLenum, ++value: *::GLuint);
+        fn glTexCoordP1ui(++gltype: ::GLenum, ++coords: ::GLuint);
+        fn glTexCoordP1uiv(++gltype: ::GLenum, ++coords: *::GLuint);
+        fn glTexCoordP2ui(++gltype: ::GLenum, ++coords: ::GLuint);
+        fn glTexCoordP2uiv(++gltype: ::GLenum, ++coords: *::GLuint);
+        fn glTexCoordP3ui(++gltype: ::GLenum, ++coords: ::GLuint);
+        fn glTexCoordP3uiv(++gltype: ::GLenum, ++coords: *::GLuint);
+        fn glTexCoordP4ui(++gltype: ::GLenum, ++coords: ::GLuint);
+        fn glTexCoordP4uiv(++gltype: ::GLenum, ++coords: *::GLuint);
+        fn glMultiTexCoordP1ui(++texture: ::GLenum, ++gltype: ::GLenum, ++coords: ::GLuint);
+        fn glMultiTexCoordP1uiv(++texture: ::GLenum, ++gltype: ::GLenum, ++coords: *::GLuint);
+        fn glMultiTexCoordP2ui(++texture: ::GLenum, ++gltype: ::GLenum, ++coords: ::GLuint);
+        fn glMultiTexCoordP2uiv(++texture: ::GLenum, ++gltype: ::GLenum, ++coords: *::GLuint);
+        fn glMultiTexCoordP3ui(++texture: ::GLenum, ++gltype: ::GLenum, ++coords: ::GLuint);
+        fn glMultiTexCoordP3uiv(++texture: ::GLenum, ++gltype: ::GLenum, ++coords: *::GLuint);
+        fn glMultiTexCoordP4ui(++texture: ::GLenum, ++gltype: ::GLenum, ++coords: ::GLuint);
+        fn glMultiTexCoordP4uiv(++texture: ::GLenum, ++gltype: ::GLenum, ++coords: *::GLuint);
+        fn glNormalP3ui(++gltype: ::GLenum, ++coords: ::GLuint);
+        fn glNormalP3uiv(++gltype: ::GLenum, ++coords: *::GLuint);
+        fn glColorP3ui(++gltype: ::GLenum, ++color: ::GLuint);
+        fn glColorP3uiv(++gltype: ::GLenum, ++color: *::GLuint);
+        fn glColorP4ui(++gltype: ::GLenum, ++color: ::GLuint);
+        fn glColorP4uiv(++gltype: ::GLenum, ++color: *::GLuint);
+        fn glSecondaryColorP3ui(++gltype: ::GLenum, ++color: ::GLuint);
+        fn glSecondaryColorP3uiv(++gltype: ::GLenum, ++color: *::GLuint);
+        fn glVertexAttribP1ui(++index: ::GLuint, ++gltype: ::GLenum, ++normalized: ::GLboolean, ++value: ::GLuint);
+        fn glVertexAttribP1uiv(++index: ::GLuint, ++gltype: ::GLenum, ++normalized: ::GLboolean, ++value: *::GLuint);
+        fn glVertexAttribP2ui(++index: ::GLuint, ++gltype: ::GLenum, ++normalized: ::GLboolean, ++value: ::GLuint);
+        fn glVertexAttribP2uiv(++index: ::GLuint, ++gltype: ::GLenum, ++normalized: ::GLboolean, ++value: *::GLuint);
+        fn glVertexAttribP3ui(++index: ::GLuint, ++gltype: ::GLenum, ++normalized: ::GLboolean, ++value: ::GLuint);
+        fn glVertexAttribP3uiv(++index: ::GLuint, ++gltype: ::GLenum, ++normalized: ::GLboolean, ++value: *::GLuint);
+        fn glVertexAttribP4ui(++index: ::GLuint, ++gltype: ::GLenum, ++normalized: ::GLboolean, ++value: ::GLuint);
+        fn glVertexAttribP4uiv(++index: ::GLuint, ++gltype: ::GLenum, ++normalized: ::GLboolean, ++value: *::GLuint);
     }
     type PFNGLVERTEXP2UIPROC = *u8;
     type PFNGLVERTEXP2UIVPROC = *u8;
@@ -1157,8 +1157,8 @@ pub mod GL_ARB_vertex_type_2_10_10_10_rev {
 pub mod GL_ARB_draw_indirect {
     #[nolink]
     extern "C" {
-        fn glDrawArraysIndirect(++mode: GLenum, ++indirect: *GLvoid);
-        fn glDrawElementsIndirect(++mode: GLenum, ++gltype: GLenum, ++indirect: *GLvoid);
+        fn glDrawArraysIndirect(++mode: ::GLenum, ++indirect: *::GLvoid);
+        fn glDrawElementsIndirect(++mode: ::GLenum, ++gltype: ::GLenum, ++indirect: *::GLvoid);
     }
     type PFNGLDRAWARRAYSINDIRECTPROC = *u8;
     type PFNGLDRAWELEMENTSINDIRECTPROC = *u8;
@@ -1172,24 +1172,24 @@ pub mod GL_ARB_gpu_shader5 {
 pub mod GL_ARB_gpu_shader_fp64 {
     #[nolink]
     extern "C" {
-        fn glUniform1d(++location: GLint, ++x: GLdouble);
-        fn glUniform2d(++location: GLint, ++x: GLdouble, ++y: GLdouble);
-        fn glUniform3d(++location: GLint, ++x: GLdouble, ++y: GLdouble, ++z: GLdouble);
-        fn glUniform4d(++location: GLint, ++x: GLdouble, ++y: GLdouble, ++z: GLdouble, ++w: GLdouble);
-        fn glUniform1dv(++location: GLint, ++count: GLsizei, ++value: *GLdouble);
-        fn glUniform2dv(++location: GLint, ++count: GLsizei, ++value: *GLdouble);
-        fn glUniform3dv(++location: GLint, ++count: GLsizei, ++value: *GLdouble);
-        fn glUniform4dv(++location: GLint, ++count: GLsizei, ++value: *GLdouble);
-        fn glUniformMatrix2dv(++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLdouble);
-        fn glUniformMatrix3dv(++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLdouble);
-        fn glUniformMatrix4dv(++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLdouble);
-        fn glUniformMatrix2x3dv(++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLdouble);
-        fn glUniformMatrix2x4dv(++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLdouble);
-        fn glUniformMatrix3x2dv(++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLdouble);
-        fn glUniformMatrix3x4dv(++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLdouble);
-        fn glUniformMatrix4x2dv(++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLdouble);
-        fn glUniformMatrix4x3dv(++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLdouble);
-        fn glGetUniformdv(++program: GLuint, ++location: GLint, ++params: *GLdouble);
+        fn glUniform1d(++location: ::GLint, ++x: ::GLdouble);
+        fn glUniform2d(++location: ::GLint, ++x: ::GLdouble, ++y: ::GLdouble);
+        fn glUniform3d(++location: ::GLint, ++x: ::GLdouble, ++y: ::GLdouble, ++z: ::GLdouble);
+        fn glUniform4d(++location: ::GLint, ++x: ::GLdouble, ++y: ::GLdouble, ++z: ::GLdouble, ++w: ::GLdouble);
+        fn glUniform1dv(++location: ::GLint, ++count: ::GLsizei, ++value: *::GLdouble);
+        fn glUniform2dv(++location: ::GLint, ++count: ::GLsizei, ++value: *::GLdouble);
+        fn glUniform3dv(++location: ::GLint, ++count: ::GLsizei, ++value: *::GLdouble);
+        fn glUniform4dv(++location: ::GLint, ++count: ::GLsizei, ++value: *::GLdouble);
+        fn glUniformMatrix2dv(++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLdouble);
+        fn glUniformMatrix3dv(++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLdouble);
+        fn glUniformMatrix4dv(++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLdouble);
+        fn glUniformMatrix2x3dv(++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLdouble);
+        fn glUniformMatrix2x4dv(++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLdouble);
+        fn glUniformMatrix3x2dv(++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLdouble);
+        fn glUniformMatrix3x4dv(++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLdouble);
+        fn glUniformMatrix4x2dv(++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLdouble);
+        fn glUniformMatrix4x3dv(++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLdouble);
+        fn glGetUniformdv(++program: ::GLuint, ++location: ::GLint, ++params: *::GLdouble);
     }
     type PFNGLUNIFORM1DPROC = *u8;
     type PFNGLUNIFORM2DPROC = *u8;
@@ -1215,14 +1215,14 @@ pub mod GL_ARB_gpu_shader_fp64 {
 pub mod GL_ARB_shader_subroutine {
     #[nolink]
     extern "C" {
-        fn glGetSubroutineUniformLocation(++program: GLuint, ++shadertype: GLenum, ++name: *GLchar) -> GLint;
-        fn glGetSubroutineIndex(++program: GLuint, ++shadertype: GLenum, ++name: *GLchar) -> GLuint;
-        fn glGetActiveSubroutineUniformiv(++program: GLuint, ++shadertype: GLenum, ++index: GLuint, ++pname: GLenum, ++values: *GLint);
-        fn glGetActiveSubroutineUniformName(++program: GLuint, ++shadertype: GLenum, ++index: GLuint, ++bufsize: GLsizei, ++length: *GLsizei, ++name: *GLchar);
-        fn glGetActiveSubroutineName(++program: GLuint, ++shadertype: GLenum, ++index: GLuint, ++bufsize: GLsizei, ++length: *GLsizei, ++name: *GLchar);
-        fn glUniformSubroutinesuiv(++shadertype: GLenum, ++count: GLsizei, ++indices: *GLuint);
-        fn glGetUniformSubroutineuiv(++shadertype: GLenum, ++location: GLint, ++params: *GLuint);
-        fn glGetProgramStageiv(++program: GLuint, ++shadertype: GLenum, ++pname: GLenum, ++values: *GLint);
+        fn glGetSubroutineUniformLocation(++program: ::GLuint, ++shadertype: ::GLenum, ++name: *::GLchar) -> ::GLint;
+        fn glGetSubroutineIndex(++program: ::GLuint, ++shadertype: ::GLenum, ++name: *::GLchar) -> ::GLuint;
+        fn glGetActiveSubroutineUniformiv(++program: ::GLuint, ++shadertype: ::GLenum, ++index: ::GLuint, ++pname: ::GLenum, ++values: *::GLint);
+        fn glGetActiveSubroutineUniformName(++program: ::GLuint, ++shadertype: ::GLenum, ++index: ::GLuint, ++bufsize: ::GLsizei, ++length: *::GLsizei, ++name: *::GLchar);
+        fn glGetActiveSubroutineName(++program: ::GLuint, ++shadertype: ::GLenum, ++index: ::GLuint, ++bufsize: ::GLsizei, ++length: *::GLsizei, ++name: *::GLchar);
+        fn glUniformSubroutinesuiv(++shadertype: ::GLenum, ++count: ::GLsizei, ++indices: *::GLuint);
+        fn glGetUniformSubroutineuiv(++shadertype: ::GLenum, ++location: ::GLint, ++params: *::GLuint);
+        fn glGetProgramStageiv(++program: ::GLuint, ++shadertype: ::GLenum, ++pname: ::GLenum, ++values: *::GLint);
     }
     type PFNGLGETSUBROUTINEUNIFORMLOCATIONPROC = *u8;
     type PFNGLGETSUBROUTINEINDEXPROC = *u8;
@@ -1238,8 +1238,8 @@ pub mod GL_ARB_shader_subroutine {
 pub mod GL_ARB_tessellation_shader {
     #[nolink]
     extern "C" {
-        fn glPatchParameteri(++pname: GLenum, ++value: GLint);
-        fn glPatchParameterfv(++pname: GLenum, ++values: *GLfloat);
+        fn glPatchParameteri(++pname: ::GLenum, ++value: ::GLint);
+        fn glPatchParameterfv(++pname: ::GLenum, ++values: *::GLfloat);
     }
     type PFNGLPATCHPARAMETERIPROC = *u8;
     type PFNGLPATCHPARAMETERFVPROC = *u8;
@@ -1253,13 +1253,13 @@ pub mod GL_ARB_texture_buffer_object_rgb32 {
 pub mod GL_ARB_transform_feedback2 {
     #[nolink]
     extern "C" {
-        fn glBindTransformFeedback(++target: GLenum, ++id: GLuint);
-        fn glDeleteTransformFeedbacks(++n: GLsizei, ++ids: *GLuint);
-        fn glGenTransformFeedbacks(++n: GLsizei, ++ids: *GLuint);
-        fn glIsTransformFeedback(++id: GLuint) -> GLboolean;
+        fn glBindTransformFeedback(++target: ::GLenum, ++id: ::GLuint);
+        fn glDeleteTransformFeedbacks(++n: ::GLsizei, ++ids: *::GLuint);
+        fn glGenTransformFeedbacks(++n: ::GLsizei, ++ids: *::GLuint);
+        fn glIsTransformFeedback(++id: ::GLuint) -> ::GLboolean;
         fn glPauseTransformFeedback();
         fn glResumeTransformFeedback();
-        fn glDrawTransformFeedback(++mode: GLenum, ++id: GLuint);
+        fn glDrawTransformFeedback(++mode: ::GLenum, ++id: ::GLuint);
     }
     type PFNGLBINDTRANSFORMFEEDBACKPROC = *u8;
     type PFNGLDELETETRANSFORMFEEDBACKSPROC = *u8;
@@ -1274,10 +1274,10 @@ pub mod GL_ARB_transform_feedback2 {
 pub mod GL_ARB_transform_feedback3 {
     #[nolink]
     extern "C" {
-        fn glDrawTransformFeedbackStream(++mode: GLenum, ++id: GLuint, ++stream: GLuint);
-        fn glBeginQueryIndexed(++target: GLenum, ++index: GLuint, ++id: GLuint);
-        fn glEndQueryIndexed(++target: GLenum, ++index: GLuint);
-        fn glGetQueryIndexediv(++target: GLenum, ++index: GLuint, ++pname: GLenum, ++params: *GLint);
+        fn glDrawTransformFeedbackStream(++mode: ::GLenum, ++id: ::GLuint, ++stream: ::GLuint);
+        fn glBeginQueryIndexed(++target: ::GLenum, ++index: ::GLuint, ++id: ::GLuint);
+        fn glEndQueryIndexed(++target: ::GLenum, ++index: ::GLuint);
+        fn glGetQueryIndexediv(++target: ::GLenum, ++index: ::GLuint, ++pname: ::GLenum, ++params: *::GLint);
     }
     type PFNGLDRAWTRANSFORMFEEDBACKSTREAMPROC = *u8;
     type PFNGLBEGINQUERYINDEXEDPROC = *u8;
@@ -1290,10 +1290,10 @@ pub mod GL_ARB_es2_compatibility {
     #[nolink]
     extern "C" {
         fn glReleaseShaderCompiler();
-        fn glShaderBinary(++count: GLsizei, ++shaders: *GLuint, ++binaryformat: GLenum, ++binary: *GLvoid, ++length: GLsizei);
-        fn glGetShaderPrecisionFormat(++shadertype: GLenum, ++precisiontype: GLenum, ++range: *GLint, ++precision: *GLint);
-        fn glDepthRangef(++n: GLfloat, ++f: GLfloat);
-        fn glClearDepthf(++d: GLfloat);
+        fn glShaderBinary(++count: ::GLsizei, ++shaders: *::GLuint, ++binaryformat: ::GLenum, ++binary: *::GLvoid, ++length: ::GLsizei);
+        fn glGetShaderPrecisionFormat(++shadertype: ::GLenum, ++precisiontype: ::GLenum, ++range: *::GLint, ++precision: *::GLint);
+        fn glDepthRangef(++n: ::GLfloat, ++f: ::GLfloat);
+        fn glClearDepthf(++d: ::GLfloat);
     }
     type PFNGLRELEASESHADERCOMPILERPROC = *u8;
     type PFNGLSHADERBINARYPROC = *u8;
@@ -1306,9 +1306,9 @@ pub mod GL_ARB_es2_compatibility {
 pub mod GL_ARB_get_program_binary {
     #[nolink]
     extern "C" {
-        fn glGetProgramBinary(++program: GLuint, ++bufSize: GLsizei, ++length: *GLsizei, ++binaryFormat: *GLenum, ++binary: *GLvoid);
-        fn glProgramBinary(++program: GLuint, ++binaryFormat: GLenum, ++binary: *GLvoid, ++length: GLsizei);
-        fn glProgramParameteri(++program: GLuint, ++pname: GLenum, ++value: GLint);
+        fn glGetProgramBinary(++program: ::GLuint, ++bufSize: ::GLsizei, ++length: *::GLsizei, ++binaryFormat: *::GLenum, ++binary: *::GLvoid);
+        fn glProgramBinary(++program: ::GLuint, ++binaryFormat: ::GLenum, ++binary: *::GLvoid, ++length: ::GLsizei);
+        fn glProgramParameteri(++program: ::GLuint, ++pname: ::GLenum, ++value: ::GLint);
     }
     type PFNGLGETPROGRAMBINARYPROC = *u8;
     type PFNGLPROGRAMBINARYPROC = *u8;
@@ -1319,66 +1319,66 @@ pub mod GL_ARB_get_program_binary {
 pub mod GL_ARB_separate_shader_objects {
     #[nolink]
     extern "C" {
-        fn glUseProgramStages(++pipeline: GLuint, ++stages: GLbitfield, ++program: GLuint);
-        fn glActiveShaderProgram(++pipeline: GLuint, ++program: GLuint);
-        fn glCreateShaderProgramv(++gltype: GLenum, ++count: GLsizei, ++strings: **GLchar) -> GLuint;
-        fn glBindProgramPipeline(++pipeline: GLuint);
-        fn glDeleteProgramPipelines(++n: GLsizei, ++pipelines: *GLuint);
-        fn glGenProgramPipelines(++n: GLsizei, ++pipelines: *GLuint);
-        fn glIsProgramPipeline(++pipeline: GLuint) -> GLboolean;
-        fn glGetProgramPipelineiv(++pipeline: GLuint, ++pname: GLenum, ++params: *GLint);
-        fn glProgramUniform1i(++program: GLuint, ++location: GLint, ++v0: GLint);
-        fn glProgramUniform1iv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++value: *GLint);
-        fn glProgramUniform1f(++program: GLuint, ++location: GLint, ++v0: GLfloat);
-        fn glProgramUniform1fv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++value: *GLfloat);
-        fn glProgramUniform1d(++program: GLuint, ++location: GLint, ++v0: GLdouble);
-        fn glProgramUniform1dv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++value: *GLdouble);
-        fn glProgramUniform1ui(++program: GLuint, ++location: GLint, ++v0: GLuint);
-        fn glProgramUniform1uiv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++value: *GLuint);
-        fn glProgramUniform2i(++program: GLuint, ++location: GLint, ++v0: GLint, ++v1: GLint);
-        fn glProgramUniform2iv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++value: *GLint);
-        fn glProgramUniform2f(++program: GLuint, ++location: GLint, ++v0: GLfloat, ++v1: GLfloat);
-        fn glProgramUniform2fv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++value: *GLfloat);
-        fn glProgramUniform2d(++program: GLuint, ++location: GLint, ++v0: GLdouble, ++v1: GLdouble);
-        fn glProgramUniform2dv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++value: *GLdouble);
-        fn glProgramUniform2ui(++program: GLuint, ++location: GLint, ++v0: GLuint, ++v1: GLuint);
-        fn glProgramUniform2uiv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++value: *GLuint);
-        fn glProgramUniform3i(++program: GLuint, ++location: GLint, ++v0: GLint, ++v1: GLint, ++v2: GLint);
-        fn glProgramUniform3iv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++value: *GLint);
-        fn glProgramUniform3f(++program: GLuint, ++location: GLint, ++v0: GLfloat, ++v1: GLfloat, ++v2: GLfloat);
-        fn glProgramUniform3fv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++value: *GLfloat);
-        fn glProgramUniform3d(++program: GLuint, ++location: GLint, ++v0: GLdouble, ++v1: GLdouble, ++v2: GLdouble);
-        fn glProgramUniform3dv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++value: *GLdouble);
-        fn glProgramUniform3ui(++program: GLuint, ++location: GLint, ++v0: GLuint, ++v1: GLuint, ++v2: GLuint);
-        fn glProgramUniform3uiv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++value: *GLuint);
-        fn glProgramUniform4i(++program: GLuint, ++location: GLint, ++v0: GLint, ++v1: GLint, ++v2: GLint, ++v3: GLint);
-        fn glProgramUniform4iv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++value: *GLint);
-        fn glProgramUniform4f(++program: GLuint, ++location: GLint, ++v0: GLfloat, ++v1: GLfloat, ++v2: GLfloat, ++v3: GLfloat);
-        fn glProgramUniform4fv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++value: *GLfloat);
-        fn glProgramUniform4d(++program: GLuint, ++location: GLint, ++v0: GLdouble, ++v1: GLdouble, ++v2: GLdouble, ++v3: GLdouble);
-        fn glProgramUniform4dv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++value: *GLdouble);
-        fn glProgramUniform4ui(++program: GLuint, ++location: GLint, ++v0: GLuint, ++v1: GLuint, ++v2: GLuint, ++v3: GLuint);
-        fn glProgramUniform4uiv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++value: *GLuint);
-        fn glProgramUniformMatrix2fv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLfloat);
-        fn glProgramUniformMatrix3fv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLfloat);
-        fn glProgramUniformMatrix4fv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLfloat);
-        fn glProgramUniformMatrix2dv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLdouble);
-        fn glProgramUniformMatrix3dv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLdouble);
-        fn glProgramUniformMatrix4dv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLdouble);
-        fn glProgramUniformMatrix2x3fv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLfloat);
-        fn glProgramUniformMatrix3x2fv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLfloat);
-        fn glProgramUniformMatrix2x4fv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLfloat);
-        fn glProgramUniformMatrix4x2fv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLfloat);
-        fn glProgramUniformMatrix3x4fv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLfloat);
-        fn glProgramUniformMatrix4x3fv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLfloat);
-        fn glProgramUniformMatrix2x3dv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLdouble);
-        fn glProgramUniformMatrix3x2dv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLdouble);
-        fn glProgramUniformMatrix2x4dv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLdouble);
-        fn glProgramUniformMatrix4x2dv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLdouble);
-        fn glProgramUniformMatrix3x4dv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLdouble);
-        fn glProgramUniformMatrix4x3dv(++program: GLuint, ++location: GLint, ++count: GLsizei, ++transpose: GLboolean, ++value: *GLdouble);
-        fn glValidateProgramPipeline(++pipeline: GLuint);
-        fn glGetProgramPipelineInfoLog(++pipeline: GLuint, ++bufSize: GLsizei, ++length: *GLsizei, ++infoLog: *GLchar);
+        fn glUseProgramStages(++pipeline: ::GLuint, ++stages: ::GLbitfield, ++program: ::GLuint);
+        fn glActiveShaderProgram(++pipeline: ::GLuint, ++program: ::GLuint);
+        fn glCreateShaderProgramv(++gltype: ::GLenum, ++count: ::GLsizei, ++strings: **::GLchar) -> ::GLuint;
+        fn glBindProgramPipeline(++pipeline: ::GLuint);
+        fn glDeleteProgramPipelines(++n: ::GLsizei, ++pipelines: *::GLuint);
+        fn glGenProgramPipelines(++n: ::GLsizei, ++pipelines: *::GLuint);
+        fn glIsProgramPipeline(++pipeline: ::GLuint) -> ::GLboolean;
+        fn glGetProgramPipelineiv(++pipeline: ::GLuint, ++pname: ::GLenum, ++params: *::GLint);
+        fn glProgramUniform1i(++program: ::GLuint, ++location: ::GLint, ++v0: ::GLint);
+        fn glProgramUniform1iv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++value: *::GLint);
+        fn glProgramUniform1f(++program: ::GLuint, ++location: ::GLint, ++v0: ::GLfloat);
+        fn glProgramUniform1fv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++value: *::GLfloat);
+        fn glProgramUniform1d(++program: ::GLuint, ++location: ::GLint, ++v0: ::GLdouble);
+        fn glProgramUniform1dv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++value: *::GLdouble);
+        fn glProgramUniform1ui(++program: ::GLuint, ++location: ::GLint, ++v0: ::GLuint);
+        fn glProgramUniform1uiv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++value: *::GLuint);
+        fn glProgramUniform2i(++program: ::GLuint, ++location: ::GLint, ++v0: ::GLint, ++v1: ::GLint);
+        fn glProgramUniform2iv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++value: *::GLint);
+        fn glProgramUniform2f(++program: ::GLuint, ++location: ::GLint, ++v0: ::GLfloat, ++v1: ::GLfloat);
+        fn glProgramUniform2fv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++value: *::GLfloat);
+        fn glProgramUniform2d(++program: ::GLuint, ++location: ::GLint, ++v0: ::GLdouble, ++v1: ::GLdouble);
+        fn glProgramUniform2dv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++value: *::GLdouble);
+        fn glProgramUniform2ui(++program: ::GLuint, ++location: ::GLint, ++v0: ::GLuint, ++v1: ::GLuint);
+        fn glProgramUniform2uiv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++value: *::GLuint);
+        fn glProgramUniform3i(++program: ::GLuint, ++location: ::GLint, ++v0: ::GLint, ++v1: ::GLint, ++v2: ::GLint);
+        fn glProgramUniform3iv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++value: *::GLint);
+        fn glProgramUniform3f(++program: ::GLuint, ++location: ::GLint, ++v0: ::GLfloat, ++v1: ::GLfloat, ++v2: ::GLfloat);
+        fn glProgramUniform3fv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++value: *::GLfloat);
+        fn glProgramUniform3d(++program: ::GLuint, ++location: ::GLint, ++v0: ::GLdouble, ++v1: ::GLdouble, ++v2: ::GLdouble);
+        fn glProgramUniform3dv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++value: *::GLdouble);
+        fn glProgramUniform3ui(++program: ::GLuint, ++location: ::GLint, ++v0: ::GLuint, ++v1: ::GLuint, ++v2: ::GLuint);
+        fn glProgramUniform3uiv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++value: *::GLuint);
+        fn glProgramUniform4i(++program: ::GLuint, ++location: ::GLint, ++v0: ::GLint, ++v1: ::GLint, ++v2: ::GLint, ++v3: ::GLint);
+        fn glProgramUniform4iv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++value: *::GLint);
+        fn glProgramUniform4f(++program: ::GLuint, ++location: ::GLint, ++v0: ::GLfloat, ++v1: ::GLfloat, ++v2: ::GLfloat, ++v3: ::GLfloat);
+        fn glProgramUniform4fv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++value: *::GLfloat);
+        fn glProgramUniform4d(++program: ::GLuint, ++location: ::GLint, ++v0: ::GLdouble, ++v1: ::GLdouble, ++v2: ::GLdouble, ++v3: ::GLdouble);
+        fn glProgramUniform4dv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++value: *::GLdouble);
+        fn glProgramUniform4ui(++program: ::GLuint, ++location: ::GLint, ++v0: ::GLuint, ++v1: ::GLuint, ++v2: ::GLuint, ++v3: ::GLuint);
+        fn glProgramUniform4uiv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++value: *::GLuint);
+        fn glProgramUniformMatrix2fv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLfloat);
+        fn glProgramUniformMatrix3fv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLfloat);
+        fn glProgramUniformMatrix4fv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLfloat);
+        fn glProgramUniformMatrix2dv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLdouble);
+        fn glProgramUniformMatrix3dv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLdouble);
+        fn glProgramUniformMatrix4dv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLdouble);
+        fn glProgramUniformMatrix2x3fv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLfloat);
+        fn glProgramUniformMatrix3x2fv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLfloat);
+        fn glProgramUniformMatrix2x4fv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLfloat);
+        fn glProgramUniformMatrix4x2fv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLfloat);
+        fn glProgramUniformMatrix3x4fv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLfloat);
+        fn glProgramUniformMatrix4x3fv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLfloat);
+        fn glProgramUniformMatrix2x3dv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLdouble);
+        fn glProgramUniformMatrix3x2dv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLdouble);
+        fn glProgramUniformMatrix2x4dv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLdouble);
+        fn glProgramUniformMatrix4x2dv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLdouble);
+        fn glProgramUniformMatrix3x4dv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLdouble);
+        fn glProgramUniformMatrix4x3dv(++program: ::GLuint, ++location: ::GLint, ++count: ::GLsizei, ++transpose: ::GLboolean, ++value: *::GLdouble);
+        fn glValidateProgramPipeline(++pipeline: ::GLuint);
+        fn glGetProgramPipelineInfoLog(++pipeline: ::GLuint, ++bufSize: ::GLsizei, ++length: *::GLsizei, ++infoLog: *::GLchar);
     }
     type PFNGLUSEPROGRAMSTAGESPROC = *u8;
     type PFNGLACTIVESHADERPROGRAMPROC = *u8;
@@ -1446,16 +1446,16 @@ pub mod GL_ARB_separate_shader_objects {
 pub mod GL_ARB_vertex_attrib_64bit {
     #[nolink]
     extern "C" {
-        fn glVertexAttribL1d(++index: GLuint, ++x: GLdouble);
-        fn glVertexAttribL2d(++index: GLuint, ++x: GLdouble, ++y: GLdouble);
-        fn glVertexAttribL3d(++index: GLuint, ++x: GLdouble, ++y: GLdouble, ++z: GLdouble);
-        fn glVertexAttribL4d(++index: GLuint, ++x: GLdouble, ++y: GLdouble, ++z: GLdouble, ++w: GLdouble);
-        fn glVertexAttribL1dv(++index: GLuint, ++v: *GLdouble);
-        fn glVertexAttribL2dv(++index: GLuint, ++v: *GLdouble);
-        fn glVertexAttribL3dv(++index: GLuint, ++v: *GLdouble);
-        fn glVertexAttribL4dv(++index: GLuint, ++v: *GLdouble);
-        fn glVertexAttribLPointer(++index: GLuint, ++size: GLint, ++gltype: GLenum, ++stride: GLsizei, ++pointer: *GLvoid);
-        fn glGetVertexAttribLdv(++index: GLuint, ++pname: GLenum, ++params: *GLdouble);
+        fn glVertexAttribL1d(++index: ::GLuint, ++x: ::GLdouble);
+        fn glVertexAttribL2d(++index: ::GLuint, ++x: ::GLdouble, ++y: ::GLdouble);
+        fn glVertexAttribL3d(++index: ::GLuint, ++x: ::GLdouble, ++y: ::GLdouble, ++z: ::GLdouble);
+        fn glVertexAttribL4d(++index: ::GLuint, ++x: ::GLdouble, ++y: ::GLdouble, ++z: ::GLdouble, ++w: ::GLdouble);
+        fn glVertexAttribL1dv(++index: ::GLuint, ++v: *::GLdouble);
+        fn glVertexAttribL2dv(++index: ::GLuint, ++v: *::GLdouble);
+        fn glVertexAttribL3dv(++index: ::GLuint, ++v: *::GLdouble);
+        fn glVertexAttribL4dv(++index: ::GLuint, ++v: *::GLdouble);
+        fn glVertexAttribLPointer(++index: ::GLuint, ++size: ::GLint, ++gltype: ::GLenum, ++stride: ::GLsizei, ++pointer: *::GLvoid);
+        fn glGetVertexAttribLdv(++index: ::GLuint, ++pname: ::GLenum, ++params: *::GLdouble);
     }
     type PFNGLVERTEXATTRIBL1DPROC = *u8;
     type PFNGLVERTEXATTRIBL2DPROC = *u8;
@@ -1473,16 +1473,16 @@ pub mod GL_ARB_vertex_attrib_64bit {
 pub mod GL_ARB_viewport_array {
     #[nolink]
     extern "C" {
-        fn glViewportArrayv(++first: GLuint, ++count: GLsizei, ++v: *GLfloat);
-        fn glViewportIndexedf(++index: GLuint, ++x: GLfloat, ++y: GLfloat, ++w: GLfloat, ++h: GLfloat);
-        fn glViewportIndexedfv(++index: GLuint, ++v: *GLfloat);
-        fn glScissorArrayv(++first: GLuint, ++count: GLsizei, ++v: *GLint);
-        fn glScissorIndexed(++index: GLuint, ++left: GLint, ++bottom: GLint, ++width: GLsizei, ++height: GLsizei);
-        fn glScissorIndexedv(++index: GLuint, ++v: *GLint);
-        fn glDepthRangeArrayv(++first: GLuint, ++count: GLsizei, ++v: *GLdouble);
-        fn glDepthRangeIndexed(++index: GLuint, ++n: GLdouble, ++f: GLdouble);
-        fn glGetFloati_v(++target: GLenum, ++index: GLuint, ++data: *GLfloat);
-        fn glGetDoublei_v(++target: GLenum, ++index: GLuint, ++data: *GLdouble);
+        fn glViewportArrayv(++first: ::GLuint, ++count: ::GLsizei, ++v: *::GLfloat);
+        fn glViewportIndexedf(++index: ::GLuint, ++x: ::GLfloat, ++y: ::GLfloat, ++w: ::GLfloat, ++h: ::GLfloat);
+        fn glViewportIndexedfv(++index: ::GLuint, ++v: *::GLfloat);
+        fn glScissorArrayv(++first: ::GLuint, ++count: ::GLsizei, ++v: *::GLint);
+        fn glScissorIndexed(++index: ::GLuint, ++left: ::GLint, ++bottom: ::GLint, ++width: ::GLsizei, ++height: ::GLsizei);
+        fn glScissorIndexedv(++index: ::GLuint, ++v: *::GLint);
+        fn glDepthRangeArrayv(++first: ::GLuint, ++count: ::GLsizei, ++v: *::GLdouble);
+        fn glDepthRangeIndexed(++index: ::GLuint, ++n: ::GLdouble, ++f: ::GLdouble);
+        fn glGetFloati_v(++target: ::GLenum, ++index: ::GLuint, ++data: *::GLfloat);
+        fn glGetDoublei_v(++target: ::GLenum, ++index: ::GLuint, ++data: *::GLdouble);
     }
     type PFNGLVIEWPORTARRAYVPROC = *u8;
     type PFNGLVIEWPORTINDEXEDFPROC = *u8;
@@ -1500,7 +1500,7 @@ pub mod GL_ARB_viewport_array {
 pub mod GL_ARB_cl_event {
     #[nolink]
     extern "C" {
-        fn glCreateSyncFromCLeventARB(++context: *Struct__cl_context, ++event: *Struct__cl_event, ++flags: GLbitfield) -> GLsync;
+        fn glCreateSyncFromCLeventARB(++context: *::Struct__cl_context, ++event: *::Struct__cl_event, ++flags: ::GLbitfield) -> ::GLsync;
     }
     type PFNGLCREATESYNCFROMCLEVENTARBPROC = *u8;
 }
@@ -1509,10 +1509,10 @@ pub mod GL_ARB_cl_event {
 pub mod GL_ARB_debug_output {
     #[nolink]
     extern "C" {
-        fn glDebugMessageControlARB(++source: GLenum, ++gltype: GLenum, ++severity: GLenum, ++count: GLsizei, ++ids: *GLuint, ++enabled: GLboolean);
-        fn glDebugMessageInsertARB(++source: GLenum, ++gltype: GLenum, ++id: GLuint, ++severity: GLenum, ++length: GLsizei, ++buf: *GLchar);
-        fn glDebugMessageCallbackARB(++callback: GLDEBUGPROCARB, ++userParam: *GLvoid);
-        fn glGetDebugMessageLogARB(++count: GLuint, ++bufsize: GLsizei, ++sources: *GLenum, ++types: *GLenum, ++ids: *GLuint, ++severities: *GLenum, ++lengths: *GLsizei, ++messageLog: *GLchar) -> GLuint;
+        fn glDebugMessageControlARB(++source: ::GLenum, ++gltype: ::GLenum, ++severity: ::GLenum, ++count: ::GLsizei, ++ids: *::GLuint, ++enabled: ::GLboolean);
+        fn glDebugMessageInsertARB(++source: ::GLenum, ++gltype: ::GLenum, ++id: ::GLuint, ++severity: ::GLenum, ++length: ::GLsizei, ++buf: *::GLchar);
+        fn glDebugMessageCallbackARB(++callback: ::GLDEBUGPROCARB, ++userParam: *::GLvoid);
+        fn glGetDebugMessageLogARB(++count: ::GLuint, ++bufsize: ::GLsizei, ++sources: *::GLenum, ++types: *::GLenum, ++ids: *::GLuint, ++severities: *::GLenum, ++lengths: *::GLsizei, ++messageLog: *::GLchar) -> ::GLuint;
     }
     type PFNGLDEBUGMESSAGECONTROLARBPROC = *u8;
     type PFNGLDEBUGMESSAGEINSERTARBPROC = *u8;
@@ -1524,14 +1524,14 @@ pub mod GL_ARB_debug_output {
 pub mod GL_ARB_robustness {
     #[nolink]
     extern "C" {
-        fn glGetGraphicsResetStatusARB() -> GLenum;
-        fn glGetnTexImageARB(++target: GLenum, ++level: GLint, ++format: GLenum, ++gltype: GLenum, ++bufSize: GLsizei, ++img: *GLvoid);
-        fn glReadnPixelsARB(++x: GLint, ++y: GLint, ++width: GLsizei, ++height: GLsizei, ++format: GLenum, ++gltype: GLenum, ++bufSize: GLsizei, ++data: *GLvoid);
-        fn glGetnCompressedTexImageARB(++target: GLenum, ++lod: GLint, ++bufSize: GLsizei, ++img: *GLvoid);
-        fn glGetnUniformfvARB(++program: GLuint, ++location: GLint, ++bufSize: GLsizei, ++params: *GLfloat);
-        fn glGetnUniformivARB(++program: GLuint, ++location: GLint, ++bufSize: GLsizei, ++params: *GLint);
-        fn glGetnUniformuivARB(++program: GLuint, ++location: GLint, ++bufSize: GLsizei, ++params: *GLuint);
-        fn glGetnUniformdvARB(++program: GLuint, ++location: GLint, ++bufSize: GLsizei, ++params: *GLdouble);
+        fn glGetGraphicsResetStatusARB() -> ::GLenum;
+        fn glGetnTexImageARB(++target: ::GLenum, ++level: ::GLint, ++format: ::GLenum, ++gltype: ::GLenum, ++bufSize: ::GLsizei, ++img: *::GLvoid);
+        fn glReadnPixelsARB(++x: ::GLint, ++y: ::GLint, ++width: ::GLsizei, ++height: ::GLsizei, ++format: ::GLenum, ++gltype: ::GLenum, ++bufSize: ::GLsizei, ++data: *::GLvoid);
+        fn glGetnCompressedTexImageARB(++target: ::GLenum, ++lod: ::GLint, ++bufSize: ::GLsizei, ++img: *::GLvoid);
+        fn glGetnUniformfvARB(++program: ::GLuint, ++location: ::GLint, ++bufSize: ::GLsizei, ++params: *::GLfloat);
+        fn glGetnUniformivARB(++program: ::GLuint, ++location: ::GLint, ++bufSize: ::GLsizei, ++params: *::GLint);
+        fn glGetnUniformuivARB(++program: ::GLuint, ++location: ::GLint, ++bufSize: ::GLsizei, ++params: *::GLuint);
+        fn glGetnUniformdvARB(++program: ::GLuint, ++location: ::GLint, ++bufSize: ::GLsizei, ++params: *::GLdouble);
     }
     type PFNGLGETGRAPHICSRESETSTATUSARBPROC = *u8;
     type PFNGLGETNTEXIMAGEARBPROC = *u8;
@@ -1551,9 +1551,9 @@ pub mod GL_ARB_shader_stencil_export {
 pub mod GL_ARB_base_instance {
     #[nolink]
     extern "C" {
-        fn glDrawArraysInstancedBaseInstance(++mode: GLenum, ++first: GLint, ++count: GLsizei, ++instancecount: GLsizei, ++baseinstance: GLuint);
-        fn glDrawElementsInstancedBaseInstance(++mode: GLenum, ++count: GLsizei, ++gltype: GLenum, ++indices: *libc::c_void, ++instancecount: GLsizei, ++baseinstance: GLuint);
-        fn glDrawElementsInstancedBaseVertexBaseInstance(++mode: GLenum, ++count: GLsizei, ++gltype: GLenum, ++indices: *libc::c_void, ++instancecount: GLsizei, ++basevertex: GLint, ++baseinstance: GLuint);
+        fn glDrawArraysInstancedBaseInstance(++mode: ::GLenum, ++first: ::GLint, ++count: ::GLsizei, ++instancecount: ::GLsizei, ++baseinstance: ::GLuint);
+        fn glDrawElementsInstancedBaseInstance(++mode: ::GLenum, ++count: ::GLsizei, ++gltype: ::GLenum, ++indices: *::libc::c_void, ++instancecount: ::GLsizei, ++baseinstance: ::GLuint);
+        fn glDrawElementsInstancedBaseVertexBaseInstance(++mode: ::GLenum, ++count: ::GLsizei, ++gltype: ::GLenum, ++indices: *::libc::c_void, ++instancecount: ::GLsizei, ++basevertex: ::GLint, ++baseinstance: ::GLuint);
     }
     type PFNGLDRAWARRAYSINSTANCEDBASEINSTANCEPROC = *u8;
     type PFNGLDRAWELEMENTSINSTANCEDBASEINSTANCEPROC = *u8;
@@ -1568,8 +1568,8 @@ pub mod GL_ARB_shading_language_420pack {
 pub mod GL_ARB_transform_feedback_instanced {
     #[nolink]
     extern "C" {
-        fn glDrawTransformFeedbackInstanced(++mode: GLenum, ++id: GLuint, ++instancecount: GLsizei);
-        fn glDrawTransformFeedbackStreamInstanced(++mode: GLenum, ++id: GLuint, ++stream: GLuint, ++instancecount: GLsizei);
+        fn glDrawTransformFeedbackInstanced(++mode: ::GLenum, ++id: ::GLuint, ++instancecount: ::GLsizei);
+        fn glDrawTransformFeedbackStreamInstanced(++mode: ::GLenum, ++id: ::GLuint, ++stream: ::GLuint, ++instancecount: ::GLsizei);
     }
     type PFNGLDRAWTRANSFORMFEEDBACKINSTANCEDPROC = *u8;
     type PFNGLDRAWTRANSFORMFEEDBACKSTREAMINSTANCEDPROC = *u8;
@@ -1587,7 +1587,7 @@ pub mod GL_ARB_conservative_depth {
 pub mod GL_ARB_internalformat_query {
     #[nolink]
     extern "C" {
-        fn glGetInternalformativ(++target: GLenum, ++internalformat: GLenum, ++pname: GLenum, ++bufSize: GLsizei, ++params: *GLint);
+        fn glGetInternalformativ(++target: ::GLenum, ++internalformat: ::GLenum, ++pname: ::GLenum, ++bufSize: ::GLsizei, ++params: *::GLint);
     }
     type PFNGLGETINTERNALFORMATIVPROC = *u8;
 }
@@ -1600,7 +1600,7 @@ pub mod GL_ARB_map_buffer_alignment {
 pub mod GL_ARB_shader_atomic_counters {
     #[nolink]
     extern "C" {
-        fn glGetActiveAtomicCounterBufferiv(++program: GLuint, ++bufferIndex: GLuint, ++pname: GLenum, ++params: *GLint);
+        fn glGetActiveAtomicCounterBufferiv(++program: ::GLuint, ++bufferIndex: ::GLuint, ++pname: ::GLenum, ++params: *::GLint);
     }
     type PFNGLGETACTIVEATOMICCOUNTERBUFFERIVPROC = *u8;
 }
@@ -1609,8 +1609,8 @@ pub mod GL_ARB_shader_atomic_counters {
 pub mod GL_ARB_shader_image_load_store {
     #[nolink]
     extern "C" {
-        fn glBindImageTexture(++unit: GLuint, ++texture: GLuint, ++level: GLint, ++layered: GLboolean, ++layer: GLint, ++access: GLenum, ++format: GLenum);
-        fn glMemoryBarrier(++barriers: GLbitfield);
+        fn glBindImageTexture(++unit: ::GLuint, ++texture: ::GLuint, ++level: ::GLint, ++layered: ::GLboolean, ++layer: ::GLint, ++access: ::GLenum, ++format: ::GLenum);
+        fn glMemoryBarrier(++barriers: ::GLbitfield);
     }
     type PFNGLBINDIMAGETEXTUREPROC = *u8;
     type PFNGLMEMORYBARRIERPROC = *u8;
@@ -1624,12 +1624,12 @@ pub mod GL_ARB_shading_language_packing {
 pub mod GL_ARB_texture_storage {
     #[nolink]
     extern "C" {
-        fn glTexStorage1D(++target: GLenum, ++levels: GLsizei, ++internalformat: GLenum, ++width: GLsizei);
-        fn glTexStorage2D(++target: GLenum, ++levels: GLsizei, ++internalformat: GLenum, ++width: GLsizei, ++height: GLsizei);
-        fn glTexStorage3D(++target: GLenum, ++levels: GLsizei, ++internalformat: GLenum, ++width: GLsizei, ++height: GLsizei, ++depth: GLsizei);
-        fn glTextureStorage1DEXT(++texture: GLuint, ++target: GLenum, ++levels: GLsizei, ++internalformat: GLenum, ++width: GLsizei);
-        fn glTextureStorage2DEXT(++texture: GLuint, ++target: GLenum, ++levels: GLsizei, ++internalformat: GLenum, ++width: GLsizei, ++height: GLsizei);
-        fn glTextureStorage3DEXT(++texture: GLuint, ++target: GLenum, ++levels: GLsizei, ++internalformat: GLenum, ++width: GLsizei, ++height: GLsizei, ++depth: GLsizei);
+        fn glTexStorage1D(++target: ::GLenum, ++levels: ::GLsizei, ++internalformat: ::GLenum, ++width: ::GLsizei);
+        fn glTexStorage2D(++target: ::GLenum, ++levels: ::GLsizei, ++internalformat: ::GLenum, ++width: ::GLsizei, ++height: ::GLsizei);
+        fn glTexStorage3D(++target: ::GLenum, ++levels: ::GLsizei, ++internalformat: ::GLenum, ++width: ::GLsizei, ++height: ::GLsizei, ++depth: ::GLsizei);
+        fn glTextureStorage1DEXT(++texture: ::GLuint, ++target: ::GLenum, ++levels: ::GLsizei, ++internalformat: ::GLenum, ++width: ::GLsizei);
+        fn glTextureStorage2DEXT(++texture: ::GLuint, ++target: ::GLenum, ++levels: ::GLsizei, ++internalformat: ::GLenum, ++width: ::GLsizei, ++height: ::GLsizei);
+        fn glTextureStorage3DEXT(++texture: ::GLuint, ++target: ::GLenum, ++levels: ::GLsizei, ++internalformat: ::GLenum, ++width: ::GLsizei, ++height: ::GLsizei, ++depth: ::GLsizei);
     }
     type PFNGLTEXSTORAGE1DPROC = *u8;
     type PFNGLTEXSTORAGE2DPROC = *u8;
@@ -1647,16 +1647,16 @@ pub mod GL_KHR_texture_compression_astc_ldr {
 pub mod GL_KHR_debug {
     #[nolink]
     extern "C" {
-        fn glDebugMessageControl(++source: GLenum, ++gltype: GLenum, ++severity: GLenum, ++count: GLsizei, ++ids: *GLuint, ++enabled: GLboolean);
-        fn glDebugMessageInsert(++source: GLenum, ++gltype: GLenum, ++id: GLuint, ++severity: GLenum, ++length: GLsizei, ++buf: *GLchar);
-        fn glDebugMessageCallback(++callback: GLDEBUGPROC, ++userParam: *libc::c_void);
-        fn glGetDebugMessageLog(++count: GLuint, ++bufsize: GLsizei, ++sources: *GLenum, ++types: *GLenum, ++ids: *GLuint, ++severities: *GLenum, ++lengths: *GLsizei, ++messageLog: *GLchar) -> GLuint;
-        fn glPushDebugGroup(++source: GLenum, ++id: GLuint, ++length: GLsizei, ++message: *GLchar);
+        fn glDebugMessageControl(++source: ::GLenum, ++gltype: ::GLenum, ++severity: ::GLenum, ++count: ::GLsizei, ++ids: *::GLuint, ++enabled: ::GLboolean);
+        fn glDebugMessageInsert(++source: ::GLenum, ++gltype: ::GLenum, ++id: ::GLuint, ++severity: ::GLenum, ++length: ::GLsizei, ++buf: *::GLchar);
+        fn glDebugMessageCallback(++callback: ::GLDEBUGPROC, ++userParam: *::libc::c_void);
+        fn glGetDebugMessageLog(++count: ::GLuint, ++bufsize: ::GLsizei, ++sources: *::GLenum, ++types: *::GLenum, ++ids: *::GLuint, ++severities: *::GLenum, ++lengths: *::GLsizei, ++messageLog: *::GLchar) -> ::GLuint;
+        fn glPushDebugGroup(++source: ::GLenum, ++id: ::GLuint, ++length: ::GLsizei, ++message: *::GLchar);
         fn glPopDebugGroup();
-        fn glObjectLabel(++identifier: GLenum, ++name: GLuint, ++length: GLsizei, ++label: *GLchar);
-        fn glGetObjectLabel(++identifier: GLenum, ++name: GLuint, ++bufSize: GLsizei, ++length: *GLsizei, ++label: *GLchar);
-        fn glObjectPtrLabel(++ptr: *libc::c_void, ++length: GLsizei, ++label: *GLchar);
-        fn glGetObjectPtrLabel(++ptr: *libc::c_void, ++bufSize: GLsizei, ++length: *GLsizei, ++label: *GLchar);
+        fn glObjectLabel(++identifier: ::GLenum, ++name: ::GLuint, ++length: ::GLsizei, ++label: *::GLchar);
+        fn glGetObjectLabel(++identifier: ::GLenum, ++name: ::GLuint, ++bufSize: ::GLsizei, ++length: *::GLsizei, ++label: *::GLchar);
+        fn glObjectPtrLabel(++ptr: *::libc::c_void, ++length: ::GLsizei, ++label: *::GLchar);
+        fn glGetObjectPtrLabel(++ptr: *::libc::c_void, ++bufSize: ::GLsizei, ++length: *::GLsizei, ++label: *::GLchar);
     }
     type PFNGLDEBUGMESSAGECONTROLPROC = *u8;
     type PFNGLDEBUGMESSAGEINSERTPROC = *u8;
@@ -1678,10 +1678,10 @@ pub mod GL_ARB_arrays_of_arrays {
 pub mod GL_ARB_clear_buffer_object {
     #[nolink]
     extern "C" {
-        fn glClearBufferData(++target: GLenum, ++internalformat: GLenum, ++format: GLenum, ++gltype: GLenum, ++data: *libc::c_void);
-        fn glClearBufferSubData(++target: GLenum, ++internalformat: GLenum, ++offset: GLintptr, ++size: GLsizeiptr, ++format: GLenum, ++gltype: GLenum, ++data: *libc::c_void);
-        fn glClearNamedBufferDataEXT(++buffer: GLuint, ++internalformat: GLenum, ++format: GLenum, ++gltype: GLenum, ++data: *libc::c_void);
-        fn glClearNamedBufferSubDataEXT(++buffer: GLuint, ++internalformat: GLenum, ++format: GLenum, ++gltype: GLenum, ++offset: GLsizeiptr, ++size: GLsizeiptr, ++data: *libc::c_void);
+        fn glClearBufferData(++target: ::GLenum, ++internalformat: ::GLenum, ++format: ::GLenum, ++gltype: ::GLenum, ++data: *::libc::c_void);
+        fn glClearBufferSubData(++target: ::GLenum, ++internalformat: ::GLenum, ++offset: ::GLintptr, ++size: ::GLsizeiptr, ++format: ::GLenum, ++gltype: ::GLenum, ++data: *::libc::c_void);
+        fn glClearNamedBufferDataEXT(++buffer: ::GLuint, ++internalformat: ::GLenum, ++format: ::GLenum, ++gltype: ::GLenum, ++data: *::libc::c_void);
+        fn glClearNamedBufferSubDataEXT(++buffer: ::GLuint, ++internalformat: ::GLenum, ++format: ::GLenum, ++gltype: ::GLenum, ++offset: ::GLsizeiptr, ++size: ::GLsizeiptr, ++data: *::libc::c_void);
     }
     type PFNGLCLEARBUFFERDATAPROC = *u8;
     type PFNGLCLEARBUFFERSUBDATAPROC = *u8;
@@ -1693,8 +1693,8 @@ pub mod GL_ARB_clear_buffer_object {
 pub mod GL_ARB_compute_shader {
     #[nolink]
     extern "C" {
-        fn glDispatchCompute(++num_groups_x: GLuint, ++num_groups_y: GLuint, ++num_groups_z: GLuint);
-        fn glDispatchComputeIndirect(++indirect: GLintptr);
+        fn glDispatchCompute(++num_groups_x: ::GLuint, ++num_groups_y: ::GLuint, ++num_groups_z: ::GLuint);
+        fn glDispatchComputeIndirect(++indirect: ::GLintptr);
     }
     type PFNGLDISPATCHCOMPUTEPROC = *u8;
     type PFNGLDISPATCHCOMPUTEINDIRECTPROC = *u8;
@@ -1704,7 +1704,7 @@ pub mod GL_ARB_compute_shader {
 pub mod GL_ARB_copy_image {
     #[nolink]
     extern "C" {
-        fn glCopyImageSubData(++srcName: GLuint, ++srcTarget: GLenum, ++srcLevel: GLint, ++srcX: GLint, ++srcY: GLint, ++srcZ: GLint, ++dstName: GLuint, ++dstTarget: GLenum, ++dstLevel: GLint, ++dstX: GLint, ++dstY: GLint, ++dstZ: GLint, ++srcWidth: GLsizei, ++srcHeight: GLsizei, ++srcDepth: GLsizei);
+        fn glCopyImageSubData(++srcName: ::GLuint, ++srcTarget: ::GLenum, ++srcLevel: ::GLint, ++srcX: ::GLint, ++srcY: ::GLint, ++srcZ: ::GLint, ++dstName: ::GLuint, ++dstTarget: ::GLenum, ++dstLevel: ::GLint, ++dstX: ::GLint, ++dstY: ::GLint, ++dstZ: ::GLint, ++srcWidth: ::GLsizei, ++srcHeight: ::GLsizei, ++srcDepth: ::GLsizei);
     }
     type PFNGLCOPYIMAGESUBDATAPROC = *u8;
 }
@@ -1713,7 +1713,7 @@ pub mod GL_ARB_copy_image {
 pub mod GL_ARB_texture_view {
     #[nolink]
     extern "C" {
-        fn glTextureView(++texture: GLuint, ++target: GLenum, ++origtexture: GLuint, ++internalformat: GLenum, ++minlevel: GLuint, ++numlevels: GLuint, ++minlayer: GLuint, ++numlayers: GLuint);
+        fn glTextureView(++texture: ::GLuint, ++target: ::GLenum, ++origtexture: ::GLuint, ++internalformat: ::GLenum, ++minlevel: ::GLuint, ++numlevels: ::GLuint, ++minlayer: ::GLuint, ++numlayers: ::GLuint);
     }
     type PFNGLTEXTUREVIEWPROC = *u8;
 }
@@ -1722,18 +1722,18 @@ pub mod GL_ARB_texture_view {
 pub mod GL_ARB_vertex_attrib_binding {
     #[nolink]
     extern "C" {
-        fn glBindVertexBuffer(++bindingindex: GLuint, ++buffer: GLuint, ++offset: GLintptr, ++stride: GLsizei);
-        fn glVertexAttribFormat(++attribindex: GLuint, ++size: GLint, ++gltype: GLenum, ++normalized: GLboolean, ++relativeoffset: GLuint);
-        fn glVertexAttribIFormat(++attribindex: GLuint, ++size: GLint, ++gltype: GLenum, ++relativeoffset: GLuint);
-        fn glVertexAttribLFormat(++attribindex: GLuint, ++size: GLint, ++gltype: GLenum, ++relativeoffset: GLuint);
-        fn glVertexAttribBinding(++attribindex: GLuint, ++bindingindex: GLuint);
-        fn glVertexBindingDivisor(++bindingindex: GLuint, ++divisor: GLuint);
-        fn glVertexArrayBindVertexBufferEXT(++vaobj: GLuint, ++bindingindex: GLuint, ++buffer: GLuint, ++offset: GLintptr, ++stride: GLsizei);
-        fn glVertexArrayVertexAttribFormatEXT(++vaobj: GLuint, ++attribindex: GLuint, ++size: GLint, ++gltype: GLenum, ++normalized: GLboolean, ++relativeoffset: GLuint);
-        fn glVertexArrayVertexAttribIFormatEXT(++vaobj: GLuint, ++attribindex: GLuint, ++size: GLint, ++gltype: GLenum, ++relativeoffset: GLuint);
-        fn glVertexArrayVertexAttribLFormatEXT(++vaobj: GLuint, ++attribindex: GLuint, ++size: GLint, ++gltype: GLenum, ++relativeoffset: GLuint);
-        fn glVertexArrayVertexAttribBindingEXT(++vaobj: GLuint, ++attribindex: GLuint, ++bindingindex: GLuint);
-        fn glVertexArrayVertexBindingDivisorEXT(++vaobj: GLuint, ++bindingindex: GLuint, ++divisor: GLuint);
+        fn glBindVertexBuffer(++bindingindex: ::GLuint, ++buffer: ::GLuint, ++offset: ::GLintptr, ++stride: ::GLsizei);
+        fn glVertexAttribFormat(++attribindex: ::GLuint, ++size: ::GLint, ++gltype: ::GLenum, ++normalized: ::GLboolean, ++relativeoffset: ::GLuint);
+        fn glVertexAttribIFormat(++attribindex: ::GLuint, ++size: ::GLint, ++gltype: ::GLenum, ++relativeoffset: ::GLuint);
+        fn glVertexAttribLFormat(++attribindex: ::GLuint, ++size: ::GLint, ++gltype: ::GLenum, ++relativeoffset: ::GLuint);
+        fn glVertexAttribBinding(++attribindex: ::GLuint, ++bindingindex: ::GLuint);
+        fn glVertexBindingDivisor(++bindingindex: ::GLuint, ++divisor: ::GLuint);
+        fn glVertexArrayBindVertexBufferEXT(++vaobj: ::GLuint, ++bindingindex: ::GLuint, ++buffer: ::GLuint, ++offset: ::GLintptr, ++stride: ::GLsizei);
+        fn glVertexArrayVertexAttribFormatEXT(++vaobj: ::GLuint, ++attribindex: ::GLuint, ++size: ::GLint, ++gltype: ::GLenum, ++normalized: ::GLboolean, ++relativeoffset: ::GLuint);
+        fn glVertexArrayVertexAttribIFormatEXT(++vaobj: ::GLuint, ++attribindex: ::GLuint, ++size: ::GLint, ++gltype: ::GLenum, ++relativeoffset: ::GLuint);
+        fn glVertexArrayVertexAttribLFormatEXT(++vaobj: ::GLuint, ++attribindex: ::GLuint, ++size: ::GLint, ++gltype: ::GLenum, ++relativeoffset: ::GLuint);
+        fn glVertexArrayVertexAttribBindingEXT(++vaobj: ::GLuint, ++attribindex: ::GLuint, ++bindingindex: ::GLuint);
+        fn glVertexArrayVertexBindingDivisorEXT(++vaobj: ::GLuint, ++bindingindex: ::GLuint, ++divisor: ::GLuint);
     }
     type PFNGLBINDVERTEXBUFFERPROC = *u8;
     type PFNGLVERTEXATTRIBFORMATPROC = *u8;
@@ -1769,10 +1769,10 @@ pub mod GL_ARB_fragment_layer_viewport {
 pub mod GL_ARB_framebuffer_no_attachments {
     #[nolink]
     extern "C" {
-        fn glFramebufferParameteri(++target: GLenum, ++pname: GLenum, ++param: GLint);
-        fn glGetFramebufferParameteriv(++target: GLenum, ++pname: GLenum, ++params: *GLint);
-        fn glNamedFramebufferParameteriEXT(++framebuffer: GLuint, ++pname: GLenum, ++param: GLint);
-        fn glGetNamedFramebufferParameterivEXT(++framebuffer: GLuint, ++pname: GLenum, ++params: *GLint);
+        fn glFramebufferParameteri(++target: ::GLenum, ++pname: ::GLenum, ++param: ::GLint);
+        fn glGetFramebufferParameteriv(++target: ::GLenum, ++pname: ::GLenum, ++params: *::GLint);
+        fn glNamedFramebufferParameteriEXT(++framebuffer: ::GLuint, ++pname: ::GLenum, ++param: ::GLint);
+        fn glGetNamedFramebufferParameterivEXT(++framebuffer: ::GLuint, ++pname: ::GLenum, ++params: *::GLint);
     }
     type PFNGLFRAMEBUFFERPARAMETERIPROC = *u8;
     type PFNGLGETFRAMEBUFFERPARAMETERIVPROC = *u8;
@@ -1784,7 +1784,7 @@ pub mod GL_ARB_framebuffer_no_attachments {
 pub mod GL_ARB_internalformat_query2 {
     #[nolink]
     extern "C" {
-        fn glGetInternalformati64v(++target: GLenum, ++internalformat: GLenum, ++pname: GLenum, ++bufSize: GLsizei, ++params: *GLint64);
+        fn glGetInternalformati64v(++target: ::GLenum, ++internalformat: ::GLenum, ++pname: ::GLenum, ++bufSize: ::GLsizei, ++params: *::GLint64);
     }
     type PFNGLGETINTERNALFORMATI64VPROC = *u8;
 }
@@ -1793,12 +1793,12 @@ pub mod GL_ARB_internalformat_query2 {
 pub mod GL_ARB_invalidate_subdata {
     #[nolink]
     extern "C" {
-        fn glInvalidateTexSubImage(++texture: GLuint, ++level: GLint, ++xoffset: GLint, ++yoffset: GLint, ++zoffset: GLint, ++width: GLsizei, ++height: GLsizei, ++depth: GLsizei);
-        fn glInvalidateTexImage(++texture: GLuint, ++level: GLint);
-        fn glInvalidateBufferSubData(++buffer: GLuint, ++offset: GLintptr, ++length: GLsizeiptr);
-        fn glInvalidateBufferData(++buffer: GLuint);
-        fn glInvalidateFramebuffer(++target: GLenum, ++numAttachments: GLsizei, ++attachments: *GLenum);
-        fn glInvalidateSubFramebuffer(++target: GLenum, ++numAttachments: GLsizei, ++attachments: *GLenum, ++x: GLint, ++y: GLint, ++width: GLsizei, ++height: GLsizei);
+        fn glInvalidateTexSubImage(++texture: ::GLuint, ++level: ::GLint, ++xoffset: ::GLint, ++yoffset: ::GLint, ++zoffset: ::GLint, ++width: ::GLsizei, ++height: ::GLsizei, ++depth: ::GLsizei);
+        fn glInvalidateTexImage(++texture: ::GLuint, ++level: ::GLint);
+        fn glInvalidateBufferSubData(++buffer: ::GLuint, ++offset: ::GLintptr, ++length: ::GLsizeiptr);
+        fn glInvalidateBufferData(++buffer: ::GLuint);
+        fn glInvalidateFramebuffer(++target: ::GLenum, ++numAttachments: ::GLsizei, ++attachments: *::GLenum);
+        fn glInvalidateSubFramebuffer(++target: ::GLenum, ++numAttachments: ::GLsizei, ++attachments: *::GLenum, ++x: ::GLint, ++y: ::GLint, ++width: ::GLsizei, ++height: ::GLsizei);
     }
     type PFNGLINVALIDATETEXSUBIMAGEPROC = *u8;
     type PFNGLINVALIDATETEXIMAGEPROC = *u8;
@@ -1812,8 +1812,8 @@ pub mod GL_ARB_invalidate_subdata {
 pub mod GL_ARB_multi_draw_indirect {
     #[nolink]
     extern "C" {
-        fn glMultiDrawArraysIndirect(++mode: GLenum, ++indirect: *libc::c_void, ++drawcount: GLsizei, ++stride: GLsizei);
-        fn glMultiDrawElementsIndirect(++mode: GLenum, ++gltype: GLenum, ++indirect: *libc::c_void, ++drawcount: GLsizei, ++stride: GLsizei);
+        fn glMultiDrawArraysIndirect(++mode: ::GLenum, ++indirect: *::libc::c_void, ++drawcount: ::GLsizei, ++stride: ::GLsizei);
+        fn glMultiDrawElementsIndirect(++mode: ::GLenum, ++gltype: ::GLenum, ++indirect: *::libc::c_void, ++drawcount: ::GLsizei, ++stride: ::GLsizei);
     }
     type PFNGLMULTIDRAWARRAYSINDIRECTPROC = *u8;
     type PFNGLMULTIDRAWELEMENTSINDIRECTPROC = *u8;
@@ -1823,12 +1823,12 @@ pub mod GL_ARB_multi_draw_indirect {
 pub mod GL_ARB_program_interface_query {
     #[nolink]
     extern "C" {
-        fn glGetProgramInterfaceiv(++program: GLuint, ++programInterface: GLenum, ++pname: GLenum, ++params: *GLint);
-        fn glGetProgramResourceIndex(++program: GLuint, ++programInterface: GLenum, ++name: *GLchar) -> GLuint;
-        fn glGetProgramResourceName(++program: GLuint, ++programInterface: GLenum, ++index: GLuint, ++bufSize: GLsizei, ++length: *GLsizei, ++name: *GLchar);
-        fn glGetProgramResourceiv(++program: GLuint, ++programInterface: GLenum, ++index: GLuint, ++propCount: GLsizei, ++props: *GLenum, ++bufSize: GLsizei, ++length: *GLsizei, ++params: *GLint);
-        fn glGetProgramResourceLocation(++program: GLuint, ++programInterface: GLenum, ++name: *GLchar) -> GLint;
-        fn glGetProgramResourceLocationIndex(++program: GLuint, ++programInterface: GLenum, ++name: *GLchar) -> GLint;
+        fn glGetProgramInterfaceiv(++program: ::GLuint, ++programInterface: ::GLenum, ++pname: ::GLenum, ++params: *::GLint);
+        fn glGetProgramResourceIndex(++program: ::GLuint, ++programInterface: ::GLenum, ++name: *::GLchar) -> ::GLuint;
+        fn glGetProgramResourceName(++program: ::GLuint, ++programInterface: ::GLenum, ++index: ::GLuint, ++bufSize: ::GLsizei, ++length: *::GLsizei, ++name: *::GLchar);
+        fn glGetProgramResourceiv(++program: ::GLuint, ++programInterface: ::GLenum, ++index: ::GLuint, ++propCount: ::GLsizei, ++props: *::GLenum, ++bufSize: ::GLsizei, ++length: *::GLsizei, ++params: *::GLint);
+        fn glGetProgramResourceLocation(++program: ::GLuint, ++programInterface: ::GLenum, ++name: *::GLchar) -> ::GLint;
+        fn glGetProgramResourceLocationIndex(++program: ::GLuint, ++programInterface: ::GLenum, ++name: *::GLchar) -> ::GLint;
     }
     type PFNGLGETPROGRAMINTERFACEIVPROC = *u8;
     type PFNGLGETPROGRAMRESOURCEINDEXPROC = *u8;
@@ -1850,7 +1850,7 @@ pub mod GL_ARB_shader_image_size {
 pub mod GL_ARB_shader_storage_buffer_object {
     #[nolink]
     extern "C" {
-        fn glShaderStorageBlockBinding(++program: GLuint, ++storageBlockIndex: GLuint, ++storageBlockBinding: GLuint);
+        fn glShaderStorageBlockBinding(++program: ::GLuint, ++storageBlockIndex: ::GLuint, ++storageBlockBinding: ::GLuint);
     }
     type PFNGLSHADERSTORAGEBLOCKBINDINGPROC = *u8;
 }
@@ -1863,8 +1863,8 @@ pub mod GL_ARB_stencil_texturing {
 pub mod GL_ARB_texture_buffer_range {
     #[nolink]
     extern "C" {
-        fn glTexBufferRange(++target: GLenum, ++internalformat: GLenum, ++buffer: GLuint, ++offset: GLintptr, ++size: GLsizeiptr);
-        fn glTextureBufferRangeEXT(++texture: GLuint, ++target: GLenum, ++internalformat: GLenum, ++buffer: GLuint, ++offset: GLintptr, ++size: GLsizeiptr);
+        fn glTexBufferRange(++target: ::GLenum, ++internalformat: ::GLenum, ++buffer: ::GLuint, ++offset: ::GLintptr, ++size: ::GLsizeiptr);
+        fn glTextureBufferRangeEXT(++texture: ::GLuint, ++target: ::GLenum, ++internalformat: ::GLenum, ++buffer: ::GLuint, ++offset: ::GLintptr, ++size: ::GLsizeiptr);
     }
     type PFNGLTEXBUFFERRANGEPROC = *u8;
     type PFNGLTEXTUREBUFFERRANGEEXTPROC = *u8;
@@ -1878,10 +1878,10 @@ pub mod GL_ARB_texture_query_levels {
 pub mod GL_ARB_texture_storage_multisample {
     #[nolink]
     extern "C" {
-        fn glTexStorage2DMultisample(++target: GLenum, ++samples: GLsizei, ++internalformat: GLenum, ++width: GLsizei, ++height: GLsizei, ++fixedsamplelocations: GLboolean);
-        fn glTexStorage3DMultisample(++target: GLenum, ++samples: GLsizei, ++internalformat: GLenum, ++width: GLsizei, ++height: GLsizei, ++depth: GLsizei, ++fixedsamplelocations: GLboolean);
-        fn glTextureStorage2DMultisampleEXT(++texture: GLuint, ++target: GLenum, ++samples: GLsizei, ++internalformat: GLenum, ++width: GLsizei, ++height: GLsizei, ++fixedsamplelocations: GLboolean);
-        fn glTextureStorage3DMultisampleEXT(++texture: GLuint, ++target: GLenum, ++samples: GLsizei, ++internalformat: GLenum, ++width: GLsizei, ++height: GLsizei, ++depth: GLsizei, ++fixedsamplelocations: GLboolean);
+        fn glTexStorage2DMultisample(++target: ::GLenum, ++samples: ::GLsizei, ++internalformat: ::GLenum, ++width: ::GLsizei, ++height: ::GLsizei, ++fixedsamplelocations: ::GLboolean);
+        fn glTexStorage3DMultisample(++target: ::GLenum, ++samples: ::GLsizei, ++internalformat: ::GLenum, ++width: ::GLsizei, ++height: ::GLsizei, ++depth: ::GLsizei, ++fixedsamplelocations: ::GLboolean);
+        fn glTextureStorage2DMultisampleEXT(++texture: ::GLuint, ++target: ::GLenum, ++samples: ::GLsizei, ++internalformat: ::GLenum, ++width: ::GLsizei, ++height: ::GLsizei, ++fixedsamplelocations: ::GLboolean);
+        fn glTextureStorage3DMultisampleEXT(++texture: ::GLuint, ++target: ::GLenum, ++samples: ::GLsizei, ++internalformat: ::GLenum, ++width: ::GLsizei, ++height: ::GLsizei, ++depth: ::GLsizei, ++fixedsamplelocations: ::GLboolean);
     }
     type PFNGLTEXSTORAGE2DMULTISAMPLEPROC = *u8;
     type PFNGLTEXSTORAGE3DMULTISAMPLEPROC = *u8;
