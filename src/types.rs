@@ -1,4 +1,4 @@
-use libc::*;
+use core::libc::*;
 
 /* Base GL types */
 
