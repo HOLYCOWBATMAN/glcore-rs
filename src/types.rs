@@ -1,5 +1,3 @@
-use libc::*;
-
 /* Base GL types */
 
 #[cfg(GL_VERSION_1_0)]
