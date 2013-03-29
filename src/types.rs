@@ -96,5 +96,5 @@ pub mod GL_KHR_debug {
 
 #[cfg(GL_NV_vdpau_interop)]
 pub mod GL_NV_vdpau_interop {
-    pub type GLvdpauSurfaceNV   = GLintptr;
+    pub type GLvdpauSurfaceNV   = ::GLintptr;
 }

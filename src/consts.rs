@@ -274,10 +274,10 @@ pub mod GL_VERSION_1_2 {
 
 #[cfg(GL_ARB_imaging)]
 pub mod GL_ARB_imaging {
-    pub static GL_staticANT_COLOR                 : ::GLenum = 0x8001;
-    pub static GL_ONE_MINUS_staticANT_COLOR       : ::GLenum = 0x8002;
-    pub static GL_staticANT_ALPHA                 : ::GLenum = 0x8003;
-    pub static GL_ONE_MINUS_staticANT_ALPHA       : ::GLenum = 0x8004;
+    pub static GL_CONSTANT_COLOR                 : ::GLenum = 0x8001;
+    pub static GL_ONE_MINUS_CONSTANT_COLOR       : ::GLenum = 0x8002;
+    pub static GL_CONSTANT_ALPHA                 : ::GLenum = 0x8003;
+    pub static GL_ONE_MINUS_CONSTANT_ALPHA       : ::GLenum = 0x8004;
     pub static GL_BLEND_COLOR                    : ::GLenum = 0x8005;
     pub static GL_FUNC_ADD                       : ::GLenum = 0x8006;
     pub static GL_MIN                            : ::GLenum = 0x8007;
@@ -608,7 +608,7 @@ pub mod GL_VERSION_3_0 {
     pub static GL_BUFFER_ACCESS_FLAGS            : ::GLenum = 0x911F;
     pub static GL_BUFFER_MAP_LENGTH              : ::GLenum = 0x9120;
     pub static GL_BUFFER_MAP_OFFSET              : ::GLenum = 0x9121;
-    
+
     /* Reuse tokens from ARB_depth_buffer_float */
     /* reuse GL_DEPTH_COMPONENT32F */
     /* reuse GL_DEPTH32F_STENCIL8 */
@@ -2587,7 +2587,7 @@ pub mod GL_ARB_shader_storage_buffer_object {
     pub static GL_MAX_SHADER_STORAGE_BLOCK_SIZE  : ::GLenum = 0x90DE;
     pub static GL_SHADER_STORAGE_BUFFER_OFFSET_ALIGNMENT : ::GLenum = 0x90DF;
     pub static GL_SHADER_STORAGE_BARRIER_BIT     : ::GLenum = 0x2000;
-    pub static GL_MAX_COMBINED_SHADER_OUTPUT_RESOURCES : ::GLenum = GL_MAX_COMBINED_IMAGE_UNITS_AND_FRAGMENT_OUTPUTS;
+    pub static GL_MAX_COMBINED_SHADER_OUTPUT_RESOURCES : ::GLenum = ::GL_MAX_COMBINED_IMAGE_UNITS_AND_FRAGMENT_OUTPUTS;
     /* reuse GL_MAX_COMBINED_IMAGE_UNITS_AND_FRAGMENT_OUTPUTS */
 }
 
