@@ -1,12 +1,8 @@
-#[link(name = "glcore", 
-       vers = "0.1", 
+#[link(name = "glcore",
+       vers = "0.1",
        author = "Brendan Zabarauskas",
        url = "https://github.com/bjz/glcore-rs")];
 #[crate_type = "lib"];
-
-mod consts;
-mod functions;
-mod types;
 
 /**
  * These symbol exports mean you can link to the entire set of glcore
@@ -677,3 +673,7 @@ pub use types::GL_KHR_debug::*;
 
 #[cfg(GL_NV_vdpau_interop)]
 pub use types::GL_NV_vdpau_interop::*;
+
+mod consts;
+mod functions;
+mod types;
