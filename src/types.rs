@@ -68,15 +68,15 @@ pub mod GL_EXT_timer_query {
 pub mod GL_ARB_sync {
     pub type GLint64            = i64;
     pub type GLuint64           = u64;
-    pub struct _GLsync {}
+    pub struct _GLsync;
     pub type GLsync             = *_GLsync;
 }
 
 #[cfg(GL_ARB_cl_event)]
 pub mod GL_ARB_cl_event {
     /* These incomplete types let us declare types compatible with OpenCL's cl_context and cl_event */
-    pub struct cl_context {}
-    pub struct cl_event {}
+    pub struct cl_context;
+    pub struct cl_event;
 }
 
 #[cfg(GL_ARB_debug_output)]
