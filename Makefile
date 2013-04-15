@@ -1,3 +1,48 @@
+# Use glewinfo to detect supported extensions
+targeted:
+	@mkdir -p lib
+	@rustc src/glcore.rc --out-dir lib --lib `./find_local_extensions.sh`
+
+# Generated using the results of glewinfo. Should work on OS X 10.6+
+osx:
+	@mkdir -p lib
+	@rustc src/glcore.rc --out-dir lib --lib \
+	--cfg GL_ARB_copy_buffer \
+	--cfg GL_ARB_depth_buffer_float \
+	--cfg GL_ARB_depth_clamp \
+	--cfg GL_ARB_draw_elements_base_vertex \
+	--cfg GL_ARB_framebuffer_object \
+	--cfg GL_ARB_framebuffer_srgb \
+	--cfg GL_ARB_half_float_pixel \
+	--cfg GL_ARB_half_float_vertex \
+	--cfg GL_ARB_imaging \
+	--cfg GL_ARB_map_buffer_range \
+	--cfg GL_ARB_provoking_vertex \
+	--cfg GL_ARB_sampler_objects \
+	--cfg GL_ARB_seamless_cube_map \
+	--cfg GL_ARB_shader_objects \
+	--cfg GL_ARB_sync \
+	--cfg GL_ARB_texture_compression_rgtc \
+	--cfg GL_ARB_texture_multisample \
+	--cfg GL_ARB_texture_rg \
+	--cfg GL_ARB_timer_query \
+	--cfg GL_ARB_uniform_buffer_object \
+	--cfg GL_ARB_vertex_array_bgra \
+	--cfg GL_ARB_vertex_array_object \
+	--cfg GL_ARB_vertex_buffer_object \
+	--cfg GL_EXT_timer_query \
+	--cfg GL_VERSION_1_0 \
+	--cfg GL_VERSION_1_1 \
+	--cfg GL_VERSION_1_2 \
+	--cfg GL_VERSION_1_3 \
+	--cfg GL_VERSION_1_4 \
+	--cfg GL_VERSION_1_5 \
+	--cfg GL_VERSION_2_0 \
+	--cfg GL_VERSION_2_1 \
+	--cfg GL_VERSION_3_0 \
+	--cfg GL_VERSION_3_1 \
+	--cfg GL_VERSION_3_2
+
 all:
 	@mkdir -p lib
 	@rustc src/glcore.rc --out-dir lib --lib \
@@ -112,50 +157,6 @@ all:
 	--cfg GL_VERSION_4_1 \
 	--cfg GL_VERSION_4_2 \
 	--cfg GL_VERSION_4_3
-
-# generated using the results of glewinfo
-osx-lion:
-	@mkdir -p lib
-	@rustc src/glcore.rc --out-dir lib --lib \
-	--cfg GL_ARB_copy_buffer \
-	--cfg GL_ARB_depth_buffer_float \
-	--cfg GL_ARB_depth_clamp \
-	--cfg GL_ARB_draw_elements_base_vertex \
-	--cfg GL_ARB_framebuffer_object \
-	--cfg GL_ARB_framebuffer_srgb \
-	--cfg GL_ARB_half_float_pixel \
-	--cfg GL_ARB_half_float_vertex \
-	--cfg GL_ARB_imaging \
-	--cfg GL_ARB_map_buffer_range \
-	--cfg GL_ARB_provoking_vertex \
-	--cfg GL_ARB_sampler_objects \
-	--cfg GL_ARB_seamless_cube_map \
-	--cfg GL_ARB_shader_objects \
-	--cfg GL_ARB_sync \
-	--cfg GL_ARB_texture_compression_rgtc \
-	--cfg GL_ARB_texture_multisample \
-	--cfg GL_ARB_texture_rg \
-	--cfg GL_ARB_timer_query \
-	--cfg GL_ARB_uniform_buffer_object \
-	--cfg GL_ARB_vertex_array_bgra \
-	--cfg GL_ARB_vertex_array_object \
-	--cfg GL_ARB_vertex_buffer_object \
-	--cfg GL_EXT_timer_query \
-	--cfg GL_VERSION_1_0 \
-	--cfg GL_VERSION_1_1 \
-	--cfg GL_VERSION_1_2 \
-	--cfg GL_VERSION_1_3 \
-	--cfg GL_VERSION_1_4 \
-	--cfg GL_VERSION_1_5 \
-	--cfg GL_VERSION_2_0 \
-	--cfg GL_VERSION_2_1 \
-	--cfg GL_VERSION_3_0 \
-	--cfg GL_VERSION_3_1 \
-	--cfg GL_VERSION_3_2
-
-targeted:
-	@mkdir -p lib
-	@rustc src/glcore.rc --out-dir lib --lib `./find_local_extensions.sh`
 
 clean:
 	rm -R -f lib
