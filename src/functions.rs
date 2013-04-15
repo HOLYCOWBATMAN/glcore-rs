@@ -1500,7 +1500,7 @@ pub mod GL_ARB_viewport_array {
 pub mod GL_ARB_cl_event {
     #[nolink]
     extern "C" {
-        fn glCreateSyncFromCLeventARB(++context: *::Struct__cl_context, ++event: *::Struct__cl_event, ++flags: ::GLbitfield) -> ::GLsync;
+        fn glCreateSyncFromCLeventARB(++context: *::cl_context, ++event: *::cl_event, ++flags: ::GLbitfield) -> ::GLsync;
     }
     type PFNGLCREATESYNCFROMCLEVENTARBPROC = *u8;
 }
